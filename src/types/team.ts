@@ -13,6 +13,7 @@
  */
 export type TeamMemberPosition = 
   | 'principal'
+  | 'managing-director'
   | 'head-of-architect'
   | 'senior-architect'
   | 'architect'
@@ -41,6 +42,8 @@ export type EducationLevel =
  */
 export type ProfessionalCertification = 
   | 'registered-architect'
+  | 'asean-architect'
+  | 'registered-interior-architect'
   | 'leed-ap'
   | 'pmp'
   | 'peng'
@@ -56,6 +59,9 @@ export type ExpertiseArea =
   | 'healthcare-facilities'
   | 'transportation-infrastructure'
   | 'aviation-facilities'
+  | 'aviation-architecture'
+  | 'infrastructure-projects'
+  | 'transportation-design'
   | 'mixed-use-developments'
   | 'office-spaces'
   | 'residential-projects'
@@ -64,7 +70,17 @@ export type ExpertiseArea =
   | 'sustainable-design'
   | 'urban-planning'
   | 'interior-design'
-  | 'landscape-architecture';
+  | 'landscape-architecture'
+  | 'architectural-design'
+  | 'project-leadership'
+  | 'design-development'
+  | 'team-management'
+  | 'team-leadership'
+  | 'client-relations'
+  | 'space-planning'
+  | 'project-management'
+  | 'business-development'
+  | 'marketing';
 
 /**
  * Education interface
