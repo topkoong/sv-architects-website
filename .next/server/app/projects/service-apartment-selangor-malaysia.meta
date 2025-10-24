@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/projects/layout,_N_T_/projects/service-apartment-selangor-malaysia/layout,_N_T_/projects/service-apartment-selangor-malaysia/page,_N_T_/projects/service-apartment-selangor-malaysia"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/projects/service-apartment-selangor-malaysia/__PAGE__",
+    "/projects/service-apartment-selangor-malaysia",
+    "/projects",
+    "/_index"
+  ]
+}

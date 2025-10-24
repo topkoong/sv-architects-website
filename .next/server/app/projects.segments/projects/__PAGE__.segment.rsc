@@ -1,0 +1,9 @@
+1:"$Sreact.fragment"
+2:I[52928,["/sv-architects-website/_next/static/chunks/3c8f70c53ab86145.js","/sv-architects-website/_next/static/chunks/d276a49971e241af.js"],"ClientPageRoot"]
+3:I[63936,["/sv-architects-website/_next/static/chunks/08066b124f3f7033.js","/sv-architects-website/_next/static/chunks/ac889cf0cb516fb5.js","/sv-architects-website/_next/static/chunks/590900fb81e9bc3a.js"],"default"]
+6:I[23532,["/sv-architects-website/_next/static/chunks/3c8f70c53ab86145.js","/sv-architects-website/_next/static/chunks/d276a49971e241af.js"],"OutletBoundary"]
+7:"$Sreact.suspense"
+0:{"buildId":"PVonS1rRqwZ3VQyoVab1e","rsc":["$","$1","c",{"children":[["$","$L2",null,{"Component":"$3","serverProvidedParams":{"searchParams":{},"params":{},"promises":["$@4","$@5"]}}],[["$","script","script-0",{"src":"/sv-architects-website/_next/static/chunks/08066b124f3f7033.js","async":true}],["$","script","script-1",{"src":"/sv-architects-website/_next/static/chunks/ac889cf0cb516fb5.js","async":true}],["$","script","script-2",{"src":"/sv-architects-website/_next/static/chunks/590900fb81e9bc3a.js","async":true}]],["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]]}],"loading":null,"isPartial":false}
+4:{}
+5:{}
+8:null

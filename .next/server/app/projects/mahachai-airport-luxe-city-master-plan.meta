@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/projects/layout,_N_T_/projects/mahachai-airport-luxe-city-master-plan/layout,_N_T_/projects/mahachai-airport-luxe-city-master-plan/page,_N_T_/projects/mahachai-airport-luxe-city-master-plan"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/projects/mahachai-airport-luxe-city-master-plan/__PAGE__",
+    "/projects/mahachai-airport-luxe-city-master-plan",
+    "/projects",
+    "/_index"
+  ]
+}

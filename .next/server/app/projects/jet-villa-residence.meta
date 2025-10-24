@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/projects/layout,_N_T_/projects/jet-villa-residence/layout,_N_T_/projects/jet-villa-residence/page,_N_T_/projects/jet-villa-residence"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/projects/jet-villa-residence/__PAGE__",
+    "/projects/jet-villa-residence",
+    "/projects",
+    "/_index"
+  ]
+}

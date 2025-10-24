@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/projects/layout,_N_T_/projects/phuket-condominium-interior-design/layout,_N_T_/projects/phuket-condominium-interior-design/page,_N_T_/projects/phuket-condominium-interior-design"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/projects/phuket-condominium-interior-design/__PAGE__",
+    "/projects/phuket-condominium-interior-design",
+    "/projects",
+    "/_index"
+  ]
+}
