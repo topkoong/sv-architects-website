@@ -104,8 +104,8 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   }
 
   return {
-    title: `${member.fullName} - ${member.title}`,
-    description: `${member.fullName}, ${member.title} at SV Architects and Associates Ltd. ${member.experience.years}+ years of experience in ${member.experience.areas.slice(0, 3).join(', ')}.`,
+    title: `MEMBER_FULL_NAME - MEMBER_TITLE`,
+    description: `MEMBER_FULL_NAME, MEMBER_TITLE at SV Architects and Associates Ltd. MEMBER_EXPERIENCE_YEARS+ years of experience in MEMBER_EXPERIENCE_AREAS.`,
     keywords: [
       member.fullName,
       member.title,
@@ -211,19 +211,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
-      url: `${baseUrl}/projects`,
+      url: `BASE_URL/projects`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/team`,
+      url: `BASE_URL/team`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/contact`,
+      url: `BASE_URL/contact`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.7,
@@ -233,7 +233,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Dynamic team member pages
   const teamMemberSlugs = getAllTeamMemberSlugs();
   const teamMemberPages = teamMemberSlugs.map((slug) => ({
-    url: `${baseUrl}/team-member/${slug}`,
+    url: `BASE_URL/team-member/SLUG`,
     lastModified: new Date(),
     changeFrequency: 'monthly',
     priority: 0.6,
@@ -334,7 +334,7 @@ const ProjectCard = ({ project }) => (
   <div>
     <h3>{project.name}</h3>
     <p>{project.description}</p>
-    <Link href={`/projects/${project.id}`}>
+    <Link href="/projects/PROJECT_ID">
       View Project Details
     </Link>
     <Link href="/team">
@@ -429,8 +429,8 @@ const personSchema = {
     }
   })),
   knowsAbout: member.experience.areas,
-  image: `https://sv-arch.com${member.image}`,
-  url: `https://sv-arch.com/team-member/${member.slug}`,
+  image: `https://sv-arch.com/MEMBER_IMAGE`,
+  url: `https://sv-arch.com/team-member/MEMBER_SLUG`,
   email: member.contact.email,
   telephone: member.contact.phone,
   sameAs: Object.values(member.contact.socialMedia || {}).filter(Boolean)
@@ -463,8 +463,8 @@ const projectSchema = {
   },
   genre: project.category,
   keywords: project.features,
-  image: `https://sv-arch.com${project.images.thumbnail}`,
-  url: `https://sv-arch.com/projects/${project.id}`
+  image: `https://sv-arch.com/PROJECT_THUMBNAIL`,
+  url: `https://sv-arch.com/projects/PROJECT_ID`
 };
 ```
 
@@ -492,7 +492,7 @@ const breadcrumbSchema = {
       '@type': 'ListItem',
       position: 3,
       name: member.fullName,
-      item: `https://sv-arch.com/team-member/${member.slug}`
+      item: `https://sv-arch.com/team-member/MEMBER_SLUG`
     }
   ]
 };
@@ -685,7 +685,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <script
           async
-          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_TRACKING_ID}`}
+          src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"
         />
         <script
           dangerouslySetInnerHTML={{
@@ -693,7 +693,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', '${process.env.NEXT_PUBLIC_GA_TRACKING_ID}', {
+              gtag('config', 'GA_TRACKING_ID', {
                 page_title: document.title,
                 page_location: window.location.href,
               });
