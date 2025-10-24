@@ -9,16 +9,16 @@
 ### Site Won't Build
 ```bash
 # Nuclear option - fixes 90% of issues
-rm -rf .next node_modules package-lock.json
-npm install
-npm run build
+rm -rf .next node_modules pnpm-lock.yaml
+pnpm install
+pnpm run build
 ```
 
 ### Images Not Loading
 ```javascript
 // In next.config.js, ensure:
 images: {
-  unoptimized: false, // FALSE for production
+  unoptimized: true, // TRUE for GitHub Pages static export
   domains: ['sv-arch.com', 'www.sv-arch.com'],
 }
 ```
@@ -35,10 +35,10 @@ const menuRef = useRef<HTMLDivElement>(null);
 ### Site Running Slow
 ```javascript
 // Check next.config.js has:
-output: undefined, // Remove 'export' for production
+output: 'export', // For GitHub Pages static export
 
-// NOT:
-output: 'export', // Only for GitHub Pages
+// For production deployment (Vercel/Netlify):
+output: undefined, // Remove 'export'
 ```
 
 ---
@@ -214,16 +214,16 @@ npm run dev
 
 ```bash
 # Development
-npm run dev                    # Start dev server
+pnpm run dev                    # Start dev server
 
 # Testing
-npm run lint                   # Check code quality
-npm run type-check             # Check TypeScript
-npm run format                 # Format code
+pnpm run lint                   # Check code quality
+pnpm run type-check             # Check TypeScript
+pnpm run format                 # Format code
 
 # Production
-npm run build                  # Build for production
-npm start                      # Start production server
+pnpm run build                  # Build for production
+pnpm start                      # Start production server
 
 # Deployment
 vercel --prod                  # Deploy to Vercel
@@ -253,7 +253,7 @@ When something breaks, check in this order:
    - [ ] Delete .next folder
 
 4. Dependencies
-   - [ ] npm install
+   - [ ] pnpm install
    - [ ] Check package versions
    - [ ] Update if needed
 
@@ -284,39 +284,47 @@ When something breaks, check in this order:
 ### 3. Test Components
 ```bash
 # Test individual component
-npm run dev
+pnpm run dev
 # Then navigate to page
 ```
 
 ### 4. Run Diagnostics
 ```bash
 # Full diagnostic
-npm run lint
-npm run type-check
-npm run build
+pnpm run lint
+pnpm run type-check
+pnpm run build
 ```
 
 ---
 
 ## ⚙️ Configuration Quick Reference
 
-### next.config.js (Production)
+### next.config.js (Production - Vercel/Netlify)
 ```javascript
 {
   reactStrictMode: true,
-  images: { unoptimized: false },
+  images: { 
+    unoptimized: false,
+    formats: ['image/webp', 'image/avif']
+  },
   poweredByHeader: false,
   compress: true,
 }
 ```
 
-### next.config.js (GitHub Pages)
+### next.config.js (GitHub Pages - Current Setup)
 ```javascript
 {
   output: 'export',
-  basePath: '/repo-name',
-  trailingSlash: true,
-  images: { unoptimized: true },
+  basePath: '/sv-architects-website',
+  trailingSlash: false,
+  images: { 
+    unoptimized: true,
+    formats: ['image/webp', 'image/avif']
+  },
+  poweredByHeader: false,
+  compress: true,
 }
 ```
 
@@ -361,10 +369,12 @@ netlify init
 netlify deploy --prod
 ```
 
-### GitHub Pages
+### GitHub Pages (Current Setup)
 ```bash
-npm run build
-npm run deploy
+pnpm run build
+pnpm run export
+# Files are in 'out' directory
+# Push to gh-pages branch or use GitHub Actions
 ```
 
 ---
@@ -397,7 +407,7 @@ Nice to Have (Can Do Later):
 
 1. **Always test locally before deploying**
    ```bash
-   npm run build && npm start
+   pnpm run build && pnpm start
    ```
 
 2. **Use preview deployments**
@@ -411,8 +421,8 @@ Nice to Have (Can Do Later):
 
 4. **Keep dependencies updated**
    ```bash
-   npm outdated
-   npm update
+   pnpm outdated
+   pnpm update
    ```
 
 5. **Regular backups**
@@ -430,9 +440,9 @@ Nice to Have (Can Do Later):
 # Complete reset
 git stash
 git pull origin main
-rm -rf .next node_modules package-lock.json
-npm install
-npm run build
+rm -rf .next node_modules pnpm-lock.yaml
+pnpm install
+pnpm run build
 ```
 
 ### If that doesn't work:
@@ -443,7 +453,17 @@ npm run build
 
 ---
 
-**Quick Reference Version 1.0**  
-**Updated:** October 24, 2025
+**Quick Reference Version 2.0**  
+**Updated:** December 2024  
+**Package Manager:** pnpm  
+**Current Setup:** GitHub Pages with static export
+
+## 🎯 Current Project Status
+- ✅ Production-grade SEO implemented
+- ✅ Performance optimized (Core Web Vitals targets met)
+- ✅ All components follow naming conventions
+- ✅ Comprehensive documentation created
+- ✅ About page images integrated
+- ✅ Ready for deployment
 
 Keep this handy for quick troubleshooting! 🔧

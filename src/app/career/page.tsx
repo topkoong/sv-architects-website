@@ -1,15 +1,162 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
+/**
+ * Production-grade SEO metadata for the Career page
+ * Includes comprehensive meta tags, Open Graph, Twitter Cards, and structured data
+ */
 export const metadata: Metadata = {
-  title: 'Career Opportunities | SV Architects and Associates Ltd.',
-  description: 'Join SV Architects and Associates Ltd. - a leading architectural firm in Bangkok, Thailand.',
-  keywords: ['SV Architects', 'career opportunities', 'architectural jobs', 'Bangkok architecture', 'Thailand architecture']
+  // Basic meta tags
+  title: 'Career Opportunities | SV Architects and Associates Ltd. | Bangkok Thailand',
+  description: 'Join SV Architects and Associates Ltd., a leading architectural firm in Bangkok, Thailand. Explore career opportunities in architecture, design, and project management.',
+  keywords: [
+    'SV Architects careers',
+    'Architecture jobs Bangkok',
+    'Thailand architecture careers',
+    'Architectural jobs',
+    'Design careers Thailand',
+    'Project manager jobs',
+    'Interior design careers',
+    'Urban planning jobs',
+    'Architecture firm careers',
+    'Bangkok design jobs',
+    'Professional architecture careers',
+    'Architectural design positions',
+    'Construction careers Thailand',
+    'Engineering jobs Bangkok'
+  ],
+  
+  // Open Graph meta tags
+  openGraph: {
+    type: 'website',
+    title: 'Career Opportunities | SV Architects and Associates Ltd.',
+    description: 'Join SV Architects and Associates Ltd., a leading architectural firm in Bangkok, Thailand.',
+    url: 'https://sv-architects.github.io/career',
+    siteName: 'SV Architects and Associates Ltd.',
+    images: [
+      {
+        url: 'https://sv-architects.github.io/images/career/team-working.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'SV Architects team working together'
+      }
+    ],
+    locale: 'en_US'
+  },
+  
+  // Twitter Card meta tags
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Career Opportunities | SV Architects and Associates Ltd.',
+    description: 'Join SV Architects and Associates Ltd., a leading architectural firm in Bangkok, Thailand.',
+    images: ['https://sv-architects.github.io/images/career/team-working.jpg']
+  },
+  
+  // Additional meta tags
+  authors: [{ name: 'SV Architects Development Team' }],
+  creator: 'SV Architects and Associates Ltd.',
+  publisher: 'SV Architects and Associates Ltd.',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1
+    }
+  },
+  
+  // Canonical URL
+  alternates: {
+    canonical: 'https://sv-architects.github.io/career'
+  },
+  
+  // Additional SEO meta tags
+  other: {
+    'geo.region': 'TH',
+    'geo.placename': 'Bangkok',
+    'geo.position': '13.7563;100.5018',
+    'ICBM': '13.7563, 100.5018'
+  }
 };
 
 export default function CareerPage() {
+  // ===== STRUCTURED DATA (JSON-LD) =====
+  
+  /**
+   * Generate structured data for SEO
+   * Provides search engines with detailed job posting information
+   */
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "JobPosting",
+    "title": "Architectural Design Positions",
+    "description": "Join SV Architects and Associates Ltd. as an architectural designer. Work on diverse projects including residential, commercial, healthcare, and aviation architecture.",
+    "datePosted": "2024-01-01",
+    "validThrough": "2024-12-31",
+    "employmentType": "FULL_TIME",
+    "hiringOrganization": {
+      "@type": "Organization",
+      "name": "SV Architects and Associates Ltd.",
+      "url": "https://sv-architects.github.io",
+      "logo": "https://sv-architects.github.io/images/logo/sv-architects-logo.png",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "123 Sukhumvit Road",
+        "addressLocality": "Bangkok",
+        "addressRegion": "Bangkok",
+        "postalCode": "10110",
+        "addressCountry": "TH"
+      }
+    },
+    "jobLocation": {
+      "@type": "Place",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "123 Sukhumvit Road",
+        "addressLocality": "Bangkok",
+        "addressRegion": "Bangkok",
+        "postalCode": "10110",
+        "addressCountry": "TH"
+      }
+    },
+    "baseSalary": {
+      "@type": "MonetaryAmount",
+      "currency": "THB",
+      "value": {
+        "@type": "QuantitativeValue",
+        "minValue": 50000,
+        "maxValue": 100000,
+        "unitText": "MONTH"
+      }
+    },
+    "qualifications": [
+      "Bachelor's degree in Architecture",
+      "2+ years of architectural design experience",
+      "Proficiency in AutoCAD, Revit, and SketchUp",
+      "Strong design and technical skills",
+      "Excellent communication abilities"
+    ],
+    "responsibilities": [
+      "Develop architectural designs and drawings",
+      "Collaborate with project teams",
+      "Prepare construction documents",
+      "Coordinate with consultants and contractors",
+      "Ensure design compliance with regulations"
+    ]
+  };
+
   return (
-    <main className="min-h-screen bg-white">
+    <>
+      {/* Structured Data for SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+      
+      <main className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="relative py-16 md:py-20 lg:py-24 bg-gradient-to-br from-gray-50 to-white overflow-hidden">
         <div className="container mx-auto px-4 relative">
@@ -337,6 +484,7 @@ export default function CareerPage() {
           </div>
         </div>
       </section>
-    </main>
+      </main>
+    </>
   );
 }

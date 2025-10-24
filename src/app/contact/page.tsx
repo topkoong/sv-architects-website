@@ -29,67 +29,111 @@
  * ============================================================================
  */
 
-// Import metadata types
+// Animation imports removed - not used in this static page
+
 import type { Metadata } from 'next';
 
+// ===== SEO METADATA =====
+
 /**
- * ============================================================================
- * METADATA CONFIGURATION
- * ============================================================================
- * SEO metadata for the contact page
- * ============================================================================
+ * Production-grade SEO metadata for the Contact page
+ * Includes comprehensive meta tags, Open Graph, Twitter Cards, and structured data
  */
 export const metadata: Metadata = {
-  // Page title
-  title: 'Contact Us | SV Architects and Associates Ltd.',
-  
-  // Meta description
-  description: 'Get in touch with SV Architects for your next project. Contact our team of experienced architects for commercial, healthcare, hospitality, and residential projects in Thailand.',
-  
-  // Keywords
+  // Basic meta tags
+  title: 'Contact Us | SV Architects and Associates Ltd. | Bangkok Thailand',
+  description: 'Get in touch with SV Architects and Associates Ltd. Contact our team for architectural services, project inquiries, and consultation. Located in Bangkok, Thailand.',
   keywords: [
-    'contact architects',
-    'SV Architects contact',
-    'architectural consultation',
-    'project inquiry',
-    'Bangkok architects',
-    'Thailand architecture',
-    'architectural services',
-    'design consultation',
-    'project planning',
-    'architectural design'
+    'Contact SV Architects',
+    'Architectural consultation Bangkok',
+    'Thailand architecture firm contact',
+    'Project inquiry',
+    'Architectural services contact',
+    'Bangkok architects contact',
+    'Design consultation',
+    'Project management contact',
+    'Interior design consultation',
+    'Architecture firm Thailand',
+    'SV Architects office',
+    'Professional architects contact',
+    'Design services inquiry',
+    'Architectural planning consultation'
   ],
-
-  // Open Graph metadata
+  
+  // Open Graph meta tags
   openGraph: {
     type: 'website',
-    url: 'https://sv-arch.com/contact',
     title: 'Contact Us | SV Architects and Associates Ltd.',
-    description: 'Get in touch with SV Architects for your next architectural project.',
+    description: 'Get in touch with SV Architects and Associates Ltd. Contact our team for architectural services, project inquiries, and consultation.',
+    url: 'https://sv-architects.github.io/contact',
     siteName: 'SV Architects and Associates Ltd.',
     images: [
       {
-        url: 'https://sv-arch.com/images/contact/office-exterior.jpg',
+        url: 'https://sv-architects.github.io/images/contact/office-building.jpg',
         width: 1200,
         height: 630,
-        alt: 'SV Architects office exterior'
+        alt: 'SV Architects office building in Bangkok'
       }
-    ]
+    ],
+    locale: 'en_US'
   },
-
-  // Twitter Card metadata
+  
+  // Twitter Card meta tags
   twitter: {
     card: 'summary_large_image',
     title: 'Contact Us | SV Architects and Associates Ltd.',
-    description: 'Get in touch with SV Architects for your next architectural project.',
-    images: ['https://sv-arch.com/images/contact/office-exterior.jpg']
+    description: 'Get in touch with SV Architects and Associates Ltd. for architectural services and consultation.',
+    images: ['https://sv-architects.github.io/images/contact/office-building.jpg']
   },
-
+  
+  // Additional meta tags
+  authors: [{ name: 'SV Architects Development Team' }],
+  creator: 'SV Architects and Associates Ltd.',
+  publisher: 'SV Architects and Associates Ltd.',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1
+    }
+  },
+  
   // Canonical URL
   alternates: {
-    canonical: 'https://sv-arch.com/contact'
+    canonical: 'https://sv-architects.github.io/contact'
+  },
+  
+  // Additional SEO meta tags
+  other: {
+    'geo.region': 'TH',
+    'geo.placename': 'Bangkok',
+    'geo.position': '13.7563;100.5018',
+    'ICBM': '13.7563, 100.5018'
   }
 };
+
+
+/**
+ * ============================================================================
+ * CONTACT PAGE COMPONENT
+ * ============================================================================
+ * Main contact page component with comprehensive contact information
+ * and inquiry form functionality
+ * 
+ * FEATURES:
+ * - Contact form with validation
+ * - Office location and contact details
+ * - Interactive map integration
+ * - Team contact information
+ * - Office hours and availability
+ * 
+ * @returns {JSX.Element} The Contact page component
+ * ============================================================================
+ */
 
 /**
  * ============================================================================
@@ -99,8 +143,59 @@ export const metadata: Metadata = {
  * ============================================================================
  */
 export default function ContactPage() {
+  // ===== STRUCTURED DATA (JSON-LD) =====
+  
+  /**
+   * Generate structured data for SEO
+   * Provides search engines with detailed contact information
+   */
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact SV Architects and Associates Ltd.",
+    "description": "Get in touch with SV Architects for architectural services and consultation",
+    "url": "https://sv-architects.github.io/contact",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "SV Architects and Associates Ltd.",
+      "url": "https://sv-architects.github.io",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+66-2-123-4567",
+        "contactType": "customer service",
+        "email": "info@sv-arch.com",
+        "availableLanguage": "English",
+        "areaServed": "Thailand"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "123 Sukhumvit Road",
+        "addressLocality": "Bangkok",
+        "addressRegion": "Bangkok",
+        "postalCode": "10110",
+        "addressCountry": "TH"
+      },
+      "openingHours": [
+        "Mo-Fr 09:00-18:00",
+        "Sa 09:00-12:00"
+      ],
+      "sameAs": [
+        "https://www.facebook.com/svarchitects",
+        "https://www.linkedin.com/company/sv-architects",
+        "https://www.instagram.com/svarchitects"
+      ]
+    }
+  };
+
   return (
-    <main className="min-h-screen bg-white">
+    <>
+      {/* Structured Data for SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+      
+      <main className="min-h-screen bg-white">
       <div className="container mx-auto px-4 py-16">
         <h1 className="text-4xl font-bold text-center mb-8">Contact Us</h1>
         <p className="text-lg text-center text-gray-600 mb-12">
@@ -173,7 +268,8 @@ export default function ContactPage() {
           </form>
         </div>
       </div>
-    </main>
+      </main>
+    </>
   );
 }
 

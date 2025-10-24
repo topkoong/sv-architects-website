@@ -1813,7 +1813,7 @@ const categories = [
  * Available project types for filtering
  * ============================================================================
  */
-const projectTypes = [
+export const projectTypes = [
   { id: 'all', name: 'All Types', count: projects.length },
   { id: 'airport-terminal', name: 'Airport Terminal', count: projects.filter(p => p.type.toLowerCase().includes('airport terminal')).length },
   { id: 'airport-development', name: 'Airport Development', count: projects.filter(p => p.type.toLowerCase().includes('airport development')).length },
@@ -1867,16 +1867,28 @@ const projectTypes = [
  * ============================================================================
  */
 
-// Helper function to convert project name to slug
+/**
+ * Helper function to convert project name to URL-friendly slug
+ * 
+ * FUNCTIONALITY:
+ * - Converts project names to URL-friendly slugs
+ * - Uses predefined mapping for specific projects
+ * - Falls back to automatic conversion for unmapped projects
+ * 
+ * @param projectName - The display name of the project
+ * @returns {string} URL-friendly slug for the project
+ */
 function getProjectSlug(projectName: string): string {
-  const slugMap: { [key: string]: string } = {
+  // Predefined mapping for specific project names to slugs
+  const PROJECT_SLUG_MAP: { [key: string]: string } = {
     'U-Tapao Airport New Terminal': 'transportation-infrastructure',
     'Bangkok Commercial Complex': 'leading-architectural-excellence',
     'Healthcare Facility Bangkok': 'healthcare-architecture',
     'Sustainable Office Tower': 'sustainable-design-leadership'
   };
   
-  return slugMap[projectName] || projectName.toLowerCase().replace(/\s+/g, '-');
+  // Return mapped slug or generate from project name
+  return PROJECT_SLUG_MAP[projectName] || projectName.toLowerCase().replace(/\s+/g, '-');
 }
 
 /**
