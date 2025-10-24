@@ -1,0 +1,68 @@
+{
+  "name": "sv-architects-website",
+  "version": "1.0.0",
+  "description": "Modern, high-performance website for SV Architects and Associates Ltd. Built with Next.js 16, TypeScript, Tailwind CSS, and Framer Motion.",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbo",
+    "build": "next build",
+    "export": "next build && next export",
+    "deploy": "npm run export && touch out/.nojekyll",
+    "start": "next start",
+    "lint": "next lint",
+    "lint:fix": "next lint --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "type-check": "tsc --noEmit",
+    "test": "npm run type-check && npm run lint",
+    "analyze": "cross-env ANALYZE=true next build",
+    "lighthouse": "lighthouse http://localhost:3000 --output=html --output-path=./reports/lighthouse-report.html --view",
+    "lighthouse:ci": "lhci autorun",
+    "clean": "rm -rf .next out node_modules/.cache",
+    "clean:all": "rm -rf .next out node_modules",
+    "reinstall": "npm run clean:all && npm install",
+    "prepare": "node -e \"try { require('husky') } catch (e) { if (e.code !== 'MODULE_NOT_FOUND') throw e }\" || true",
+    "gh-pages": "gh-pages -d out"
+  },
+  "keywords": [
+    "architecture",
+    "nextjs",
+    "typescript",
+    "tailwindcss",
+    "framer-motion",
+    "responsive-design",
+    "seo-optimized"
+  ],
+  "author": "SV Architects and Associates Ltd.",
+  "license": "ISC",
+  "packageManager": "pnpm@10.18.3",
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  },
+  "dependencies": {
+    "framer-motion": "^11.18.2",
+    "next": "^16.0.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@next/bundle-analyzer": "^16.0.0",
+    "@types/node": "^20.19.23",
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.2",
+    "autoprefixer": "^10.4.21",
+    "cross-env": "^7.0.3",
+    "eslint": "^9.38.0",
+    "eslint-config-next": "^16.0.0",
+    "gh-pages": "^6.1.1",
+    "postcss": "^8.5.6",
+    "prettier": "^3.6.2",
+    "prettier-plugin-tailwindcss": "^0.5.14",
+    "tailwindcss": "^3.4.18",
+    "typescript": "^5.9.3"
+  },
+  "optionalDependencies": {
+    "@lhci/cli": "^0.13.0"
+  }
+}

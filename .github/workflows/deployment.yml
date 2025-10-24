@@ -1,0 +1,67 @@
+name: GitHub Pages
+
+# Workflow to automatically deploy static site to GitHub Pages
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-22.04
+    permissions:
+      contents: write
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js 22.x
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22.x'
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: latest
+
+      - name: Get pnpm store directory
+        id: pnpm-cache
+        run: echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
+
+      - name: Cache dependencies
+        uses: actions/cache@v4
+        with:
+          path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build
+        run: NODE_ENV=production pnpm run build
+
+      - name: Add .nojekyll
+        run: |
+          mkdir -p out
+          touch out/.nojekyll
+
+      - name: Debug build output
+        run: |
+          echo "Build output contents:"
+          ls -la out/
+          echo "Checking if index.html exists:"
+          test -f out/index.html && echo "✅ index.html found" || echo "❌ index.html missing"
+          echo "Checking redirect content:"
+          head -15 out/index.html
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v4
+        if: github.ref == 'refs/heads/main'
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./out
+          full_commit_message: ${{ github.event.head_commit.message }}
