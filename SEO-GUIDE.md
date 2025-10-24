@@ -688,7 +688,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"
         />
         <script
-          dangerouslySetInnerHTML={{
+          dangerouslySetInnerHTML={% raw %}{{
             __html: `
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
@@ -698,7 +698,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 page_location: window.location.href,
               });
             `,
-          }}
+          }}{% endraw %}
         />
       </head>
       <body>{children}</body>
