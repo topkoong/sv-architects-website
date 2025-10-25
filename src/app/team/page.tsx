@@ -193,12 +193,16 @@ const LeadershipSection = ({ teamMembers }: { teamMembers: any[] }) => {
               variants={slideUp} // Apply slide-up animation
               className="
                 group // Group for hover effects
-                card // Card styling
-                text-center // Center text
-                hover:shadow-elegant // Elegant shadow on hover
-                transition-shadow // Smooth shadow transition
+                bg-white // Clean white background
+                rounded-3xl // More rounded corners
+                shadow-lg // Elegant shadow
+                hover:shadow-2xl // Enhanced shadow on hover
+                transition-all // Smooth transitions
                 duration-300 // 300ms transition
-                hover-lift // Lift on hover
+                hover:-translate-y-2 // Lift on hover
+                border // Subtle border
+                border-gray-100 // Light border
+                overflow-hidden // Hide overflow
               "
             >
               {/* Team Member Photo */}
@@ -207,15 +211,20 @@ const LeadershipSection = ({ teamMembers }: { teamMembers: any[] }) => {
                 aspect-square // Square aspect ratio for circular images
                 mx-auto // Center horizontally
                 mb-6 // 24px bottom margin
-                w-40 // 160px width
+                w-32 // Smaller, more elegant size
                 rounded-full // Circular
                 overflow-hidden // Hide overflow
-                shadow-md // Medium shadow
+                shadow-xl // Enhanced shadow
+                ring-4 // Ring border
+                ring-white // White ring
+                group-hover:ring-blue-100 // Blue ring on hover
+                transition-all // Smooth transitions
+                duration-300 // 300ms duration
               ">
                 <Image
                   src={member.image || ''}
                   alt={`${member.fullName} - ${member.title}`}
-                  className="w-full h-full object-cover object-[center_top] group-hover:scale-105 transition-transform duration-500"
+                  className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500"
                   fill
                   style={{ objectFit: 'cover' }}
                   unoptimized
@@ -223,33 +232,35 @@ const LeadershipSection = ({ teamMembers }: { teamMembers: any[] }) => {
               </div>
 
               {/* Team Member Info */}
-              <div className="p-8">
-                <h3 className="text-2xl font-bold mb-3 text-black group-hover:text-black transition-colors duration-200">
+              <div className="px-8 pt-4 pb-8">
+                <h3 className="text-xl font-bold mb-2 text-black group-hover:text-blue-600 transition-colors duration-200">
                   {member.fullName}
                 </h3>
                 
-                <p className="text-lg mb-4 text-gray-600 font-semibold">
+                <p className="text-base mb-3 text-gray-600 font-semibold">
                   {member.title}
                 </p>
 
-                <p className="text-gray-600 mb-6 leading-relaxed">
+                <p className="text-sm text-gray-500 mb-6 leading-relaxed">
                   {member.shortBio}
                 </p>
 
                 {/* Key Skills */}
-                <div className="mb-8">
-                  <div className="flex flex-wrap gap-3 justify-center">
+                <div className="mb-6">
+                  <div className="flex flex-wrap gap-2 justify-center">
                     {member.skills.slice(0, 3).map((skill: string, skillIndex: number) => (
                       <span 
                         key={skillIndex}
                         className="
-                          px-4 // 16px horizontal padding
-                          py-2 // 8px vertical padding
-                          bg-gray-100 // Light gray background
-                          text-gray-700 // Gray text color
-                          text-sm // 14px font
-                          font-medium // Medium weight
-                          tracking-wide // Letter spacing
+                          px-3 // 12px horizontal padding
+                          py-1.5 // 6px vertical padding
+                          bg-blue-50 // Light blue background
+                          text-blue-700 // Blue text color
+                          rounded-full // Rounded pill
+                          text-xs // 12px font
+                          font-semibold // Semi-bold weight
+                          border // Border
+                          border-blue-200 // Light blue border
                         "
                       >
                         {skill}
@@ -267,21 +278,25 @@ const LeadershipSection = ({ teamMembers }: { teamMembers: any[] }) => {
                     w-full // Full width
                     px-6 // 24px horizontal padding
                     py-3 // 12px vertical padding
-                    bg-black // Black background
+                    bg-gradient-to-r // Gradient background
+                    from-blue-600 // Blue start
+                    to-blue-700 // Darker blue end
                     text-white // White text
                     font-semibold // Semi-bold
                     text-sm // 14px font
-                    tracking-wide // Letter spacing
+                    rounded-xl // Rounded corners
+                    shadow-lg // Shadow
+                    hover:shadow-xl // Enhanced shadow on hover
+                    hover:from-blue-700 // Darker gradient on hover
+                    hover:to-blue-800 // Even darker on hover
                     transition-all // Smooth transitions
-                    duration-200 // 200ms duration
-                    hover:bg-gray-800 // Darker on hover
-                    hover:shadow-lg // Shadow on hover
-                    group-hover:transform // Transform on hover
-                    group-hover:-translate-y-0.5 // Lift on hover
+                    duration-300 // 300ms duration
+                    group-hover:scale-105 // Scale on hover
+                    transform // Enable transforms
                   "
                 >
-                  VIEW PROFILE
-                  <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  View Profile
+                  <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                 </Link>
