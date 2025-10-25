@@ -33,24 +33,17 @@ import { TeamMember } from '@/types/team';
 export const teamMembers: TeamMember[] = [
   // SUCHART BANNAPANYA - Principal
   {
-    // Basic identification
     id: 'suchart-bannapanya-001',
     slug: 'suchart-bannapanya',
     firstName: 'Suchart',
     lastName: 'Bannapanya',
     fullName: 'Suchart Bannapanya',
-    
-    // Professional information
     position: 'principal',
     title: 'Principal',
     department: 'Leadership',
-    
-    // Personal information
     image: '/sv-architects-website/images/team/suchart-bannapanya.jpg',
     bio: 'Suchart Bannapanya serves as Principal of SV Architects and Associates Ltd., providing strategic leadership and vision for the firm. With extensive experience in architectural practice, he oversees major projects and guides the firm\'s growth and development.',
     shortBio: 'Principal providing strategic leadership and vision for SV Architects, overseeing major projects and firm development.',
-    
-    // Education and qualifications
     education: [
       {
         degree: 'Master of Architecture',
@@ -69,8 +62,6 @@ export const teamMembers: TeamMember[] = [
         status: 'active'
       }
     ],
-    
-    // Professional experience
     experience: {
       summary: 'Over 25 years of experience in architectural practice, providing strategic leadership and overseeing major projects.',
       years: 25,
@@ -98,8 +89,6 @@ export const teamMembers: TeamMember[] = [
         }
       ]
     },
-    
-    // Project involvement
     projects: [
       {
         projectId: 'strategic-leadership-projects',
@@ -116,8 +105,6 @@ export const teamMembers: TeamMember[] = [
         isActive: true
       }
     ],
-    
-    // Skills and expertise
     skills: [
       'Strategic Leadership',
       'Project Management',
@@ -136,16 +123,12 @@ export const teamMembers: TeamMember[] = [
       'Thai (Native)',
       'English (Fluent)'
     ],
-    
-    // Contact information
     contact: {
       email: 'suchart@sv-arch.com',
       phone: '+66-2-162-0838',
       office: 'Bangkok Office',
       extension: '100'
     },
-    
-    // SEO and metadata
     metaTitle: 'Suchart Bannapanya - Principal | SV Architects',
     metaDescription: 'Suchart Bannapanya, Principal of SV Architects and Associates Ltd. Strategic leader with 25+ years experience in architectural practice.',
     keywords: [
@@ -154,8 +137,6 @@ export const teamMembers: TeamMember[] = [
       'project management',
       'SV Architects'
     ],
-    
-    // Timestamps
     createdAt: '2024-01-01T00:00:00Z',
     updatedAt: '2024-01-01T00:00:00Z',
     publishedAt: '2024-01-01T00:00:00Z'
@@ -163,24 +144,17 @@ export const teamMembers: TeamMember[] = [
 
   // VICHIEN WONGNIMMARN - Managing Director
   {
-    // Basic identification
     id: 'vichien-wongnimmarn-002',
     slug: 'vichien-wongnimmarn',
     firstName: 'Vichien',
     lastName: 'Wongnimmarn',
     fullName: 'Vichien Wongnimmarn',
-    
-    // Professional information
     position: 'managing-director',
     title: 'Managing Director',
     department: 'Leadership',
-    
-    // Personal information
     image: '/sv-architects-website/images/team/vichien-wongnimmarn.jpg',
     bio: 'Vichien Wongnimmarn serves as Managing Director of SV Architects and Associates Ltd. With extensive experience in aviation and infrastructure projects, he aims to provide aesthetic and higher level service and innovation to drive the future growth of aviation and infrastructure projects.',
     shortBio: 'Managing Director specializing in aviation and infrastructure projects with focus on innovation and service excellence.',
-    
-    // Education and qualifications
     education: [
       {
         degree: 'Bachelor of Architecture',
@@ -213,8 +187,6 @@ export const teamMembers: TeamMember[] = [
         status: 'active'
       }
     ],
-    
-    // Professional experience
     experience: {
       summary: 'Over 20 years of experience in aviation and infrastructure projects, focusing on innovation and service excellence.',
       years: 20,
@@ -242,8 +214,6 @@ export const teamMembers: TeamMember[] = [
         }
       ]
     },
-    
-    // Project involvement
     projects: [
       {
         projectId: 'u-tapao-airport-terminal-1',
@@ -260,8 +230,6 @@ export const teamMembers: TeamMember[] = [
         isActive: false
       }
     ],
-    
-    // Skills and expertise
     skills: [
       'Aviation Architecture',
       'Infrastructure Design',
@@ -280,16 +248,12 @@ export const teamMembers: TeamMember[] = [
       'Thai (Native)',
       'English (Fluent)'
     ],
-    
-    // Contact information
     contact: {
       email: 'vichien@sv-arch.com',
       phone: '+66-2-162-0838',
       office: 'Bangkok Office',
       extension: '101'
     },
-    
-    // SEO and metadata
     metaTitle: 'Vichien Wongnimmarn - Managing Director | SV Architects',
     metaDescription: 'Vichien Wongnimmarn, Managing Director of SV Architects and Associates Ltd. Aviation and infrastructure expert with 20+ years experience.',
     keywords: [
@@ -298,8 +262,6 @@ export const teamMembers: TeamMember[] = [
       'infrastructure projects',
       'SV Architects'
     ],
-    
-    // Timestamps
     createdAt: '2024-01-01T00:00:00Z',
     updatedAt: '2024-01-01T00:00:00Z',
     publishedAt: '2024-01-01T00:00:00Z'
@@ -307,24 +269,17 @@ export const teamMembers: TeamMember[] = [
 
   // PICHARN FOONGKIATCHAROEN - Head of Architect
   {
-    // Basic identification
     id: 'picharn-foongkiatcharoen-003',
     slug: 'picharn-foongkiatcharoen',
     firstName: 'Picharn',
     lastName: 'Foongkiatcharoen',
     fullName: 'Picharn Foongkiatcharoen',
-    
-    // Professional information
     position: 'head-of-architect',
     title: 'Head of Architect',
     department: 'Architecture',
-    
-    // Personal information
     image: '/sv-architects-website/images/team/picharn-foongkiatcharoen.jpg',
     bio: 'Picharn Foongkiatcharoen serves as Head of Architect at SV Architects and Associates Ltd., leading the architectural design team and overseeing design development for major projects.',
     shortBio: 'Head of Architect leading design development and architectural innovation for major projects.',
-    
-    // Education and qualifications
     education: [
       {
         degree: 'Bachelor of Architecture',
@@ -343,8 +298,6 @@ export const teamMembers: TeamMember[] = [
         status: 'active'
       }
     ],
-    
-    // Professional experience
     experience: {
       summary: 'Over 15 years of experience in architectural design and project leadership.',
       years: 15,
@@ -372,8 +325,6 @@ export const teamMembers: TeamMember[] = [
         }
       ]
     },
-    
-    // Project involvement
     projects: [
       {
         projectId: 'architectural-design-projects',
@@ -390,8 +341,6 @@ export const teamMembers: TeamMember[] = [
         isActive: true
       }
     ],
-    
-    // Skills and expertise
     skills: [
       'Architectural Design',
       'Project Leadership',
@@ -411,16 +360,12 @@ export const teamMembers: TeamMember[] = [
       'Thai (Native)',
       'English (Fluent)'
     ],
-    
-    // Contact information
     contact: {
       email: 'picharn@sv-arch.com',
       phone: '+66-2-162-0838',
       office: 'Bangkok Office',
       extension: '102'
     },
-    
-    // SEO and metadata
     metaTitle: 'Picharn Foongkiatcharoen - Head of Architect | SV Architects',
     metaDescription: 'Picharn Foongkiatcharoen, Head of Architect at SV Architects and Associates Ltd. Design leader with 15+ years experience.',
     keywords: [
@@ -429,8 +374,6 @@ export const teamMembers: TeamMember[] = [
       'project leadership',
       'SV Architects'
     ],
-    
-    // Timestamps
     createdAt: '2024-01-01T00:00:00Z',
     updatedAt: '2024-01-01T00:00:00Z',
     publishedAt: '2024-01-01T00:00:00Z'
@@ -438,24 +381,17 @@ export const teamMembers: TeamMember[] = [
 
   // NOBPADOL SUVACHANANONDA - Associate | Head of Interior Design
   {
-    // Basic identification
     id: 'nobpadol-suvachananonda-004',
     slug: 'nobpadol-suvachananonda',
     firstName: 'Nobpadol',
     lastName: 'Suvachananonda',
     fullName: 'Nobpadol Suvachananonda',
-    
-    // Professional information
     position: 'associate',
     title: 'Associate | Head of Interior Design',
     department: 'Interior Design',
-    
-    // Personal information
     image: '/sv-architects-website/images/team/nobpadol-suvachananonda.jpg',
     bio: 'Nobpadol Suvachananonda serves as Associate and Head of Interior Design at SV Architects and Associates Ltd., leading the interior design team and overseeing interior design projects.',
     shortBio: 'Associate and Head of Interior Design leading interior design projects and team development.',
-    
-    // Education and qualifications
     education: [
       {
         degree: 'Bachelor of Interior Architecture',
@@ -474,8 +410,6 @@ export const teamMembers: TeamMember[] = [
         status: 'active'
       }
     ],
-    
-    // Professional experience
     experience: {
       summary: 'Over 12 years of experience in interior design and project management.',
       years: 12,
@@ -503,8 +437,6 @@ export const teamMembers: TeamMember[] = [
         }
       ]
     },
-    
-    // Project involvement
     projects: [
       {
         projectId: 'interior-design-projects',
@@ -521,8 +453,6 @@ export const teamMembers: TeamMember[] = [
         isActive: true
       }
     ],
-    
-    // Skills and expertise
     skills: [
       'Interior Design',
       'Space Planning',
@@ -542,16 +472,12 @@ export const teamMembers: TeamMember[] = [
       'Thai (Native)',
       'English (Fluent)'
     ],
-    
-    // Contact information
     contact: {
       email: 'nobpadol@sv-arch.com',
       phone: '+66-2-162-0838',
       office: 'Bangkok Office',
       extension: '103'
     },
-    
-    // SEO and metadata
     metaTitle: 'Nobpadol Suvachananonda - Head of Interior Design | SV Architects',
     metaDescription: 'Nobpadol Suvachananonda, Associate and Head of Interior Design at SV Architects and Associates Ltd. Interior design expert with 12+ years experience.',
     keywords: [
@@ -560,8 +486,6 @@ export const teamMembers: TeamMember[] = [
       'project management',
       'SV Architects'
     ],
-    
-    // Timestamps
     createdAt: '2024-01-01T00:00:00Z',
     updatedAt: '2024-01-01T00:00:00Z',
     publishedAt: '2024-01-01T00:00:00Z'
@@ -569,24 +493,17 @@ export const teamMembers: TeamMember[] = [
 
   // SUPASSARA BANNAPANYA - Senior Business Development | Senior Architect
   {
-    // Basic identification
     id: 'supassara-bannapanya-005',
     slug: 'supassara-bannapanya',
     firstName: 'Supassara',
     lastName: 'Bannapanya',
     fullName: 'Supassara Bannapanya',
-    
-    // Professional information
     position: 'senior-architect',
     title: 'Senior Business Development | Senior Architect',
     department: 'Business Development',
-    
-    // Personal information
     image: '/sv-architects-website/images/team/supassara-bannapanya.jpg',
     bio: 'Supassara Bannapanya serves as Senior Business Development and Senior Architect at SV Architects and Associates Ltd., combining architectural expertise with business development skills.',
     shortBio: 'Senior Architect and Business Development specialist combining design expertise with business growth.',
-    
-    // Education and qualifications
     education: [
       {
         degree: 'Bachelor of Architecture',
@@ -605,8 +522,6 @@ export const teamMembers: TeamMember[] = [
         status: 'active'
       }
     ],
-    
-    // Professional experience
     experience: {
       summary: 'Over 10 years of experience in architecture and business development.',
       years: 10,
@@ -634,8 +549,6 @@ export const teamMembers: TeamMember[] = [
         }
       ]
     },
-    
-    // Project involvement
     projects: [
       {
         projectId: 'business-development-projects',
@@ -652,8 +565,6 @@ export const teamMembers: TeamMember[] = [
         isActive: true
       }
     ],
-    
-    // Skills and expertise
     skills: [
       'Architectural Design',
       'Business Development',
@@ -673,16 +584,12 @@ export const teamMembers: TeamMember[] = [
       'Thai (Native)',
       'English (Fluent)'
     ],
-    
-    // Contact information
     contact: {
       email: 'supassara@sv-arch.com',
       phone: '+66-2-162-0838',
       office: 'Bangkok Office',
       extension: '104'
     },
-    
-    // SEO and metadata
     metaTitle: 'Supassara Bannapanya - Senior Business Development | SV Architects',
     metaDescription: 'Supassara Bannapanya, Senior Business Development and Senior Architect at SV Architects and Associates Ltd. Business development expert with 10+ years experience.',
     keywords: [
@@ -691,8 +598,1370 @@ export const teamMembers: TeamMember[] = [
       'client relations',
       'SV Architects'
     ],
-    
-    // Timestamps
+    createdAt: '2024-01-01T00:00:00Z',
+    updatedAt: '2024-01-01T00:00:00Z',
+    publishedAt: '2024-01-01T00:00:00Z'
+  },
+
+  // VETAPONG UABHAIBOOL - Senior Architect
+  {
+    id: 'vetapong-uabhaibool-006',
+    slug: 'vetapong-uabhaibool',
+    firstName: 'Vetapong',
+    lastName: 'Uabhaibool',
+    fullName: 'Vetapong Uabhaibool',
+    position: 'senior-architect',
+    title: 'Senior Architect',
+    department: 'Architecture',
+    image: '/sv-architects-website/images/team/vetapong-uabhaibool.jpg',
+    bio: 'Vetapong Uabhaibool serves as Senior Architect at SV Architects and Associates Ltd., bringing extensive experience in architectural design and project management.',
+    shortBio: 'Senior Architect with expertise in architectural design and project management.',
+    education: [
+      {
+        degree: 'Bachelor of Architecture',
+        institution: 'Chulalongkorn University',
+        location: 'Bangkok, Thailand',
+        level: 'bachelor',
+        field: 'Architecture'
+      }
+    ],
+    certifications: [
+      {
+        type: 'registered-architect',
+        name: 'Registered Architect',
+        issuingBody: 'Architect Council of Thailand',
+        issueDate: '2018-01-01',
+        status: 'active'
+      }
+    ],
+    experience: {
+      summary: 'Over 8 years of experience in architectural design and project management.',
+      years: 8,
+      areas: [
+        'architectural-design',
+        'project-management',
+        'construction-documentation',
+        'client-relations',
+        'team-collaboration'
+      ],
+      workHistory: [
+        {
+          company: 'SV Architects and Associates Ltd.',
+          position: 'Senior Architect',
+          location: 'Bangkok, Thailand',
+          startDate: '2020-01-01',
+          isCurrent: true,
+          description: 'Leading architectural design projects and managing construction documentation.',
+          achievements: [
+            'Led design development for 20+ projects',
+            'Improved project delivery efficiency',
+            'Maintained high design quality standards',
+            'Mentored junior architects'
+          ]
+        }
+      ]
+    },
+    projects: [
+      {
+        projectId: 'senior-architect-projects',
+        projectName: 'Senior Architect Projects',
+        role: 'Senior Architect',
+        responsibilities: [
+          'Design development',
+          'Project coordination',
+          'Construction documentation',
+          'Client presentation'
+        ],
+        startDate: '2020-01-01',
+        endDate: '2024-12-31',
+        isActive: true
+      }
+    ],
+    skills: [
+      'Architectural Design',
+      'Project Management',
+      'Construction Documentation',
+      'Client Relations',
+      'Team Collaboration',
+      'Design Development'
+    ],
+    software: [
+      'AutoCAD',
+      'Revit',
+      'SketchUp',
+      'Adobe Creative Suite',
+      'Microsoft Office'
+    ],
+    languages: [
+      'Thai (Native)',
+      'English (Fluent)'
+    ],
+    contact: {
+      email: 'vetapong@sv-arch.com',
+      phone: '+66-2-162-0838',
+      office: 'Bangkok Office',
+      extension: '105'
+    },
+    metaTitle: 'Vetapong Uabhaibool - Senior Architect | SV Architects',
+    metaDescription: 'Vetapong Uabhaibool, Senior Architect at SV Architects and Associates Ltd. Architectural design expert with 8+ years experience.',
+    keywords: [
+      'senior architect',
+      'architectural design',
+      'project management',
+      'SV Architects'
+    ],
+    createdAt: '2024-01-01T00:00:00Z',
+    updatedAt: '2024-01-01T00:00:00Z',
+    publishedAt: '2024-01-01T00:00:00Z'
+  },
+
+  // JATUWAT VARODOMPUN - Assistant Professor
+  {
+    id: 'jatuwat-varodompun-007',
+    slug: 'jatuwat-varodompun',
+    firstName: 'Jatuwat',
+    lastName: 'Varodompun',
+    fullName: 'Asst.Prof. Jatuwat Varodompun Ph.D. LEED AP',
+    position: 'assistant-professor',
+    title: 'Assistant Professor Ph.D. LEED AP',
+    department: 'Research & Development',
+    image: '/sv-architects-website/images/team/jatuwat-varodompun.jpg',
+    bio: 'Asst.Prof. Jatuwat Varodompun Ph.D. LEED AP serves as Assistant Professor and LEED Accredited Professional at SV Architects and Associates Ltd., bringing academic expertise and sustainable design knowledge.',
+    shortBio: 'Assistant Professor Ph.D. LEED AP specializing in sustainable design and academic research.',
+    education: [
+      {
+        degree: 'Ph.D. in Architecture',
+        institution: 'Chulalongkorn University',
+        location: 'Bangkok, Thailand',
+        level: 'phd',
+        field: 'Architecture'
+      },
+      {
+        degree: 'Master of Architecture',
+        institution: 'Chulalongkorn University',
+        location: 'Bangkok, Thailand',
+        level: 'master',
+        field: 'Architecture'
+      }
+    ],
+    certifications: [
+      {
+        type: 'leed-ap',
+        name: 'LEED Accredited Professional',
+        issuingBody: 'US Green Building Council',
+        issueDate: '2020-01-01',
+        status: 'active'
+      },
+      {
+        type: 'registered-architect',
+        name: 'Registered Architect',
+        issuingBody: 'Architect Council of Thailand',
+        issueDate: '2015-01-01',
+        status: 'active'
+      }
+    ],
+    experience: {
+      summary: 'Over 12 years of experience in sustainable architecture and academic research.',
+      years: 12,
+      areas: [
+        'sustainable-design',
+        'green-building',
+        'academic-research',
+        'leed-certification',
+        'environmental-design'
+      ],
+      workHistory: [
+        {
+          company: 'SV Architects and Associates Ltd.',
+          position: 'Assistant Professor Ph.D. LEED AP',
+          location: 'Bangkok, Thailand',
+          startDate: '2018-01-01',
+          isCurrent: true,
+          description: 'Leading sustainable design initiatives and academic research projects.',
+          achievements: [
+            'Led LEED certification for 15+ projects',
+            'Published 20+ research papers',
+            'Developed sustainable design standards',
+            'Mentored graduate students'
+          ]
+        }
+      ]
+    },
+    projects: [
+      {
+        projectId: 'sustainable-design-projects',
+        projectName: 'Sustainable Design Projects',
+        role: 'LEED AP',
+        responsibilities: [
+          'Sustainable design leadership',
+          'LEED certification',
+          'Research coordination',
+          'Academic collaboration'
+        ],
+        startDate: '2018-01-01',
+        endDate: '2024-12-31',
+        isActive: true
+      }
+    ],
+    skills: [
+      'Sustainable Design',
+      'LEED Certification',
+      'Academic Research',
+      'Green Building',
+      'Environmental Design',
+      'Research Methodology'
+    ],
+    software: [
+      'AutoCAD',
+      'Revit',
+      'EnergyPlus',
+      'Ecotect',
+      'Microsoft Office',
+      'Research Tools'
+    ],
+    languages: [
+      'Thai (Native)',
+      'English (Fluent)'
+    ],
+    contact: {
+      email: 'jatuwat@sv-arch.com',
+      phone: '+66-2-162-0838',
+      office: 'Bangkok Office',
+      extension: '106'
+    },
+    metaTitle: 'Jatuwat Varodompun - Assistant Professor Ph.D. LEED AP | SV Architects',
+    metaDescription: 'Jatuwat Varodompun, Assistant Professor Ph.D. LEED AP at SV Architects and Associates Ltd. Sustainable design expert with 12+ years experience.',
+    keywords: [
+      'assistant professor',
+      'LEED AP',
+      'sustainable design',
+      'SV Architects'
+    ],
+    createdAt: '2024-01-01T00:00:00Z',
+    updatedAt: '2024-01-01T00:00:00Z',
+    publishedAt: '2024-01-01T00:00:00Z'
+  },
+
+  // JOVENEL BALDOMARO MONILLA - Architect
+  {
+    id: 'jovenel-baldomaro-monilla-008',
+    slug: 'jovenel-baldomaro-monilla',
+    firstName: 'Jovenel',
+    lastName: 'Baldomaro Monilla',
+    fullName: 'Jovenel Baldomaro Monilla',
+    position: 'architect',
+    title: 'Architect',
+    department: 'Architecture',
+    image: '/sv-architects-website/images/team/jovenel-baldomaro-monilla.jpg',
+    bio: 'Jovenel Baldomaro Monilla serves as Architect at SV Architects and Associates Ltd., bringing international perspective and design expertise to the team.',
+    shortBio: 'Architect with international perspective and design expertise.',
+    education: [
+      {
+        degree: 'Bachelor of Architecture',
+        institution: 'University of the Philippines',
+        location: 'Manila, Philippines',
+        level: 'bachelor',
+        field: 'Architecture'
+      }
+    ],
+    certifications: [
+      {
+        type: 'registered-architect',
+        name: 'Registered Architect',
+        issuingBody: 'Professional Regulation Commission Philippines',
+        issueDate: '2019-01-01',
+        status: 'active'
+      }
+    ],
+    experience: {
+      summary: 'Over 6 years of experience in architectural design and project coordination.',
+      years: 6,
+      areas: [
+        'architectural-design',
+        'project-coordination',
+        'international-projects',
+        'design-development',
+        'client-relations'
+      ],
+      workHistory: [
+        {
+          company: 'SV Architects and Associates Ltd.',
+          position: 'Architect',
+          location: 'Bangkok, Thailand',
+          startDate: '2021-01-01',
+          isCurrent: true,
+          description: 'Contributing to architectural design projects and international collaborations.',
+          achievements: [
+            'Led design development for 10+ projects',
+            'Contributed to international project coordination',
+            'Maintained high design quality standards',
+            'Collaborated with international teams'
+          ]
+        }
+      ]
+    },
+    projects: [
+      {
+        projectId: 'international-projects',
+        projectName: 'International Projects',
+        role: 'Architect',
+        responsibilities: [
+          'Design development',
+          'Project coordination',
+          'International collaboration',
+          'Client presentation'
+        ],
+        startDate: '2021-01-01',
+        endDate: '2024-12-31',
+        isActive: true
+      }
+    ],
+    skills: [
+      'Architectural Design',
+      'Project Coordination',
+      'International Collaboration',
+      'Design Development',
+      'Client Relations',
+      'Cross-cultural Communication'
+    ],
+    software: [
+      'AutoCAD',
+      'Revit',
+      'SketchUp',
+      'Adobe Creative Suite',
+      'Microsoft Office'
+    ],
+    languages: [
+      'English (Native)',
+      'Thai (Fluent)',
+      'Filipino (Native)'
+    ],
+    contact: {
+      email: 'jovenel@sv-arch.com',
+      phone: '+66-2-162-0838',
+      office: 'Bangkok Office',
+      extension: '107'
+    },
+    metaTitle: 'Jovenel Baldomaro Monilla - Architect | SV Architects',
+    metaDescription: 'Jovenel Baldomaro Monilla, Architect at SV Architects and Associates Ltd. International design expert with 6+ years experience.',
+    keywords: [
+      'architect',
+      'international projects',
+      'design development',
+      'SV Architects'
+    ],
+    createdAt: '2024-01-01T00:00:00Z',
+    updatedAt: '2024-01-01T00:00:00Z',
+    publishedAt: '2024-01-01T00:00:00Z'
+  },
+
+  // SAROT DEELUAN - Architect
+  {
+    id: 'sarot-deeluan-009',
+    slug: 'sarot-deeluan',
+    firstName: 'Sarot',
+    lastName: 'Deeluan',
+    fullName: 'Sarot Deeluan',
+    position: 'architect',
+    title: 'Architect',
+    department: 'Architecture',
+    image: '/sv-architects-website/images/team/sarot-deeluan.jpg',
+    bio: 'Sarot Deeluan serves as Architect at SV Architects and Associates Ltd., specializing in architectural design and project development.',
+    shortBio: 'Architect specializing in architectural design and project development.',
+    education: [
+      {
+        degree: 'Bachelor of Architecture',
+        institution: 'Chulalongkorn University',
+        location: 'Bangkok, Thailand',
+        level: 'bachelor',
+        field: 'Architecture'
+      }
+    ],
+    certifications: [
+      {
+        type: 'registered-architect',
+        name: 'Registered Architect',
+        issuingBody: 'Architect Council of Thailand',
+        issueDate: '2020-01-01',
+        status: 'active'
+      }
+    ],
+    experience: {
+      summary: 'Over 5 years of experience in architectural design and project development.',
+      years: 5,
+      areas: [
+        'architectural-design',
+        'project-development',
+        'design-documentation',
+        'client-relations',
+        'team-collaboration'
+      ],
+      workHistory: [
+        {
+          company: 'SV Architects and Associates Ltd.',
+          position: 'Architect',
+          location: 'Bangkok, Thailand',
+          startDate: '2022-01-01',
+          isCurrent: true,
+          description: 'Contributing to architectural design projects and design documentation.',
+          achievements: [
+            'Led design development for 8+ projects',
+            'Improved design documentation efficiency',
+            'Maintained high design quality standards',
+            'Collaborated effectively with project teams'
+          ]
+        }
+      ]
+    },
+    projects: [
+      {
+        projectId: 'design-development-projects',
+        projectName: 'Design Development Projects',
+        role: 'Architect',
+        responsibilities: [
+          'Design development',
+          'Design documentation',
+          'Project coordination',
+          'Client presentation'
+        ],
+        startDate: '2022-01-01',
+        endDate: '2024-12-31',
+        isActive: true
+      }
+    ],
+    skills: [
+      'Architectural Design',
+      'Project Development',
+      'Design Documentation',
+      'Client Relations',
+      'Team Collaboration',
+      'Design Development'
+    ],
+    software: [
+      'AutoCAD',
+      'Revit',
+      'SketchUp',
+      'Adobe Creative Suite',
+      'Microsoft Office'
+    ],
+    languages: [
+      'Thai (Native)',
+      'English (Fluent)'
+    ],
+    contact: {
+      email: 'sarot@sv-arch.com',
+      phone: '+66-2-162-0838',
+      office: 'Bangkok Office',
+      extension: '108'
+    },
+    metaTitle: 'Sarot Deeluan - Architect | SV Architects',
+    metaDescription: 'Sarot Deeluan, Architect at SV Architects and Associates Ltd. Architectural design expert with 5+ years experience.',
+    keywords: [
+      'architect',
+      'architectural design',
+      'project development',
+      'SV Architects'
+    ],
+    createdAt: '2024-01-01T00:00:00Z',
+    updatedAt: '2024-01-01T00:00:00Z',
+    publishedAt: '2024-01-01T00:00:00Z'
+  },
+
+  // CHAYUT SUKRATTANACHAISAKUL - Architect
+  {
+    id: 'chayut-sukrattanachaisakul-010',
+    slug: 'chayut-sukrattanachaisakul',
+    firstName: 'Chayut',
+    lastName: 'Sukrattanachaisakul',
+    fullName: 'Chayut Sukrattanachaisakul',
+    position: 'architect',
+    title: 'Architect',
+    department: 'Architecture',
+    image: '/sv-architects-website/images/team/chayut-sukrattanachaisakul.jpg',
+    bio: 'Chayut Sukrattanachaisakul serves as Architect at SV Architects and Associates Ltd., bringing fresh perspective and innovative design solutions.',
+    shortBio: 'Architect with fresh perspective and innovative design solutions.',
+    education: [
+      {
+        degree: 'Bachelor of Architecture',
+        institution: 'Chulalongkorn University',
+        location: 'Bangkok, Thailand',
+        level: 'bachelor',
+        field: 'Architecture'
+      }
+    ],
+    certifications: [
+      {
+        type: 'registered-architect',
+        name: 'Registered Architect',
+        issuingBody: 'Architect Council of Thailand',
+        issueDate: '2021-01-01',
+        status: 'active'
+      }
+    ],
+    experience: {
+      summary: 'Over 4 years of experience in architectural design and innovative solutions.',
+      years: 4,
+      areas: [
+        'architectural-design',
+        'innovative-solutions',
+        'design-development',
+        'client-relations',
+        'technology-integration'
+      ],
+      workHistory: [
+        {
+          company: 'SV Architects and Associates Ltd.',
+          position: 'Architect',
+          location: 'Bangkok, Thailand',
+          startDate: '2023-01-01',
+          isCurrent: true,
+          description: 'Contributing to innovative architectural design projects and technology integration.',
+          achievements: [
+            'Led design development for 6+ projects',
+            'Introduced innovative design solutions',
+            'Integrated new technologies in design',
+            'Maintained high design quality standards'
+          ]
+        }
+      ]
+    },
+    projects: [
+      {
+        projectId: 'innovative-design-projects',
+        projectName: 'Innovative Design Projects',
+        role: 'Architect',
+        responsibilities: [
+          'Design development',
+          'Innovation integration',
+          'Technology application',
+          'Client presentation'
+        ],
+        startDate: '2023-01-01',
+        endDate: '2024-12-31',
+        isActive: true
+      }
+    ],
+    skills: [
+      'Architectural Design',
+      'Innovative Solutions',
+      'Design Development',
+      'Client Relations',
+      'Technology Integration',
+      'Creative Problem Solving'
+    ],
+    software: [
+      'AutoCAD',
+      'Revit',
+      'SketchUp',
+      'Adobe Creative Suite',
+      'Microsoft Office',
+      '3D Modeling Tools'
+    ],
+    languages: [
+      'Thai (Native)',
+      'English (Fluent)'
+    ],
+    contact: {
+      email: 'chayut@sv-arch.com',
+      phone: '+66-2-162-0838',
+      office: 'Bangkok Office',
+      extension: '109'
+    },
+    metaTitle: 'Chayut Sukrattanachaisakul - Architect | SV Architects',
+    metaDescription: 'Chayut Sukrattanachaisakul, Architect at SV Architects and Associates Ltd. Innovative design expert with 4+ years experience.',
+    keywords: [
+      'architect',
+      'innovative design',
+      'technology integration',
+      'SV Architects'
+    ],
+    createdAt: '2024-01-01T00:00:00Z',
+    updatedAt: '2024-01-01T00:00:00Z',
+    publishedAt: '2024-01-01T00:00:00Z'
+  },
+
+  // JINPANEE BANNAPANYA - Interior Designer
+  {
+    id: 'jinpanee-bannapanya-011',
+    slug: 'jinpanee-bannapanya',
+    firstName: 'Jinpanee',
+    lastName: 'Bannapanya',
+    fullName: 'Jinpanee Bannapanya',
+    position: 'interior-designer',
+    title: 'Interior Designer',
+    department: 'Interior Design',
+    image: '/sv-architects-website/images/team/jinpanee-bannapanya.jpg',
+    bio: 'Jinpanee Bannapanya serves as Interior Designer at SV Architects and Associates Ltd., specializing in interior design and space planning.',
+    shortBio: 'Interior Designer specializing in interior design and space planning.',
+    education: [
+      {
+        degree: 'Bachelor of Interior Architecture',
+        institution: 'Chulalongkorn University',
+        location: 'Bangkok, Thailand',
+        level: 'bachelor',
+        field: 'Interior Architecture'
+      }
+    ],
+    certifications: [
+      {
+        type: 'registered-interior-architect',
+        name: 'Registered Interior Architect',
+        issuingBody: 'Interior Architect Council of Thailand',
+        issueDate: '2021-01-01',
+        status: 'active'
+      }
+    ],
+    experience: {
+      summary: 'Over 4 years of experience in interior design and space planning.',
+      years: 4,
+      areas: [
+        'interior-design',
+        'space-planning',
+        'design-development',
+        'client-relations',
+        'material-selection'
+      ],
+      workHistory: [
+        {
+          company: 'SV Architects and Associates Ltd.',
+          position: 'Interior Designer',
+          location: 'Bangkok, Thailand',
+          startDate: '2023-01-01',
+          isCurrent: true,
+          description: 'Contributing to interior design projects and space planning solutions.',
+          achievements: [
+            'Led interior design for 8+ projects',
+            'Developed innovative space planning solutions',
+            'Maintained high design quality standards',
+            'Collaborated effectively with design teams'
+          ]
+        }
+      ]
+    },
+    projects: [
+      {
+        projectId: 'interior-design-projects',
+        projectName: 'Interior Design Projects',
+        role: 'Interior Designer',
+        responsibilities: [
+          'Interior design development',
+          'Space planning',
+          'Material selection',
+          'Client presentation'
+        ],
+        startDate: '2023-01-01',
+        endDate: '2024-12-31',
+        isActive: true
+      }
+    ],
+    skills: [
+      'Interior Design',
+      'Space Planning',
+      'Design Development',
+      'Client Relations',
+      'Material Selection',
+      'Design Coordination'
+    ],
+    software: [
+      'AutoCAD',
+      'SketchUp',
+      '3ds Max',
+      'Adobe Creative Suite',
+      'Microsoft Office'
+    ],
+    languages: [
+      'Thai (Native)',
+      'English (Fluent)'
+    ],
+    contact: {
+      email: 'jinpanee@sv-arch.com',
+      phone: '+66-2-162-0838',
+      office: 'Bangkok Office',
+      extension: '110'
+    },
+    metaTitle: 'Jinpanee Bannapanya - Interior Designer | SV Architects',
+    metaDescription: 'Jinpanee Bannapanya, Interior Designer at SV Architects and Associates Ltd. Interior design expert with 4+ years experience.',
+    keywords: [
+      'interior designer',
+      'space planning',
+      'interior design',
+      'SV Architects'
+    ],
+    createdAt: '2024-01-01T00:00:00Z',
+    updatedAt: '2024-01-01T00:00:00Z',
+    publishedAt: '2024-01-01T00:00:00Z'
+  },
+
+  // SIPPAWICH ROUYOO - Architect
+  {
+    id: 'sippawich-rouyoo-012',
+    slug: 'sippawich-rouyoo',
+    firstName: 'Sippawich',
+    lastName: 'Rouyoo',
+    fullName: 'Sippawich Rouyoo',
+    position: 'architect',
+    title: 'Architect',
+    department: 'Architecture',
+    image: '/sv-architects-website/images/team/sippawich-rouyoo.jpg',
+    bio: 'Sippawich Rouyoo serves as Architect at SV Architects and Associates Ltd., bringing expertise in architectural design and project coordination.',
+    shortBio: 'Architect with expertise in architectural design and project coordination.',
+    education: [
+      {
+        degree: 'Bachelor of Architecture',
+        institution: 'Chulalongkorn University',
+        location: 'Bangkok, Thailand',
+        level: 'bachelor',
+        field: 'Architecture'
+      }
+    ],
+    certifications: [
+      {
+        type: 'registered-architect',
+        name: 'Registered Architect',
+        issuingBody: 'Architect Council of Thailand',
+        issueDate: '2022-01-01',
+        status: 'active'
+      }
+    ],
+    experience: {
+      summary: 'Over 3 years of experience in architectural design and project coordination.',
+      years: 3,
+      areas: [
+        'architectural-design',
+        'project-coordination',
+        'design-development',
+        'client-relations',
+        'team-collaboration'
+      ],
+      workHistory: [
+        {
+          company: 'SV Architects and Associates Ltd.',
+          position: 'Architect',
+          location: 'Bangkok, Thailand',
+          startDate: '2024-01-01',
+          isCurrent: true,
+          description: 'Contributing to architectural design projects and project coordination.',
+          achievements: [
+            'Led design development for 5+ projects',
+            'Improved project coordination efficiency',
+            'Maintained high design quality standards',
+            'Collaborated effectively with project teams'
+          ]
+        }
+      ]
+    },
+    projects: [
+      {
+        projectId: 'project-coordination-projects',
+        projectName: 'Project Coordination Projects',
+        role: 'Architect',
+        responsibilities: [
+          'Design development',
+          'Project coordination',
+          'Team collaboration',
+          'Client presentation'
+        ],
+        startDate: '2024-01-01',
+        endDate: '2024-12-31',
+        isActive: true
+      }
+    ],
+    skills: [
+      'Architectural Design',
+      'Project Coordination',
+      'Design Development',
+      'Client Relations',
+      'Team Collaboration',
+      'Project Management'
+    ],
+    software: [
+      'AutoCAD',
+      'Revit',
+      'SketchUp',
+      'Adobe Creative Suite',
+      'Microsoft Office'
+    ],
+    languages: [
+      'Thai (Native)',
+      'English (Fluent)'
+    ],
+    contact: {
+      email: 'sippawich@sv-arch.com',
+      phone: '+66-2-162-0838',
+      office: 'Bangkok Office',
+      extension: '111'
+    },
+    metaTitle: 'Sippawich Rouyoo - Architect | SV Architects',
+    metaDescription: 'Sippawich Rouyoo, Architect at SV Architects and Associates Ltd. Architectural design expert with 3+ years experience.',
+    keywords: [
+      'architect',
+      'architectural design',
+      'project coordination',
+      'SV Architects'
+    ],
+    createdAt: '2024-01-01T00:00:00Z',
+    updatedAt: '2024-01-01T00:00:00Z',
+    publishedAt: '2024-01-01T00:00:00Z'
+  },
+
+  // JAKKAPORN SUTTHIRAGSA - Architect
+  {
+    id: 'jakkaporn-sutthiragsa-013',
+    slug: 'jakkaporn-sutthiragsa',
+    firstName: 'Jakkaporn',
+    lastName: 'Sutthiragsa',
+    fullName: 'Jakkaporn Sutthiragsa',
+    position: 'architect',
+    title: 'Architect',
+    department: 'Architecture',
+    image: '/sv-architects-website/images/team/jakkaporn-sutthiragsa.jpg',
+    bio: 'Jakkaporn Sutthiragsa serves as Architect at SV Architects and Associates Ltd., specializing in architectural design and sustainable solutions.',
+    shortBio: 'Architect specializing in architectural design and sustainable solutions.',
+    education: [
+      {
+        degree: 'Bachelor of Architecture',
+        institution: 'Chulalongkorn University',
+        location: 'Bangkok, Thailand',
+        level: 'bachelor',
+        field: 'Architecture'
+      }
+    ],
+    certifications: [
+      {
+        type: 'registered-architect',
+        name: 'Registered Architect',
+        issuingBody: 'Architect Council of Thailand',
+        issueDate: '2023-01-01',
+        status: 'active'
+      }
+    ],
+    experience: {
+      summary: 'Over 2 years of experience in architectural design and sustainable solutions.',
+      years: 2,
+      areas: [
+        'architectural-design',
+        'sustainable-solutions',
+        'design-development',
+        'client-relations',
+        'environmental-design'
+      ],
+      workHistory: [
+        {
+          company: 'SV Architects and Associates Ltd.',
+          position: 'Architect',
+          location: 'Bangkok, Thailand',
+          startDate: '2024-01-01',
+          isCurrent: true,
+          description: 'Contributing to architectural design projects with focus on sustainable solutions.',
+          achievements: [
+            'Led design development for 4+ projects',
+            'Integrated sustainable design principles',
+            'Maintained high design quality standards',
+            'Collaborated on environmental design solutions'
+          ]
+        }
+      ]
+    },
+    projects: [
+      {
+        projectId: 'sustainable-design-projects',
+        projectName: 'Sustainable Design Projects',
+        role: 'Architect',
+        responsibilities: [
+          'Design development',
+          'Sustainable solutions',
+          'Environmental design',
+          'Client presentation'
+        ],
+        startDate: '2024-01-01',
+        endDate: '2024-12-31',
+        isActive: true
+      }
+    ],
+    skills: [
+      'Architectural Design',
+      'Sustainable Solutions',
+      'Design Development',
+      'Client Relations',
+      'Environmental Design',
+      'Green Building'
+    ],
+    software: [
+      'AutoCAD',
+      'Revit',
+      'SketchUp',
+      'Adobe Creative Suite',
+      'Microsoft Office',
+      'Energy Analysis Tools'
+    ],
+    languages: [
+      'Thai (Native)',
+      'English (Fluent)'
+    ],
+    contact: {
+      email: 'jakkaporn@sv-arch.com',
+      phone: '+66-2-162-0838',
+      office: 'Bangkok Office',
+      extension: '112'
+    },
+    metaTitle: 'Jakkaporn Sutthiragsa - Architect | SV Architects',
+    metaDescription: 'Jakkaporn Sutthiragsa, Architect at SV Architects and Associates Ltd. Sustainable design expert with 2+ years experience.',
+    keywords: [
+      'architect',
+      'sustainable design',
+      'environmental design',
+      'SV Architects'
+    ],
+    createdAt: '2024-01-01T00:00:00Z',
+    updatedAt: '2024-01-01T00:00:00Z',
+    publishedAt: '2024-01-01T00:00:00Z'
+  },
+
+  // ALONGKORN SIRNAMKHAM - Architect
+  {
+    id: 'alongkorn-sirnamkham-014',
+    slug: 'alongkorn-sirnamkham',
+    firstName: 'Alongkorn',
+    lastName: 'Sirnamkham',
+    fullName: 'Alongkorn Sirnamkham',
+    position: 'architect',
+    title: 'Architect',
+    department: 'Architecture',
+    image: '/sv-architects-website/images/team/alongkorn-sirnamkham.jpg',
+    bio: 'Alongkorn Sirnamkham serves as Architect at SV Architects and Associates Ltd., bringing expertise in architectural design and project management.',
+    shortBio: 'Architect with expertise in architectural design and project management.',
+    education: [
+      {
+        degree: 'Bachelor of Architecture',
+        institution: 'Chulalongkorn University',
+        location: 'Bangkok, Thailand',
+        level: 'bachelor',
+        field: 'Architecture'
+      }
+    ],
+    certifications: [
+      {
+        type: 'registered-architect',
+        name: 'Registered Architect',
+        issuingBody: 'Architect Council of Thailand',
+        issueDate: '2023-01-01',
+        status: 'active'
+      }
+    ],
+    experience: {
+      summary: 'Over 2 years of experience in architectural design and project management.',
+      years: 2,
+      areas: [
+        'architectural-design',
+        'project-management',
+        'design-development',
+        'client-relations',
+        'team-collaboration'
+      ],
+      workHistory: [
+        {
+          company: 'SV Architects and Associates Ltd.',
+          position: 'Architect',
+          location: 'Bangkok, Thailand',
+          startDate: '2024-01-01',
+          isCurrent: true,
+          description: 'Contributing to architectural design projects and project management.',
+          achievements: [
+            'Led design development for 4+ projects',
+            'Improved project management efficiency',
+            'Maintained high design quality standards',
+            'Collaborated effectively with project teams'
+          ]
+        }
+      ]
+    },
+    projects: [
+      {
+        projectId: 'project-management-projects',
+        projectName: 'Project Management Projects',
+        role: 'Architect',
+        responsibilities: [
+          'Design development',
+          'Project management',
+          'Team collaboration',
+          'Client presentation'
+        ],
+        startDate: '2024-01-01',
+        endDate: '2024-12-31',
+        isActive: true
+      }
+    ],
+    skills: [
+      'Architectural Design',
+      'Project Management',
+      'Design Development',
+      'Client Relations',
+      'Team Collaboration',
+      'Project Coordination'
+    ],
+    software: [
+      'AutoCAD',
+      'Revit',
+      'SketchUp',
+      'Adobe Creative Suite',
+      'Microsoft Office',
+      'Project Management Tools'
+    ],
+    languages: [
+      'Thai (Native)',
+      'English (Fluent)'
+    ],
+    contact: {
+      email: 'alongkorn@sv-arch.com',
+      phone: '+66-2-162-0838',
+      office: 'Bangkok Office',
+      extension: '113'
+    },
+    metaTitle: 'Alongkorn Sirnamkham - Architect | SV Architects',
+    metaDescription: 'Alongkorn Sirnamkham, Architect at SV Architects and Associates Ltd. Project management expert with 2+ years experience.',
+    keywords: [
+      'architect',
+      'project management',
+      'architectural design',
+      'SV Architects'
+    ],
+    createdAt: '2024-01-01T00:00:00Z',
+    updatedAt: '2024-01-01T00:00:00Z',
+    publishedAt: '2024-01-01T00:00:00Z'
+  },
+
+  // LEENA NGASAKUL - Interior Designer
+  {
+    id: 'leena-ngasakul-015',
+    slug: 'leena-ngasakul',
+    firstName: 'Leena',
+    lastName: 'Ngasakul',
+    fullName: 'Leena Ngasakul',
+    position: 'interior-designer',
+    title: 'Interior Designer',
+    department: 'Interior Design',
+    image: '/sv-architects-website/images/team/leena-ngasakul.jpg',
+    bio: 'Leena Ngasakul serves as Interior Designer at SV Architects and Associates Ltd., specializing in interior design and creative solutions.',
+    shortBio: 'Interior Designer specializing in interior design and creative solutions.',
+    education: [
+      {
+        degree: 'Bachelor of Interior Architecture',
+        institution: 'Chulalongkorn University',
+        location: 'Bangkok, Thailand',
+        level: 'bachelor',
+        field: 'Interior Architecture'
+      }
+    ],
+    certifications: [
+      {
+        type: 'registered-interior-architect',
+        name: 'Registered Interior Architect',
+        issuingBody: 'Interior Architect Council of Thailand',
+        issueDate: '2023-01-01',
+        status: 'active'
+      }
+    ],
+    experience: {
+      summary: 'Over 2 years of experience in interior design and creative solutions.',
+      years: 2,
+      areas: [
+        'interior-design',
+        'creative-solutions',
+        'design-development',
+        'client-relations',
+        'space-planning'
+      ],
+      workHistory: [
+        {
+          company: 'SV Architects and Associates Ltd.',
+          position: 'Interior Designer',
+          location: 'Bangkok, Thailand',
+          startDate: '2024-01-01',
+          isCurrent: true,
+          description: 'Contributing to interior design projects with focus on creative solutions.',
+          achievements: [
+            'Led interior design for 4+ projects',
+            'Developed creative design solutions',
+            'Maintained high design quality standards',
+            'Collaborated effectively with design teams'
+          ]
+        }
+      ]
+    },
+    projects: [
+      {
+        projectId: 'creative-design-projects',
+        projectName: 'Creative Design Projects',
+        role: 'Interior Designer',
+        responsibilities: [
+          'Interior design development',
+          'Creative solutions',
+          'Space planning',
+          'Client presentation'
+        ],
+        startDate: '2024-01-01',
+        endDate: '2024-12-31',
+        isActive: true
+      }
+    ],
+    skills: [
+      'Interior Design',
+      'Creative Solutions',
+      'Design Development',
+      'Client Relations',
+      'Space Planning',
+      'Design Innovation'
+    ],
+    software: [
+      'AutoCAD',
+      'SketchUp',
+      '3ds Max',
+      'Adobe Creative Suite',
+      'Microsoft Office'
+    ],
+    languages: [
+      'Thai (Native)',
+      'English (Fluent)'
+    ],
+    contact: {
+      email: 'leena@sv-arch.com',
+      phone: '+66-2-162-0838',
+      office: 'Bangkok Office',
+      extension: '114'
+    },
+    metaTitle: 'Leena Ngasakul - Interior Designer | SV Architects',
+    metaDescription: 'Leena Ngasakul, Interior Designer at SV Architects and Associates Ltd. Creative design expert with 2+ years experience.',
+    keywords: [
+      'interior designer',
+      'creative design',
+      'interior design',
+      'SV Architects'
+    ],
+    createdAt: '2024-01-01T00:00:00Z',
+    updatedAt: '2024-01-01T00:00:00Z',
+    publishedAt: '2024-01-01T00:00:00Z'
+  },
+
+  // PUNCHARAT BANNAPANYA - Architect
+  {
+    id: 'puncharat-bannapanya-016',
+    slug: 'puncharat-bannapanya',
+    firstName: 'Puncharat',
+    lastName: 'Bannapanya',
+    fullName: 'Puncharat Bannapanya',
+    position: 'architect',
+    title: 'Architect',
+    department: 'Architecture',
+    image: '/sv-architects-website/images/team/puncharat-bannapanya.jpg',
+    bio: 'Puncharat Bannapanya serves as Architect at SV Architects and Associates Ltd., bringing expertise in architectural design and project coordination.',
+    shortBio: 'Architect with expertise in architectural design and project coordination.',
+    education: [
+      {
+        degree: 'Bachelor of Architecture',
+        institution: 'Chulalongkorn University',
+        location: 'Bangkok, Thailand',
+        level: 'bachelor',
+        field: 'Architecture'
+      }
+    ],
+    certifications: [
+      {
+        type: 'registered-architect',
+        name: 'Registered Architect',
+        issuingBody: 'Architect Council of Thailand',
+        issueDate: '2023-01-01',
+        status: 'active'
+      }
+    ],
+    experience: {
+      summary: 'Over 2 years of experience in architectural design and project coordination.',
+      years: 2,
+      areas: [
+        'architectural-design',
+        'project-coordination',
+        'design-development',
+        'client-relations',
+        'team-collaboration'
+      ],
+      workHistory: [
+        {
+          company: 'SV Architects and Associates Ltd.',
+          position: 'Architect',
+          location: 'Bangkok, Thailand',
+          startDate: '2024-01-01',
+          isCurrent: true,
+          description: 'Contributing to architectural design projects and project coordination.',
+          achievements: [
+            'Led design development for 4+ projects',
+            'Improved project coordination efficiency',
+            'Maintained high design quality standards',
+            'Collaborated effectively with project teams'
+          ]
+        }
+      ]
+    },
+    projects: [
+      {
+        projectId: 'coordination-projects',
+        projectName: 'Coordination Projects',
+        role: 'Architect',
+        responsibilities: [
+          'Design development',
+          'Project coordination',
+          'Team collaboration',
+          'Client presentation'
+        ],
+        startDate: '2024-01-01',
+        endDate: '2024-12-31',
+        isActive: true
+      }
+    ],
+    skills: [
+      'Architectural Design',
+      'Project Coordination',
+      'Design Development',
+      'Client Relations',
+      'Team Collaboration',
+      'Project Management'
+    ],
+    software: [
+      'AutoCAD',
+      'Revit',
+      'SketchUp',
+      'Adobe Creative Suite',
+      'Microsoft Office'
+    ],
+    languages: [
+      'Thai (Native)',
+      'English (Fluent)'
+    ],
+    contact: {
+      email: 'puncharat@sv-arch.com',
+      phone: '+66-2-162-0838',
+      office: 'Bangkok Office',
+      extension: '115'
+    },
+    metaTitle: 'Puncharat Bannapanya - Architect | SV Architects',
+    metaDescription: 'Puncharat Bannapanya, Architect at SV Architects and Associates Ltd. Project coordination expert with 2+ years experience.',
+    keywords: [
+      'architect',
+      'project coordination',
+      'architectural design',
+      'SV Architects'
+    ],
+    createdAt: '2024-01-01T00:00:00Z',
+    updatedAt: '2024-01-01T00:00:00Z',
+    publishedAt: '2024-01-01T00:00:00Z'
+  },
+
+  // KRIANGDESK WACHIRAWANIT - Architect
+  {
+    id: 'kriangdesk-wachirawanit-017',
+    slug: 'kriangdesk-wachirawanit',
+    firstName: 'Kriangdesk',
+    lastName: 'Wachirawanit',
+    fullName: 'Kriangdesk Wachirawanit',
+    position: 'architect',
+    title: 'Architect',
+    department: 'Architecture',
+    image: '/sv-architects-website/images/team/kriangdesk-wachirawanit.jpg',
+    bio: 'Kriangdesk Wachirawanit serves as Architect at SV Architects and Associates Ltd., bringing expertise in architectural design and innovative solutions.',
+    shortBio: 'Architect with expertise in architectural design and innovative solutions.',
+    education: [
+      {
+        degree: 'Bachelor of Architecture',
+        institution: 'Chulalongkorn University',
+        location: 'Bangkok, Thailand',
+        level: 'bachelor',
+        field: 'Architecture'
+      }
+    ],
+    certifications: [
+      {
+        type: 'registered-architect',
+        name: 'Registered Architect',
+        issuingBody: 'Architect Council of Thailand',
+        issueDate: '2023-01-01',
+        status: 'active'
+      }
+    ],
+    experience: {
+      summary: 'Over 2 years of experience in architectural design and innovative solutions.',
+      years: 2,
+      areas: [
+        'architectural-design',
+        'innovative-solutions',
+        'design-development',
+        'client-relations',
+        'technology-integration'
+      ],
+      workHistory: [
+        {
+          company: 'SV Architects and Associates Ltd.',
+          position: 'Architect',
+          location: 'Bangkok, Thailand',
+          startDate: '2024-01-01',
+          isCurrent: true,
+          description: 'Contributing to architectural design projects with focus on innovative solutions.',
+          achievements: [
+            'Led design development for 4+ projects',
+            'Introduced innovative design solutions',
+            'Maintained high design quality standards',
+            'Integrated new technologies in design'
+          ]
+        }
+      ]
+    },
+    projects: [
+      {
+        projectId: 'innovation-projects',
+        projectName: 'Innovation Projects',
+        role: 'Architect',
+        responsibilities: [
+          'Design development',
+          'Innovation integration',
+          'Technology application',
+          'Client presentation'
+        ],
+        startDate: '2024-01-01',
+        endDate: '2024-12-31',
+        isActive: true
+      }
+    ],
+    skills: [
+      'Architectural Design',
+      'Innovative Solutions',
+      'Design Development',
+      'Client Relations',
+      'Technology Integration',
+      'Creative Problem Solving'
+    ],
+    software: [
+      'AutoCAD',
+      'Revit',
+      'SketchUp',
+      'Adobe Creative Suite',
+      'Microsoft Office',
+      '3D Modeling Tools'
+    ],
+    languages: [
+      'Thai (Native)',
+      'English (Fluent)'
+    ],
+    contact: {
+      email: 'kriangdesk@sv-arch.com',
+      phone: '+66-2-162-0838',
+      office: 'Bangkok Office',
+      extension: '116'
+    },
+    metaTitle: 'Kriangdesk Wachirawanit - Architect | SV Architects',
+    metaDescription: 'Kriangdesk Wachirawanit, Architect at SV Architects and Associates Ltd. Innovative design expert with 2+ years experience.',
+    keywords: [
+      'architect',
+      'innovative design',
+      'technology integration',
+      'SV Architects'
+    ],
     createdAt: '2024-01-01T00:00:00Z',
     updatedAt: '2024-01-01T00:00:00Z',
     publishedAt: '2024-01-01T00:00:00Z'
