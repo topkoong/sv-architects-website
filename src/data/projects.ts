@@ -394,19 +394,9 @@ export const projects: ProjectData[] = [
     
     images: [
       {
-        url: getImagePath('/images/projects/bunditpatanasilpa-gallery.jpg'),
+        url: getImagePath('/images/projects/bunditpatanasilpa-auditorium/bunditpatanasilpa-auditorium.jpg'),
         alt: 'Bunditpatanasilpa Institute Auditorium exterior',
         caption: 'Modern cultural institution facade'
-      },
-      {
-        url: getImagePath('/images/projects/bunditpatanasilpa-interior1.jpg'),
-        alt: 'Bunditpatanasilpa Institute Auditorium interior',
-        caption: 'Main auditorium space'
-      },
-      {
-        url: getImagePath('/images/projects/bunditpatanasilpa-interior2.jpg'),
-        alt: 'Bunditpatanasilpa Institute Auditorium stage',
-        caption: 'Performance stage area'
       }
     ],
     
@@ -447,24 +437,9 @@ export const projects: ProjectData[] = [
     
     images: [
       {
-        url: getImagePath('/images/projects/somdech-phra-nangchao-sirikit-hospital-1.jpg'),
+        url: getImagePath('/images/projects/phra-nangchao-sirikit-hospital/phra-nangchao-sirikit-hospital.jpg'),
         alt: 'Somdech Phra Nangchao Sirikit Hospital exterior',
         caption: 'Modern healthcare facility'
-      },
-      {
-        url: getImagePath('/images/projects/somdech-phra-nangchao-sirikit-hospital-2.jpg'),
-        alt: 'Somdech Phra Nangchao Sirikit Hospital lobby',
-        caption: 'Patient-friendly lobby design'
-      },
-      {
-        url: getImagePath('/images/projects/somdech-phra-nangchao-sirikit-hospital-3.jpg'),
-        alt: 'Somdech Phra Nangchao Sirikit Hospital ward',
-        caption: 'Modern patient care areas'
-      },
-      {
-        url: getImagePath('/images/projects/somdech-phra-nangchao-sirikit-hospital-4.jpg'),
-        alt: 'Somdech Phra Nangchao Sirikit Hospital garden',
-        caption: 'Healing garden spaces'
       }
     ],
     
@@ -625,20 +600,16 @@ export const projects: ProjectData[] = [
     
     images: [
       {
-        url: getImagePath('/images/projects/hh-park-residence-1.jpg'),
+        url: getImagePath('/images/projects/hh-park-residence-residential/hh-park-residence-1.jpg'),
         alt: 'HH Park Residence exterior'
       },
       {
-        url: getImagePath('/images/projects/hh-park-residence-2.jpg'),
+        url: getImagePath('/images/projects/hh-park-residence-residential/hh-park-residence-2.jpg'),
         alt: 'HH Park Residence common area'
       },
       {
-        url: getImagePath('/images/projects/hh-park-residence-3.jpg'),
+        url: getImagePath('/images/projects/hh-park-residence-residential/hh-park-residence-3.jpg'),
         alt: 'HH Park Residence garden'
-      },
-      {
-        url: getImagePath('/images/projects/hh-park-residence-4.jpg'),
-        alt: 'HH Park Residence amenities'
       }
     ]
   },
@@ -679,20 +650,12 @@ export const projects: ProjectData[] = [
     
     images: [
       {
-        url: getImagePath('/images/projects/vivo-executive-apartment-1.jpg'),
+        url: getImagePath('/images/projects/vivo-executive-apartment/vivo-executive-apartment-1.jpg'),
         alt: 'Vivo Executive Apartment exterior'
       },
       {
-        url: getImagePath('/images/projects/vivo-executive-apartment-2.jpg'),
+        url: getImagePath('/images/projects/vivo-executive-apartment/vivo-executive-apartment-2.jpg'),
         alt: 'Vivo Executive Apartment lobby'
-      },
-      {
-        url: getImagePath('/images/projects/vivo-executive-apartment-3.jpg'),
-        alt: 'Vivo Executive Apartment unit'
-      },
-      {
-        url: getImagePath('/images/projects/vivo-executive-apartment-4.jpg'),
-        alt: 'Vivo Executive Apartment amenities'
       }
     ]
   },
@@ -708,20 +671,16 @@ export const projects: ProjectData[] = [
     
     images: [
       {
-        url: getImagePath('/images/projects/zen-village-1.jpg'),
+        url: getImagePath('/images/projects/zen-village-master-plan/zen-village-boat-station.jpg'),
         alt: 'Zen Village exterior'
       },
       {
-        url: getImagePath('/images/projects/zen-village-2.jpg'),
+        url: getImagePath('/images/projects/zen-village-master-plan/zen-village-boutique-square.jpg'),
         alt: 'Zen Village garden'
       },
       {
-        url: getImagePath('/images/projects/zen-village-3.jpg'),
+        url: getImagePath('/images/projects/zen-village-master-plan/zen-village-market.jpg'),
         alt: 'Zen Village common area'
-      },
-      {
-        url: getImagePath('/images/projects/zen-village-4.jpg'),
-        alt: 'Zen Village amenities'
       }
     ]
   },
@@ -737,20 +696,16 @@ export const projects: ProjectData[] = [
     
     images: [
       {
-        url: getImagePath('/images/projects/eec-silicon-technology-park-1.jpg'),
+        url: getImagePath('/images/projects/eec-silicon-technology-park-master-planning/eec-silicon-tech-park-view1.jpg'),
         alt: 'EEC Silicon Technology Park master plan'
       },
       {
-        url: getImagePath('/images/projects/eec-silicon-technology-park-2.jpg'),
+        url: getImagePath('/images/projects/eec-silicon-technology-park-master-planning/eec-silicon-tech-park-view2.jpg'),
         alt: 'EEC Silicon Technology Park facilities'
       },
       {
-        url: getImagePath('/images/projects/eec-silicon-technology-park-3.jpg'),
+        url: getImagePath('/images/projects/eec-silicon-technology-park-master-planning/eec-silicon-tech-park-innovation-center.jpg'),
         alt: 'EEC Silicon Technology Park infrastructure'
-      },
-      {
-        url: getImagePath('/images/projects/eec-silicon-technology-park-4.jpg'),
-        alt: 'EEC Silicon Technology Park development'
       }
     ]
   },
@@ -766,20 +721,12 @@ export const projects: ProjectData[] = [
     
     images: [
       {
-        url: getImagePath('/images/projects/geo-valley-apartment-master-plan-1.jpg'),
+        url: getImagePath('/images/projects/geo-valley-apartment-master-plan/geo-valley-apartment-1.jpg'),
         alt: 'Geo Valley Apartment Master Plan overview'
       },
       {
-        url: getImagePath('/images/projects/geo-valley-apartment-master-plan-2.jpg'),
+        url: getImagePath('/images/projects/geo-valley-apartment-master-plan/geo-valley-apartment-2.jpg'),
         alt: 'Geo Valley Apartment Master Plan layout'
-      },
-      {
-        url: getImagePath('/images/projects/geo-valley-apartment-master-plan-3.jpg'),
-        alt: 'Geo Valley Apartment Master Plan facilities'
-      },
-      {
-        url: getImagePath('/images/projects/geo-valley-apartment-master-plan-4.jpg'),
-        alt: 'Geo Valley Apartment Master Plan amenities'
       }
     ]
   },
@@ -795,20 +742,8 @@ export const projects: ProjectData[] = [
     
     images: [
       {
-        url: getImagePath('/images/projects/mahachai-airport-luxe-city-master-plan-1.jpg'),
+        url: getImagePath('/images/projects/mahachai-airport-luxe-city-master-planning/mahachai-airport-luxe-city.jpg'),
         alt: 'Mahachai Airport Luxe City Master Plan overview'
-      },
-      {
-        url: getImagePath('/images/projects/mahachai-airport-luxe-city-master-plan-2.jpg'),
-        alt: 'Mahachai Airport Luxe City Master Plan layout'
-      },
-      {
-        url: getImagePath('/images/projects/mahachai-airport-luxe-city-master-plan-3.jpg'),
-        alt: 'Mahachai Airport Luxe City Master Plan facilities'
-      },
-      {
-        url: getImagePath('/images/projects/mahachai-airport-luxe-city-master-plan-4.jpg'),
-        alt: 'Mahachai Airport Luxe City Master Plan development'
       }
     ]
   },
@@ -824,20 +759,16 @@ export const projects: ProjectData[] = [
     
     images: [
       {
-        url: getImagePath('/images/projects/maintenance-repair-operation-u-tapao-airport-1.jpg'),
+        url: getImagePath('/images/projects/maintenance-repair-operation-u-tapao-airport-aviation/maintenance-repair-operation-u-tapao-1.jpg'),
         alt: 'Maintenance Repair Operation U-Tapao Airport facility'
       },
       {
-        url: getImagePath('/images/projects/maintenance-repair-operation-u-tapao-airport-2.jpg'),
+        url: getImagePath('/images/projects/maintenance-repair-operation-u-tapao-airport-aviation/maintenance-repair-operation-u-tapao-2.jpg'),
         alt: 'Maintenance Repair Operation U-Tapao Airport hangar'
       },
       {
-        url: getImagePath('/images/projects/maintenance-repair-operation-u-tapao-airport-3.jpg'),
+        url: getImagePath('/images/projects/maintenance-repair-operation-u-tapao-airport-aviation/maintenance-repair-operation-u-tapao-3.jpg'),
         alt: 'Maintenance Repair Operation U-Tapao Airport workshop'
-      },
-      {
-        url: getImagePath('/images/projects/maintenance-repair-operation-u-tapao-airport-4.jpg'),
-        alt: 'Maintenance Repair Operation U-Tapao Airport operations'
       }
     ]
   },
@@ -853,20 +784,12 @@ export const projects: ProjectData[] = [
     
     images: [
       {
-        url: getImagePath('/images/projects/service-apartment-selangor-malaysia-1.jpg'),
+        url: getImagePath('/images/projects/service-apartment-selangor-malaysia/service-apartment-selangor-1.jpg'),
         alt: 'Service Apartment Selangor Malaysia exterior'
       },
       {
-        url: getImagePath('/images/projects/service-apartment-selangor-malaysia-2.jpg'),
+        url: getImagePath('/images/projects/service-apartment-selangor-malaysia/service-apartment-selangor-2.jpg'),
         alt: 'Service Apartment Selangor Malaysia lobby'
-      },
-      {
-        url: getImagePath('/images/projects/service-apartment-selangor-malaysia-3.jpg'),
-        alt: 'Service Apartment Selangor Malaysia unit'
-      },
-      {
-        url: getImagePath('/images/projects/service-apartment-selangor-malaysia-4.jpg'),
-        alt: 'Service Apartment Selangor Malaysia amenities'
       }
     ]
   },
