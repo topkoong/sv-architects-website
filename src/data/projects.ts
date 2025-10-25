@@ -853,19 +853,19 @@ export const projects: ProjectData[] = [
     
     images: [
       {
-        url: getImagePath('/images/projects/phuket-condominium-interior-design/'),
+        url: getImagePath('/images/projects/phuket-condominium-interior-design/phuket-condominium-interior-design-1.jpg'),
         alt: 'Phuket Condominium Interior Design living room'
       },
       {
-        url: getImagePath('/images/projects/phuket-condominium-interior-design/'),
+        url: getImagePath('/images/projects/phuket-condominium-interior-design/phuket-condominium-interior-design-2.jpg'),
         alt: 'Phuket Condominium Interior Design bedroom'
       },
       {
-        url: getImagePath('/images/projects/phuket-condominium-interior-design/'),
+        url: getImagePath('/images/projects/phuket-condominium-interior-design/phuket-condominium-interior-design-3.jpg'),
         alt: 'Phuket Condominium Interior Design kitchen'
       },
       {
-        url: getImagePath('/images/projects/phuket-condominium-interior-design/'),
+        url: getImagePath('/images/projects/phuket-condominium-interior-design/phuket-condominium-interior-design-4.jpg'),
         alt: 'Phuket Condominium Interior Design bathroom'
       }
     ]
@@ -911,19 +911,19 @@ export const projects: ProjectData[] = [
     
     images: [
       {
-        url: getImagePath('/images/projects/baan-huahin-interior-design/'),
+        url: getImagePath('/images/projects/baan-huahin-interior-design/baan-huahin-interior-1.jpg'),
         alt: 'Baan Huahin Interior Design living room'
       },
       {
-        url: getImagePath('/images/projects/baan-huahin-interior-design/'),
+        url: getImagePath('/images/projects/baan-huahin-interior-design/baan-huahin-interior-2.jpg'),
         alt: 'Baan Huahin Interior Design bedroom'
       },
       {
-        url: getImagePath('/images/projects/baan-huahin-interior-design/'),
+        url: getImagePath('/images/projects/baan-huahin-interior-design/baan-huahin-interior-3.jpg'),
         alt: 'Baan Huahin Interior Design kitchen'
       },
       {
-        url: getImagePath('/images/projects/baan-huahin-interior-design/'),
+        url: getImagePath('/images/projects/baan-huahin-interior-design/baan-huahin-interior-4.jpg'),
         alt: 'Baan Huahin Interior Design bathroom'
       }
     ]
@@ -940,19 +940,19 @@ export const projects: ProjectData[] = [
     
     images: [
       {
-        url: getImagePath('/images/projects/hi-tech-sandbox-interior-design/'),
+        url: getImagePath('/images/projects/hi-tech-sandbox-interior-design/hi-tech-sandbox-executive.jpg'),
         alt: 'Hi-Tech Sandbox Interior Design workspace'
       },
       {
-        url: getImagePath('/images/projects/hi-tech-sandbox-interior-design/'),
+        url: getImagePath('/images/projects/hi-tech-sandbox-interior-design/hi-tech-sandbox-interior.jpg'),
         alt: 'Hi-Tech Sandbox Interior Design meeting room'
       },
       {
-        url: getImagePath('/images/projects/hi-tech-sandbox-interior-design/'),
+        url: getImagePath('/images/projects/hi-tech-sandbox-interior-design/hi-tech-sandbox-main.jpg'),
         alt: 'Hi-Tech Sandbox Interior Design common area'
       },
       {
-        url: getImagePath('/images/projects/hi-tech-sandbox-interior-design/'),
+        url: getImagePath('/images/projects/hi-tech-sandbox-interior-design/hi-tech-sandbox-office.jpg'),
         alt: 'Hi-Tech Sandbox Interior Design technology area'
       }
     ]
