@@ -158,18 +158,21 @@ const HeroSection = () => {
  */
 const LeadershipSection = ({ teamMembers }: { teamMembers: any[] }) => {
   return (
-    <section className="py-16 md:py-20 lg:py-24">
+    <section className="py-16 md:py-20 lg:py-24 bg-gradient-to-br from-gray-50 to-white">
       <div className="container-responsive">
         {/* Section Header */}
         <motion.div
-          variants={fadeIn} // Apply fade-in animation
-          initial="hidden" // Start hidden
-          whileInView="visible" // Animate when in viewport
-          viewport={{ once: true }} // Only animate once
-          className="text-center mb-12 md:mb-16"
+          variants={fadeIn}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="text-center mb-16 md:mb-20"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-black">Leadership Team</h2>
-          <p className="body-lg max-w-3xl mx-auto text-text-secondary">
+          <div className="inline-flex items-center px-4 py-2 bg-gray-100 rounded-full mb-6">
+            <span className="text-sm font-semibold text-gray-700 uppercase tracking-wide">Leadership</span>
+          </div>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-gray-900">Leadership Team</h2>
+          <p className="text-xl max-w-3xl mx-auto text-gray-600 leading-relaxed">
             Our leadership team brings together decades of experience and expertise 
             to guide our architectural vision and ensure exceptional project delivery.
           </p>
@@ -177,93 +180,52 @@ const LeadershipSection = ({ teamMembers }: { teamMembers: any[] }) => {
 
         {/* Leadership Grid */}
         <motion.div
-          variants={staggerContainer} // Apply stagger animation
-          initial="hidden" // Start hidden
-          whileInView="visible" // Animate when in viewport
-          viewport={{ once: true }} // Only animate once
-          className="
-            grid // Grid layout
-            grid-cols-1 // 1 column on mobile
-            md:grid-cols-2 // 2 columns on tablet
-            lg:grid-cols-3 // 3 columns on desktop
-            gap-8 // 32px gap
-          "
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12"
         >
           {teamMembers.map((member) => (
             <motion.article
               key={member.id}
-              variants={slideUp} // Apply slide-up animation
-              className="
-                group // Group for hover effects
-                bg-white // Clean white background
-                rounded-3xl // More rounded corners
-                shadow-lg // Elegant shadow
-                hover:shadow-2xl // Enhanced shadow on hover
-                transition-all // Smooth transitions
-                duration-300 // 300ms transition
-                hover:-translate-y-2 // Lift on hover
-                border // Subtle border
-                border-gray-100 // Light border
-                overflow-hidden // Hide overflow
-              "
+              variants={slideUp}
+              className="group bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 border border-gray-100 overflow-hidden"
             >
               {/* Team Member Photo */}
-              <div className="
-                relative // Position context
-                aspect-square // Square aspect ratio for circular images
-                mx-auto // Center horizontally
-                mb-6 // 24px bottom margin
-                w-32 // Smaller, more elegant size
-                rounded-full // Circular
-                overflow-hidden // Hide overflow
-                shadow-xl // Enhanced shadow
-                ring-4 // Ring border
-                ring-white // White ring
-                group-hover:ring-blue-100 // Blue ring on hover
-                transition-all // Smooth transitions
-                duration-300 // 300ms duration
-              ">
+              <div className="relative aspect-square mx-auto mb-8 w-40 rounded-full overflow-hidden shadow-2xl ring-4 ring-white group-hover:ring-gray-200 transition-all duration-500">
                 <Image
                   src={member.image || ''}
                   alt={`${member.fullName} - ${member.title}`}
-                  className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500"
+                  className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700"
                   fill
                   style={{ objectFit: 'cover' }}
                   unoptimized
+                  priority={true}
                 />
               </div>
 
               {/* Team Member Info */}
-              <div className="px-8 pt-4 pb-8">
-                <h3 className="text-xl font-bold mb-2 text-black group-hover:text-blue-600 transition-colors duration-200">
+              <div className="px-8 pt-4 pb-8 text-center">
+                <h3 className="text-2xl font-bold mb-3 text-gray-900 group-hover:text-gray-700 transition-colors duration-300">
                   {member.fullName}
                 </h3>
                 
-                <p className="text-base mb-3 text-gray-600 font-semibold">
+                <p className="text-lg mb-4 text-gray-600 font-semibold">
                   {member.title}
                 </p>
 
-                <p className="text-sm text-gray-500 mb-6 leading-relaxed">
+                <p className="text-gray-500 mb-8 leading-relaxed">
                   {member.shortBio}
                 </p>
 
                 {/* Key Skills */}
-                <div className="mb-6">
+                <div className="mb-8">
                   <div className="flex flex-wrap gap-2 justify-center">
                     {member.skills.slice(0, 3).map((skill: string, skillIndex: number) => (
                       <span 
                         key={skillIndex}
-                        className="
-                          px-3 // 12px horizontal padding
-                          py-1.5 // 6px vertical padding
-                          bg-blue-50 // Light blue background
-                          text-blue-700 // Blue text color
-                          rounded-full // Rounded pill
-                          text-xs // 12px font
-                          font-semibold // Semi-bold weight
-                          border // Border
-                          border-blue-200 // Light blue border
-                        "
+                        className="px-3 py-1.5 bg-gray-100 text-gray-700 rounded-full text-xs font-semibold border border-gray-200"
                       >
                         {skill}
                       </span>
@@ -273,29 +235,7 @@ const LeadershipSection = ({ teamMembers }: { teamMembers: any[] }) => {
 
                 <Link 
                   href={`/team-member/${member.slug}`}
-                  className="
-                    inline-flex // Inline flex
-                    items-center // Center vertically
-                    justify-center // Center horizontally
-                    w-full // Full width
-                    px-6 // 24px horizontal padding
-                    py-3 // 12px vertical padding
-                    bg-gradient-to-r // Gradient background
-                    from-blue-600 // Blue start
-                    to-blue-700 // Darker blue end
-                    text-white // White text
-                    font-semibold // Semi-bold
-                    text-sm // 14px font
-                    rounded-xl // Rounded corners
-                    shadow-lg // Shadow
-                    hover:shadow-xl // Enhanced shadow on hover
-                    hover:from-blue-700 // Darker gradient on hover
-                    hover:to-blue-800 // Even darker on hover
-                    transition-all // Smooth transitions
-                    duration-300 // 300ms duration
-                    group-hover:scale-105 // Scale on hover
-                    transform // Enable transforms
-                  "
+                  className="inline-flex items-center justify-center w-full px-8 py-4 bg-gray-900 text-white font-semibold text-sm rounded-xl shadow-lg hover:shadow-xl hover:bg-gray-800 transition-all duration-300 group-hover:scale-105 transform"
                 >
                   View Profile
                   <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -320,17 +260,20 @@ const LeadershipSection = ({ teamMembers }: { teamMembers: any[] }) => {
  */
 const AllTeamSection = ({ teamMembers }: { teamMembers: any[] }) => {
   return (
-    <section className="py-16 md:py-20 lg:py-24 bg-gray-50">
+    <section className="py-16 md:py-20 lg:py-24 bg-white">
       <div className="container-responsive">
         {/* Section Header */}
         <motion.div
-          variants={fadeIn} // Apply fade-in animation
-          initial="hidden" // Start hidden
-          whileInView="visible" // Animate when in viewport
-          viewport={{ once: true }} // Only animate once
-          className="text-center mb-12 md:mb-16"
+          variants={fadeIn}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="text-center mb-16 md:mb-20"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-black">ALL TEAM MEMBERS</h2>
+          <div className="inline-flex items-center px-4 py-2 bg-gray-100 rounded-full mb-6">
+            <span className="text-sm font-semibold text-gray-700 uppercase tracking-wide">All Members</span>
+          </div>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-gray-900">All Team Members</h2>
           <p className="text-xl max-w-3xl mx-auto text-gray-600 leading-relaxed">
             Get to know each member of our talented team and their unique contributions 
             to our architectural projects and company culture.
@@ -339,116 +282,63 @@ const AllTeamSection = ({ teamMembers }: { teamMembers: any[] }) => {
 
         {/* Team Grid */}
         <motion.div
-          variants={staggerContainer} // Apply stagger animation
-          initial="hidden" // Start hidden
-          whileInView="visible" // Animate when in viewport
-          viewport={{ once: true }} // Only animate once
-          className="
-            grid // Grid layout
-            grid-cols-1 // 1 column on mobile
-            md:grid-cols-2 // 2 columns on tablet
-            lg:grid-cols-3 // 3 columns on desktop
-            gap-8 // 32px gap
-          "
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8"
         >
           {teamMembers.map((member) => (
             <motion.article
               key={member.id}
-              variants={slideUp} // Apply slide-up animation
-              className="
-                group // Group for hover effects
-                card // Card styling
-                hover:shadow-elegant // Elegant shadow on hover
-                transition-shadow // Smooth shadow transition
-                duration-300 // 300ms transition
-                hover-lift // Lift on hover
-              "
+              variants={slideUp}
+              className="group bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-400 hover:-translate-y-2 border border-gray-100 overflow-hidden"
             >
               {/* Team Member Photo */}
-              <div className="
-                relative // Position context
-                aspect-[4/3] // 4:3 aspect ratio
-                overflow-hidden // Hide overflow
-                rounded-t-xl // Rounded top corners
-              ">
+              <div className="relative aspect-square overflow-hidden">
                 <Image
                   src={member.image || ''}
                   alt={`${member.fullName} - ${member.title}`}
-                  className="w-full h-full object-cover object-[center_top] group-hover:scale-105 transition-transform duration-500"
+                  className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
                   fill
                   style={{ objectFit: 'cover' }}
                   unoptimized
                 />
                 
-                {/* Overlay */}
-                <div className="
-                  absolute // Position over image
-                  inset-0 // Cover entire image
-                  bg-gradient-to-t // Gradient top to bottom
-                  from-black/60 // Black with 60% opacity at bottom
-                  to-transparent // Transparent at top
-                " />
+                {/* Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 
                 {/* Position Badge */}
-                <div className="
-                  absolute // Position absolute
-                  top-4 // 16px from top
-                  right-4 // 16px from right
-                  px-3 // 12px horizontal padding
-                  py-1 // 4px vertical padding
-                  bg-white/90 // Semi-transparent white background
-                  backdrop-blur-sm // Backdrop blur effect
-                  rounded-full // Rounded pill
-                  text-xs // Extra small text
-                  font-semibold // Semi-bold
-                  text-text-primary // Primary text color
-                ">
+                <div className="absolute top-3 right-3 px-2 py-1 bg-white/95 backdrop-blur-sm rounded-full text-xs font-semibold text-gray-800 shadow-sm">
                   {member.title}
                 </div>
               </div>
 
               {/* Content */}
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-2 text-black group-hover:text-black transition-colors duration-200">
+                <h3 className="text-lg font-bold mb-2 text-gray-900 group-hover:text-gray-700 transition-colors duration-200">
                   {member.fullName}
                 </h3>
                 
-                <p className="body-sm mb-4 text-text-secondary">
+                <p className="text-sm text-gray-600 mb-4 leading-relaxed line-clamp-3">
                   {member.shortBio}
                 </p>
 
-                {/* Experience and Skills */}
-                <div className="space-y-3">
-                  <div className="flex items-center text-sm text-text-tertiary">
-                    <svg className="w-4 h-4 mr-2 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                    {member.experience.years}+ years experience
-                  </div>
-                  
-                  <div className="flex items-center text-sm text-text-tertiary">
-                    <svg className="w-4 h-4 mr-2 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
-                    {member.experience.areas.slice(0, 2).join(', ')}
-                  </div>
+                {/* Experience */}
+                <div className="flex items-center text-sm text-gray-500 mb-4">
+                  <svg className="w-4 h-4 mr-2 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  {member.experience.years}+ years experience
                 </div>
 
                 {/* Key Skills */}
-                <div className="mt-4 mb-6">
-                  <div className="flex flex-wrap gap-2">
-                    {member.skills.slice(0, 4).map((skill: string, skillIndex: number) => (
+                <div className="mb-6">
+                  <div className="flex flex-wrap gap-1.5">
+                    {member.skills.slice(0, 3).map((skill: string, skillIndex: number) => (
                       <span 
                         key={skillIndex}
-                        className="
-                          px-2 // 8px horizontal padding
-                          py-1 // 4px vertical padding
-                          bg-neutral-100 // Light gray background
-                          text-neutral-700 // Dark gray text
-                          rounded-full // Rounded pill
-                          text-xs // Extra small text
-                        "
+                        className="px-2 py-1 bg-gray-100 text-gray-700 rounded-md text-xs font-medium"
                       >
                         {skill}
                       </span>
@@ -458,18 +348,10 @@ const AllTeamSection = ({ teamMembers }: { teamMembers: any[] }) => {
 
                 <Link 
                   href={`/team-member/${member.slug}`}
-                  className="
-                    inline-flex // Inline flex
-                    items-center // Center vertically
-                    text-sm // 14px
-                    font-semibold // Semi-bold
-                    text-primary-600 // Blue text
-                    hover:text-primary-700 // Darker blue on hover
-                    transition-colors // Smooth transition
-                  "
+                  className="inline-flex items-center justify-center w-full px-4 py-3 bg-gray-900 text-white font-semibold text-sm rounded-lg shadow-md hover:shadow-lg hover:bg-gray-800 transition-all duration-300 group-hover:scale-105 transform"
                 >
                   View Profile
-                  <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                 </Link>
@@ -514,17 +396,20 @@ const CultureSection = () => {
   ];
 
   return (
-    <section className="py-16 md:py-20 lg:py-24">
+    <section className="py-16 md:py-20 lg:py-24 bg-gradient-to-br from-gray-50 to-white">
       <div className="container-responsive">
         {/* Section Header */}
         <motion.div
-          variants={fadeIn} // Apply fade-in animation
-          initial="hidden" // Start hidden
-          whileInView="visible" // Animate when in viewport
-          viewport={{ once: true }} // Only animate once
-          className="text-center mb-12 md:mb-16"
+          variants={fadeIn}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="text-center mb-16 md:mb-20"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-black">OUR CULTURE & VALUES</h2>
+          <div className="inline-flex items-center px-4 py-2 bg-gray-100 rounded-full mb-6">
+            <span className="text-sm font-semibold text-gray-700 uppercase tracking-wide">Culture</span>
+          </div>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-gray-900">Our Culture & Values</h2>
           <p className="text-xl max-w-3xl mx-auto text-gray-600 leading-relaxed">
             Our team is united by shared values that guide our work and shape our 
             company culture, ensuring we deliver exceptional results for every client.
@@ -533,60 +418,46 @@ const CultureSection = () => {
 
         {/* Values Grid */}
         <motion.div
-          variants={staggerContainer} // Apply stagger animation
-          initial="hidden" // Start hidden
-          whileInView="visible" // Animate when in viewport
-          viewport={{ once: true }} // Only animate once
-          className="
-            grid // Grid layout
-            grid-cols-1 // 1 column on mobile
-            md:grid-cols-2 // 2 columns on tablet
-            lg:grid-cols-4 // 4 columns on desktop
-            gap-8 // 32px gap
-          "
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
         >
           {values.map((value, index) => (
             <motion.div
               key={index}
-              variants={slideUp} // Apply slide-up animation
-              className="
-                card // Card styling
-                p-8 // 32px padding
-                text-center // Center text
-                hover:shadow-elegant // Elegant shadow on hover
-                transition-shadow // Smooth shadow transition
-                duration-300 // 300ms transition
-                hover-lift // Lift on hover
-              "
+              variants={slideUp}
+              className="group bg-white rounded-2xl p-8 text-center hover:shadow-xl transition-all duration-400 hover:-translate-y-2 border border-gray-100"
             >
               {/* Value Icon */}
-              <div className="text-4xl mb-4">{value.icon}</div>
+              <div className="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">{value.icon}</div>
               
               {/* Value Title */}
-              <h3 className="text-xl font-bold mb-4 text-black">{value.title}</h3>
+              <h3 className="text-xl font-bold mb-4 text-gray-900">{value.title}</h3>
               
               {/* Value Description */}
-              <p className="body-sm text-text-secondary">{value.description}</p>
+              <p className="text-gray-600 leading-relaxed">{value.description}</p>
             </motion.div>
           ))}
         </motion.div>
 
         {/* Call to Action */}
         <motion.div
-          variants={fadeIn} // Apply fade-in animation
-          initial="hidden" // Start hidden
-          whileInView="visible" // Animate when in viewport
-          viewport={{ once: true }} // Only animate once
+          variants={fadeIn}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
           className="text-center mt-16"
         >
-          <h3 className="text-2xl font-bold mb-4 text-black">Join Our Team</h3>
-          <p className="body-lg mb-8 text-text-secondary max-w-2xl mx-auto">
+          <h3 className="text-3xl font-bold mb-4 text-gray-900">Join Our Team</h3>
+          <p className="text-xl mb-8 text-gray-600 max-w-2xl mx-auto leading-relaxed">
             We're always looking for talented architects, designers, and project managers 
             who share our passion for innovative design and sustainable architecture.
           </p>
           <Link
             href="/contact"
-            className="btn-primary hover-lift hover-glow"
+            className="inline-flex items-center px-8 py-4 bg-gray-900 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl hover:bg-gray-800 transition-all duration-300 transform hover:-translate-y-1"
           >
             View Open Positions
             <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
