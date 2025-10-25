@@ -37,9 +37,9 @@
 // Import team data and types
 import { getAllTeamMemberSlugs, getTeamMemberBySlug } from '@/data/team';
 
+import Image from 'next/image';
 // Import Next.js components
 import Link from 'next/link';
-import Image from 'next/image';
 // Import metadata types
 import type { Metadata } from 'next';
 // Import custom components
@@ -286,60 +286,99 @@ const HeroSection = ({ member }: { member: TeamMember }) => {
   return (
     <section className="
       relative // Position context
-      h-[60vh] // 60% viewport height
-      bg-gradient-to-br // Gradient background
-      from-neutral-900 // Dark gray start
-      to-neutral-800 // Darker gray end
+      bg-white // Clean white background
       overflow-hidden // Hide overflow
     ">
-      {/* Background image with overlay */}
-      <div className="absolute inset-0">
-        <Image
-          src={member.image || ''}
-          alt={`${member.fullName} - ${member.title}`}
-          className="w-full h-full object-cover object-[center_top] opacity-30"
-          fill
-          style={{ objectFit: 'cover' }}
-          unoptimized
-        />
-      </div>
-      
-      {/* Text content overlaid on image */}
-      <div className="
-        absolute // Position absolute
-        inset-0 // Cover entire section
-        flex // Flex container
-        items-center // Center vertically
-        justify-center // Center horizontally
-      ">
-        <div
-          className="text-center text-white"
-        >
-          {/* Team member name */}
-          <h1 className="heading-xl mb-4">
-            {member.fullName}
-          </h1>
+      <div className="container-responsive py-12 md:py-16 lg:py-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
           
-          {/* Team member position */}
-          <p className="body-lg text-neutral-300 mb-6">
-            {member.title}
-          </p>
-          
-          {/* Years of experience */}
+          {/* Team Member Photo - Full Image Display */}
           <div className="
-            inline-flex // Inline flex
-            items-center // Center items
-            px-6 // 24px horizontal padding
-            py-3 // 12px vertical padding
-            bg-white/10 // Semi-transparent white background
-            backdrop-blur-sm // Backdrop blur effect
-            rounded-full // Rounded pill shape
-            border // Border
-            border-white/20 // Semi-transparent white border
+            relative // Position context
+            aspect-square // Square aspect ratio
+            max-w-md // Maximum width
+            mx-auto // Center horizontally
+            lg:mx-0 // Left align on desktop
+            rounded-3xl // More rounded corners
+            overflow-hidden // Hide overflow
+            shadow-2xl // Large shadow
+            bg-gray-100 // Light background
+            ring-1 // Subtle ring
+            ring-gray-200 // Light ring color
           ">
-            <span className="text-sm font-semibold">
-              {member.experience.years}+ Years Experience
-            </span>
+            <Image
+              src={member.image || ''}
+              alt={`${member.fullName} - ${member.title}`}
+              className="w-full h-full object-cover object-center"
+              fill
+              style={{ objectFit: 'cover' }}
+              unoptimized
+            />
+          </div>
+
+          {/* Team Member Information */}
+          <div className="text-center lg:text-left space-y-6">
+            {/* Name */}
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black leading-tight">
+              {member.fullName}
+            </h1>
+            
+            {/* Title */}
+            <p className="text-lg md:text-xl text-gray-600 font-semibold">
+              {member.title}
+            </p>
+            
+            {/* Badges */}
+            <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
+              <div className="inline-flex items-center px-4 py-2 bg-gray-100 rounded-full ring-1 ring-gray-200">
+                <span className="text-sm font-medium text-gray-700">
+                  {member.department}
+                </span>
+              </div>
+              
+              <div className="inline-flex items-center px-4 py-2 bg-blue-50 rounded-full ring-1 ring-blue-200">
+                <span className="text-sm font-medium text-blue-700">
+                  {member.experience.years}+ Years Experience
+                </span>
+              </div>
+            </div>
+            
+            {/* Contact Info */}
+            <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
+              <a 
+                href={`mailto:${member.email}`}
+                className="inline-flex items-center px-5 py-2.5 bg-black text-white font-semibold rounded-lg hover:bg-gray-800 transition-colors duration-200 text-sm"
+              >
+                <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                Contact
+              </a>
+              
+              <a 
+                href={`tel:${member.phone}`}
+                className="inline-flex items-center px-5 py-2.5 border border-gray-300 text-gray-700 font-semibold rounded-lg hover:border-gray-400 hover:bg-gray-50 transition-colors duration-200 text-sm"
+              >
+                <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+                Call
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        {/* Biography Section - Moved up and integrated */}
+        <div className="mt-12 lg:mt-16">
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-gray-50 rounded-2xl p-8 lg:p-10 ring-1 ring-gray-200">
+              <h2 className="text-2xl font-bold text-black mb-4 text-center lg:text-left">
+                About {member.firstName}
+              </h2>
+              <p className="text-lg text-gray-600 leading-relaxed text-center lg:text-left">
+                {member.bio}
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -356,24 +395,8 @@ const HeroSection = ({ member }: { member: TeamMember }) => {
  */
 const ContentSection = ({ member }: { member: TeamMember }) => {
   return (
-    <section className="py-16 px-4 max-w-4xl mx-auto">
-      <div
-         // Apply stagger animation
-         // Start hidden
-         // Animate when in viewport
-        className="space-y-16" // 64px vertical spacing
-      >
-        {/* Biography Section */}
-        <div >
-          <h2 className="heading-md mb-6 text-text-primary">
-            Biography
-          </h2>
-          <div className="card p-8">
-            <p className="body-lg text-text-secondary leading-relaxed">
-              {member.bio}
-            </p>
-          </div>
-        </div>
+    <section className="py-12 px-4 max-w-4xl mx-auto">
+      <div className="space-y-12">
 
         {/* Education Section */}
         <div >
@@ -673,27 +696,22 @@ const ContentSection = ({ member }: { member: TeamMember }) => {
  */
 const ContactSection = ({ member }: { member: TeamMember }) => {
   return (
-    <section className="py-16 bg-neutral-50">
+    <section className="py-12 bg-gray-50">
       <div className="container-responsive">
-        <div
-           // Apply stagger animation
-           // Start hidden
-           // Animate when in viewport
-          className="max-w-4xl mx-auto"
-        >
-          <div  className="text-center mb-12">
-            <h2 className="heading-md mb-4 text-text-primary">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl font-bold text-black mb-4">
               Get In Touch
             </h2>
-            <p className="body-lg text-text-secondary">
+            <p className="text-lg text-gray-600">
               Ready to discuss your project? Contact {member.firstName} directly or reach out to our team.
             </p>
           </div>
 
-          <div  className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Contact Information */}
-            <div className="card p-8">
-              <h3 className="heading-sm mb-6 text-text-primary">Contact Information</h3>
+            <div className="bg-white rounded-2xl p-6 ring-1 ring-gray-200">
+              <h3 className="text-xl font-bold text-black mb-4">Contact Information</h3>
               <div className="space-y-4">
                 <div className="flex items-center">
                   <svg className="w-5 h-5 text-primary-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -767,8 +785,8 @@ const ContactSection = ({ member }: { member: TeamMember }) => {
             </div>
 
             {/* Additional Information */}
-            <div className="card p-8">
-              <h3 className="heading-sm mb-6 text-text-primary">Additional Information</h3>
+            <div className="bg-white rounded-2xl p-6 ring-1 ring-gray-200">
+              <h3 className="text-xl font-bold text-black mb-4">Additional Information</h3>
               <div className="space-y-4">
                 {/* Languages */}
                 <div>
@@ -806,12 +824,15 @@ const ContactSection = ({ member }: { member: TeamMember }) => {
           </div>
 
           {/* Back to Team Button */}
-          <div  className="text-center mt-12">
+          <div className="text-center mt-8">
             <Link
               href="/team"
-              className="btn-secondary hover-lift"
+              className="inline-flex items-center px-6 py-3 bg-white text-gray-700 font-semibold rounded-lg border border-gray-300 hover:bg-gray-50 hover:border-gray-400 transition-colors duration-200"
             >
-              ← Back to Team
+              <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+              </svg>
+              Back to Team
             </Link>
           </div>
         </div>
