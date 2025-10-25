@@ -969,19 +969,19 @@ export const projects: ProjectData[] = [
     
     images: [
       {
-        url: getImagePath('/images/projects/innovation-center-interior-design/'),
+        url: getImagePath('/images/projects/innovation-center-interior-design/innovation-center-closeup.jpg'),
         alt: 'Innovation Center Interior Design workspace'
       },
       {
-        url: getImagePath('/images/projects/innovation-center-interior-design/'),
+        url: getImagePath('/images/projects/innovation-center-interior-design/innovation-center-hall.jpg'),
         alt: 'Innovation Center Interior Design meeting room'
       },
       {
-        url: getImagePath('/images/projects/innovation-center-interior-design/'),
+        url: getImagePath('/images/projects/innovation-center-interior-design/innovation-center-main.jpg'),
         alt: 'Innovation Center Interior Design common area'
       },
       {
-        url: getImagePath('/images/projects/innovation-center-interior-design/'),
+        url: getImagePath('/images/projects/innovation-center-interior-design/innovation-center-scene2.jpg'),
         alt: 'Innovation Center Interior Design collaboration space'
       }
     ]
