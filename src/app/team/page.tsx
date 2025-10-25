@@ -188,11 +188,10 @@ const LeadershipSection = ({ teamMembers }: { teamMembers: any[] }) => {
             <motion.article
               key={member.id}
               variants={slideUp}
-              className="group relative bg-gradient-to-br from-white via-gray-50 to-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-700 hover:-translate-y-4 border border-gray-200/50 overflow-hidden flex flex-col backdrop-blur-sm"
+              className="group relative bg-gradient-to-br from-white via-gray-50 to-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-700 hover:-translate-y-4 border border-gray-200/50 overflow-hidden flex flex-col"
             >
               {/* Team Member Photo */}
               <div className="relative aspect-square mx-auto mb-8 w-44 rounded-full overflow-hidden shadow-2xl ring-4 ring-white/80 group-hover:ring-purple-200/60 transition-all duration-700 group-hover:scale-105">
-                <div className="absolute inset-0 bg-gradient-to-br from-purple-50/20 to-gray-50/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
                 <Image
                   src={member.image || ''}
                   alt={`${member.fullName} - ${member.title}`}
@@ -205,13 +204,8 @@ const LeadershipSection = ({ teamMembers }: { teamMembers: any[] }) => {
               </div>
 
               {/* Team Member Info */}
-              <div className="px-8 pt-4 pb-8 text-center flex flex-col flex-grow relative">
-                {/* Subtle background pattern */}
-                <div className="absolute inset-0 opacity-5">
-                  <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-purple-100 to-gray-100 rounded-full blur-3xl"></div>
-                </div>
-                
-                <h3 className="text-2xl font-bold mb-3 text-gray-900 group-hover:text-purple-900 transition-colors duration-500 relative z-10">
+              <div className="px-8 pt-4 pb-8 text-center flex flex-col flex-grow">
+                <h3 className="text-2xl font-bold mb-3 text-gray-900 group-hover:text-purple-900 transition-colors duration-500">
                   {member.fullName}
                 </h3>
                 
@@ -224,7 +218,7 @@ const LeadershipSection = ({ teamMembers }: { teamMembers: any[] }) => {
                 </p>
 
                 {/* Key Skills */}
-                <div className="mb-8 flex-grow relative z-10">
+                <div className="mb-8 flex-grow">
                   <div className="flex flex-wrap gap-2 justify-center">
                     {member.skills.slice(0, 3).map((skill: string, skillIndex: number) => (
                       <span 
@@ -297,11 +291,10 @@ const AllTeamSection = ({ teamMembers }: { teamMembers: any[] }) => {
             <motion.article
               key={member.id}
               variants={slideUp}
-              className="group relative bg-gradient-to-br from-white via-gray-50 to-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-3 border border-gray-200/50 overflow-hidden flex flex-col backdrop-blur-sm"
+              className="group relative bg-gradient-to-br from-white via-gray-50 to-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-3 border border-gray-200/50 overflow-hidden flex flex-col"
             >
               {/* Team Member Photo */}
               <div className="relative aspect-square overflow-hidden group-hover:scale-105 transition-transform duration-500">
-                <div className="absolute inset-0 bg-gradient-to-br from-purple-50/10 to-gray-50/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
                 <Image
                   src={member.image || ''}
                   alt={`${member.fullName} - ${member.title}`}
@@ -321,13 +314,8 @@ const AllTeamSection = ({ teamMembers }: { teamMembers: any[] }) => {
               </div>
 
               {/* Content */}
-              <div className="p-6 flex flex-col flex-grow relative">
-                {/* Subtle background pattern */}
-                <div className="absolute inset-0 opacity-3">
-                  <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-purple-100 to-gray-100 rounded-full blur-2xl"></div>
-                </div>
-                
-                <h3 className="text-lg font-bold mb-2 text-gray-900 group-hover:text-purple-900 transition-colors duration-500 relative z-10">
+              <div className="p-6 flex flex-col flex-grow">
+                <h3 className="text-lg font-bold mb-2 text-gray-900 group-hover:text-purple-900 transition-colors duration-500">
                   {member.fullName}
                 </h3>
                 
@@ -344,7 +332,7 @@ const AllTeamSection = ({ teamMembers }: { teamMembers: any[] }) => {
                 </div>
 
                 {/* Key Skills */}
-                <div className="mb-6 flex-grow relative z-10">
+                <div className="mb-6 flex-grow">
                   <div className="flex flex-wrap gap-1.5">
                     {member.skills.slice(0, 3).map((skill: string, skillIndex: number) => (
                       <span 
