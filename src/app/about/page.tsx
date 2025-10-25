@@ -292,70 +292,92 @@ export default function AboutPage() {
       {/* ===== HERO SECTION ===== */}
       
       /**
-       * Hero section with company philosophy and background image
+       * Compact hero section with company philosophy
        * 
        * DESIGN FEATURES:
-       * - Full-height hero section with background image
-       * - Overlay for text readability
-       * - Responsive typography and spacing
+       * - Smaller, more focused hero section
+       * - Clean typography and spacing
        * - Professional monochrome color scheme
        * - Smooth animations on load
        */
-      <section className="relative h-[70vh] md:h-[80vh] lg:h-[90vh] overflow-hidden">
-        {/* Background image with overlay */}
-        <div className="absolute inset-0">
-          <Image
-            src={getImagePath('/images/about/DSC_4275-1.jpg')}
-            alt="SV Architects office and team environment"
-            fill
-            className="object-cover"
-            priority
-            unoptimized
-            onError={(e) => {
-              console.error('Hero image failed to load:', e);
-              // Fallback to a solid background if image fails
-              e.currentTarget.style.display = 'none';
-            }}
-          />
-          <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-black bg-opacity-70" />
+      <section className="relative py-16 md:py-20 lg:py-24 bg-gradient-to-br from-gray-50 to-white overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute inset-0 bg-[url('/images/patterns/architecture-pattern.svg')] bg-repeat" />
         </div>
-
-        {/* Hero content */}
-        <div className="relative z-10 flex items-center justify-center h-full">
-          <div className="container mx-auto px-4 text-center text-white">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
+        
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="max-w-4xl mx-auto"
+          >
+            {/* Company tagline */}
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-gray-900">
+              First Class Design
+            </h1>
+            
+            {/* Company philosophy */}
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="text-lg md:text-xl lg:text-2xl mb-8 leading-relaxed text-gray-600"
             >
-              {/* Company tagline */}
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
-                First Class Design
-              </h1>
-              
-              {/* Company philosophy */}
-              <div className="max-w-4xl mx-auto">
-                <motion.p
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.4 }}
-                  className="text-lg md:text-xl lg:text-2xl mb-8 leading-relaxed text-gray-100"
-                >
-                  We believe that creativity and innovation flourish through collaborative team efforts rather than individual work alone. With this philosophy, combined with the right environment, we attract many young, talented design enthusiasts who share this commitment to excellence.
-                </motion.p>
-                
-                {/* Company commitment */}
-                <motion.blockquote
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.6 }}
-                  className="text-xl md:text-2xl lg:text-3xl font-semibold italic text-white border-l-4 border-white pl-6"
-                >
-                  "SV is committed to design excellence and progressive innovation"
-                </motion.blockquote>
-              </div>
-            </motion.div>
-          </div>
+              We believe that creativity and innovation flourish through collaborative team efforts rather than individual work alone. With this philosophy, combined with the right environment, we attract many young, talented design enthusiasts who share this commitment to excellence.
+            </motion.p>
+            
+            {/* Company commitment */}
+            <motion.blockquote
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              className="text-xl md:text-2xl lg:text-3xl font-semibold italic text-gray-800 border-l-4 border-gray-800 pl-6"
+            >
+              "SV is committed to design excellence and progressive innovation"
+            </motion.blockquote>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ===== PROMINENT IMAGE SECTION ===== */}
+      
+      /**
+       * Prominent image display showcasing our office environment
+       * 
+       * DESIGN FEATURES:
+       * - Large, prominent image display
+       * - Clean, minimal design
+       * - Responsive layout
+       * - Professional presentation
+       */
+      <section className="py-8 md:py-12 bg-white">
+        <div className="container mx-auto px-4">
+          <motion.div
+            variants={fadeIn}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="max-w-6xl mx-auto"
+          >
+            <div className="relative aspect-[16/10] overflow-hidden rounded-2xl shadow-2xl ring-1 ring-gray-200">
+              <Image
+                src={getImagePath('/images/about/DSC_4275-1.jpg')}
+                alt="SV Architects modern office environment showcasing professional workspace and collaborative design area"
+                fill
+                className="object-cover"
+                priority
+                unoptimized
+                onError={(e) => {
+                  console.error('Hero image failed to load:', e);
+                  e.currentTarget.style.display = 'none';
+                }}
+              />
+              {/* Subtle overlay for text readability if needed */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
+            </div>
+          </motion.div>
         </div>
       </section>
 
