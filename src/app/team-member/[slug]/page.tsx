@@ -346,7 +346,7 @@ const HeroSection = ({ member }: { member: TeamMember }) => {
             {/* Contact Info */}
             <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
               <a 
-                href={`mailto:${member.email}`}
+                href={`mailto:${member.contact.email}`}
                 className="inline-flex items-center px-5 py-2.5 bg-black text-white font-semibold rounded-lg hover:bg-gray-800 transition-colors duration-200 text-sm"
               >
                 <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -356,7 +356,7 @@ const HeroSection = ({ member }: { member: TeamMember }) => {
               </a>
               
               <a 
-                href={`tel:${member.phone}`}
+                href={`tel:${member.contact.phone}`}
                 className="inline-flex items-center px-5 py-2.5 border border-gray-300 text-gray-700 font-semibold rounded-lg hover:border-gray-400 hover:bg-gray-50 transition-colors duration-200 text-sm"
               >
                 <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
