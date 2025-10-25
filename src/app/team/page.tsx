@@ -36,8 +36,6 @@
 import { fadeIn, slideUp, staggerContainer } from '@/lib/animations';
 // Import team data
 import { getAllTeamMembers, getLeadershipTeam } from '@/data/team';
-// Import image path helper
-import { getImagePath } from '@/config/site';
 
 // Import Next.js components
 import Link from 'next/link';
