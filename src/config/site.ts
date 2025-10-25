@@ -10,10 +10,9 @@
 /**
  * Base path for the site
  * Used for GitHub Pages deployment with repository name
+ * Always use base path since Next.js config has basePath set
  */
-export const BASE_PATH = process.env.NODE_ENV === 'production' 
-  ? '/sv-architects-website' 
-  : '';
+export const BASE_PATH = '/sv-architects-website';
 
 /**
  * Site metadata
