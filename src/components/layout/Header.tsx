@@ -293,12 +293,12 @@ export const Header = () => {
    */
   const toggleMobileMenu = useCallback(() => {
     // Debug logging for development (can be removed in production)
-    console.log('Toggle mobile menu clicked, current state:', isMobileMenuOpen);
+    console.log('Toggle mobile menu clicked');
     
     // Toggle mobile menu state using functional update
     // Functional update ensures we get the latest state value
     setIsMobileMenuOpen(prev => !prev);
-  }, [isMobileMenuOpen]); // Dependency on menu state for debug logging
+  }, []); // Empty dependency array - function never changes
 
   /**
    * Check if navigation link is currently active

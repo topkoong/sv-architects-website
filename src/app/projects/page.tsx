@@ -136,9 +136,13 @@ const projects: Project[] = [
       'Heritage integration design'
     ],
     images: {
-      thumbnail: '/sv-architects-website/images/projects/u-tapao-airport-new-terminal/u-tapao-airport-new-terminal.jpg',
+      thumbnail: '/sv-architects-website/images/projects/don-mueang-international-airport-terminal-3-aviation/IMG_2621.jpeg',
       gallery: [
-        '/sv-architects-website/images/projects/u-tapao-airport-new-terminal/u-tapao-airport-new-terminal.jpg'
+        '/sv-architects-website/images/projects/don-mueang-international-airport-terminal-3-aviation/IMG_2621.jpeg',
+        '/sv-architects-website/images/projects/don-mueang-international-airport-terminal-3-aviation/IMG_2622.jpeg',
+        '/sv-architects-website/images/projects/don-mueang-international-airport-terminal-3-aviation/IMG_2623.jpeg',
+        '/sv-architects-website/images/projects/don-mueang-international-airport-terminal-3-aviation/IMG_2624.jpeg',
+        '/sv-architects-website/images/projects/don-mueang-international-airport-terminal-3-aviation/IMG_2625.jpeg'
       ]
     },
     awards: ['Airport Design Excellence 2023'],
@@ -301,12 +305,12 @@ const projects: Project[] = [
       'Modern hospitality amenities'
     ],
     images: {
-      thumbnail: '/sv-architects-website/images/projects/chaopraya-mahanatee-hotel-1.jpg',
+      thumbnail: '/sv-architects-website/images/projects/chaopraya-mahanatee-hotel-hospitality/chaopraya-mahanatee-hotel-view10.jpg',
       gallery: [
-        '/sv-architects-website/images/projects/chaopraya-mahanatee-hotel-1.jpg',
-        '/sv-architects-website/images/projects/chaopraya-mahanatee-hotel-2.jpg',
-        '/sv-architects-website/images/projects/chaopraya-mahanatee-hotel-3.jpg',
-        '/sv-architects-website/images/projects/chaopraya-mahanatee-hotel-4.jpg'
+        '/sv-architects-website/images/projects/chaopraya-mahanatee-hotel-hospitality/chaopraya-mahanatee-hotel-view10.jpg',
+        '/sv-architects-website/images/projects/chaopraya-mahanatee-hotel-hospitality/chaopraya-mahanatee-hotel-pool.jpg',
+        '/sv-architects-website/images/projects/chaopraya-mahanatee-hotel-hospitality/chaopraya-mahanatee-hotel-river.jpg',
+        '/sv-architects-website/images/projects/chaopraya-mahanatee-hotel-hospitality/chaopraya-mahanatee-hotel-night.jpg'
       ]
     },
     sustainability: {
