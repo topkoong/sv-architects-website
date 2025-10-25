@@ -190,7 +190,7 @@ const LeadershipSection = ({ teamMembers }: { teamMembers: any[] }) => {
             <motion.article
               key={member.id}
               variants={slideUp}
-              className="group bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 border border-gray-100 overflow-hidden"
+              className="group bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 border border-gray-100 overflow-hidden h-[500px] flex flex-col"
             >
               {/* Team Member Photo */}
               <div className="relative aspect-square mx-auto mb-8 w-40 rounded-full overflow-hidden shadow-2xl ring-4 ring-white group-hover:ring-gray-200 transition-all duration-500">
@@ -206,7 +206,7 @@ const LeadershipSection = ({ teamMembers }: { teamMembers: any[] }) => {
               </div>
 
               {/* Team Member Info */}
-              <div className="px-8 pt-4 pb-8 text-center">
+              <div className="px-8 pt-4 pb-8 text-center flex flex-col flex-grow">
                 <h3 className="text-2xl font-bold mb-3 text-gray-900 group-hover:text-gray-700 transition-colors duration-300">
                   {member.fullName}
                 </h3>
@@ -220,7 +220,7 @@ const LeadershipSection = ({ teamMembers }: { teamMembers: any[] }) => {
                 </p>
 
                 {/* Key Skills */}
-                <div className="mb-8">
+                <div className="mb-8 flex-grow">
                   <div className="flex flex-wrap gap-2 justify-center">
                     {member.skills.slice(0, 3).map((skill: string, skillIndex: number) => (
                       <span 
@@ -235,7 +235,7 @@ const LeadershipSection = ({ teamMembers }: { teamMembers: any[] }) => {
 
                 <Link 
                   href={`/team-member/${member.slug}`}
-                  className="inline-flex items-center justify-center w-full px-8 py-4 bg-gray-900 text-white font-semibold text-sm rounded-xl shadow-lg hover:shadow-xl hover:bg-gray-800 transition-all duration-300 group-hover:scale-105 transform"
+                  className="inline-flex items-center justify-center w-full px-8 py-4 bg-gray-900 text-white font-semibold text-sm rounded-xl shadow-lg hover:shadow-xl hover:bg-gray-800 transition-all duration-300 group-hover:scale-105 transform mt-auto"
                 >
                   View Profile
                   <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -292,7 +292,7 @@ const AllTeamSection = ({ teamMembers }: { teamMembers: any[] }) => {
             <motion.article
               key={member.id}
               variants={slideUp}
-              className="group bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-400 hover:-translate-y-2 border border-gray-100 overflow-hidden"
+              className="group bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-400 hover:-translate-y-2 border border-gray-100 overflow-hidden h-[420px] flex flex-col"
             >
               {/* Team Member Photo */}
               <div className="relative aspect-square overflow-hidden">
@@ -315,7 +315,7 @@ const AllTeamSection = ({ teamMembers }: { teamMembers: any[] }) => {
               </div>
 
               {/* Content */}
-              <div className="p-6">
+              <div className="p-6 flex flex-col flex-grow">
                 <h3 className="text-lg font-bold mb-2 text-gray-900 group-hover:text-gray-700 transition-colors duration-200">
                   {member.fullName}
                 </h3>
@@ -333,7 +333,7 @@ const AllTeamSection = ({ teamMembers }: { teamMembers: any[] }) => {
                 </div>
 
                 {/* Key Skills */}
-                <div className="mb-6">
+                <div className="mb-6 flex-grow">
                   <div className="flex flex-wrap gap-1.5">
                     {member.skills.slice(0, 3).map((skill: string, skillIndex: number) => (
                       <span 
@@ -348,7 +348,7 @@ const AllTeamSection = ({ teamMembers }: { teamMembers: any[] }) => {
 
                 <Link 
                   href={`/team-member/${member.slug}`}
-                  className="inline-flex items-center justify-center w-full px-4 py-3 bg-gray-900 text-white font-semibold text-sm rounded-lg shadow-md hover:shadow-lg hover:bg-gray-800 transition-all duration-300 group-hover:scale-105 transform"
+                  className="inline-flex items-center justify-center w-full px-4 py-3 bg-gray-900 text-white font-semibold text-sm rounded-lg shadow-md hover:shadow-lg hover:bg-gray-800 transition-all duration-300 group-hover:scale-105 transform mt-auto"
                 >
                   View Profile
                   <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
