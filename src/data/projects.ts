@@ -882,19 +882,19 @@ export const projects: ProjectData[] = [
     
     images: [
       {
-        url: getImagePath('/images/projects/villa-perpetual-interior-design-1.jpg'),
+        url: getImagePath('/images/projects/villa-perpetual-interior-design/villa-perpetual-living.jpg'),
         alt: 'Villa Perpetual Interior Design living space'
       },
       {
-        url: getImagePath('/images/projects/villa-perpetual-interior-design-2.jpg'),
+        url: getImagePath('/images/projects/villa-perpetual-interior-design/villa-perpetual-master-bedroom.jpg'),
         alt: 'Villa Perpetual Interior Design bedroom'
       },
       {
-        url: getImagePath('/images/projects/villa-perpetual-interior-design-3.jpg'),
+        url: getImagePath('/images/projects/villa-perpetual-interior-design/villa-perpetual-dining.jpg'),
         alt: 'Villa Perpetual Interior Design kitchen'
       },
       {
-        url: getImagePath('/images/projects/villa-perpetual-interior-design-4.jpg'),
+        url: getImagePath('/images/projects/villa-perpetual-interior-design/villa-perpetual-family.jpg'),
         alt: 'Villa Perpetual Interior Design bathroom'
       }
     ]
@@ -1000,20 +1000,16 @@ export const projects: ProjectData[] = [
     
     images: [
       {
-        url: getImagePath('/images/projects/siamese-rama9-award-1.jpg'),
+        url: getImagePath('/images/projects/siamese-rama9-award-winning/siamese-rama9-view1.jpg'),
         alt: 'Siamese Rama 9 Award ceremony'
       },
       {
-        url: getImagePath('/images/projects/siamese-rama9-award-2.jpg'),
+        url: getImagePath('/images/projects/siamese-rama9-award-winning/siamese-rama9-view2.jpg'),
         alt: 'Siamese Rama 9 Award recognition'
       },
       {
-        url: getImagePath('/images/projects/siamese-rama9-award-3.jpg'),
+        url: getImagePath('/images/projects/siamese-rama9-award-winning/siamese-rama9-view3.jpg'),
         alt: 'Siamese Rama 9 Award presentation'
-      },
-      {
-        url: getImagePath('/images/projects/siamese-rama9-award-4.jpg'),
-        alt: 'Siamese Rama 9 Award celebration'
       }
     ]
   }
