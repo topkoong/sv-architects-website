@@ -49,8 +49,6 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { fadeIn, slideUp } from '@/lib/animations';
 // Import React hooks for state management and side effects
 import { useEffect, useState } from 'react';
-// Import image path helper
-import { getImagePath } from '@/config/site';
 
 import Image from 'next/image';
 // Import Next.js components
