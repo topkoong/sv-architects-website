@@ -92,7 +92,7 @@ export async function generateMetadata({
   }
 
   // Construct full URL for this team member page
-  const pageUrl = `https://sv-arch.com/team-member/${params.slug}`;
+  const pageUrl = `https://sv-arch.com/team-member/${slug}`;
   
   // Construct canonical image URL
   const imageUrl = `https://sv-arch.com${member.image}`;
@@ -154,7 +154,7 @@ export async function generateMetadata({
 
     // Additional structured data
     other: {
-      'profile:username': params.slug, // Profile username (slug)
+      'profile:username': slug, // Profile username (slug)
     }
   };
 }
@@ -299,7 +299,7 @@ const HeroSection = ({ member }: { member: TeamMember }) => {
           alt={`${member.fullName} - ${member.title}`}
           className="w-full h-full object-cover object-[center_top] opacity-30"
           fill
-          objectFit="cover"
+          style={{ objectFit: 'cover' }}
           unoptimized
         />
       </div>

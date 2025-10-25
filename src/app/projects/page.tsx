@@ -295,7 +295,7 @@ const ProjectsGrid = ({
                       duration-500 // 500ms transition
                     "
                     fill
-                    objectFit="cover"
+                    style={{ objectFit: 'cover' }}
                     unoptimized
                   />
                   

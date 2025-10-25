@@ -538,20 +538,16 @@ export const projects: ProjectData[] = [
     
     images: [
       {
-        url: getImagePath('/images/projects/villa-perpetual-1.jpg'),
+        url: getImagePath('/images/projects/villa-perpetual-residential/Bird-eye-view-1-1.jpg'),
         alt: 'Villa Perpetual exterior'
       },
       {
-        url: getImagePath('/images/projects/villa-perpetual-2.jpg'),
+        url: getImagePath('/images/projects/villa-perpetual-residential/Entrance-1.jpg'),
         alt: 'Villa Perpetual pool area'
       },
       {
-        url: getImagePath('/images/projects/villa-perpetual-3.jpg'),
+        url: getImagePath('/images/projects/villa-perpetual-residential/Landscape-1.jpg'),
         alt: 'Villa Perpetual living space'
-      },
-      {
-        url: getImagePath('/images/projects/villa-perpetual-4.jpg'),
-        alt: 'Villa Perpetual garden view'
       }
     ]
   },
@@ -658,20 +654,16 @@ export const projects: ProjectData[] = [
     
     images: [
       {
-        url: getImagePath('/images/projects/phuket-condominium-1.jpg'),
+        url: getImagePath('/images/projects/phuket-condominium-residential/phuket-condominium-1.jpg'),
         alt: 'Phuket Condominium exterior'
       },
       {
-        url: getImagePath('/images/projects/phuket-condominium-2.jpg'),
+        url: getImagePath('/images/projects/phuket-condominium-residential/phuket-condominium-2.jpg'),
         alt: 'Phuket Condominium pool area'
       },
       {
-        url: getImagePath('/images/projects/phuket-condominium-3.jpg'),
+        url: getImagePath('/images/projects/phuket-condominium-residential/phuket-condominium-3.jpg'),
         alt: 'Phuket Condominium beach view'
-      },
-      {
-        url: getImagePath('/images/projects/phuket-condominium-4.jpg'),
-        alt: 'Phuket Condominium amenities'
       }
     ]
   },

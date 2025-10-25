@@ -217,7 +217,7 @@ const LeadershipSection = ({ teamMembers }: { teamMembers: any[] }) => {
                   alt={`${member.fullName} - ${member.title}`}
                   className="w-full h-full object-cover object-[center_top] group-hover:scale-105 transition-transform duration-500"
                   fill
-                  objectFit="cover"
+                  style={{ objectFit: 'cover' }}
                   unoptimized
                 />
               </div>
@@ -359,7 +359,7 @@ const AllTeamSection = ({ teamMembers }: { teamMembers: any[] }) => {
                   alt={`${member.fullName} - ${member.title}`}
                   className="w-full h-full object-cover object-[center_top] group-hover:scale-105 transition-transform duration-500"
                   fill
-                  objectFit="cover"
+                  style={{ objectFit: 'cover' }}
                   unoptimized
                 />
                 
