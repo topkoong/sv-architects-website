@@ -190,10 +190,11 @@ const LeadershipSection = ({ teamMembers }: { teamMembers: any[] }) => {
             <motion.article
               key={member.id}
               variants={slideUp}
-              className="group bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 border border-gray-100 overflow-hidden flex flex-col"
+              className="group relative bg-gradient-to-br from-white via-gray-50 to-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-700 hover:-translate-y-4 border border-gray-200/50 overflow-hidden flex flex-col backdrop-blur-sm"
             >
               {/* Team Member Photo */}
-              <div className="relative aspect-square mx-auto mb-8 w-40 rounded-full overflow-hidden shadow-2xl ring-4 ring-white group-hover:ring-gray-200 transition-all duration-500">
+              <div className="relative aspect-square mx-auto mb-8 w-44 rounded-full overflow-hidden shadow-2xl ring-4 ring-white/80 group-hover:ring-blue-200/60 transition-all duration-700 group-hover:scale-105">
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-50/20 to-purple-50/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
                 <Image
                   src={member.image || ''}
                   alt={`${member.fullName} - ${member.title}`}
@@ -206,8 +207,13 @@ const LeadershipSection = ({ teamMembers }: { teamMembers: any[] }) => {
               </div>
 
               {/* Team Member Info */}
-              <div className="px-8 pt-4 pb-8 text-center flex flex-col flex-grow">
-                <h3 className="text-2xl font-bold mb-3 text-gray-900 group-hover:text-gray-700 transition-colors duration-300">
+              <div className="px-8 pt-4 pb-8 text-center flex flex-col flex-grow relative">
+                {/* Subtle background pattern */}
+                <div className="absolute inset-0 opacity-5">
+                  <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-100 to-purple-100 rounded-full blur-3xl"></div>
+                </div>
+                
+                <h3 className="text-2xl font-bold mb-3 text-gray-900 group-hover:text-blue-900 transition-colors duration-500 relative z-10">
                   {member.fullName}
                 </h3>
                 
@@ -220,12 +226,12 @@ const LeadershipSection = ({ teamMembers }: { teamMembers: any[] }) => {
                 </p>
 
                 {/* Key Skills */}
-                <div className="mb-8 flex-grow">
+                <div className="mb-8 flex-grow relative z-10">
                   <div className="flex flex-wrap gap-2 justify-center">
                     {member.skills.slice(0, 3).map((skill: string, skillIndex: number) => (
                       <span 
                         key={skillIndex}
-                        className="px-3 py-1.5 bg-gray-100 text-gray-700 rounded-full text-xs font-semibold border border-gray-200"
+                        className="px-4 py-2 bg-gradient-to-r from-gray-100 to-gray-200 text-gray-700 rounded-full text-xs font-semibold border border-gray-300/50 hover:from-blue-100 hover:to-blue-200 hover:text-blue-800 hover:border-blue-300/50 transition-all duration-300 group-hover:shadow-md"
                       >
                         {skill}
                       </span>
@@ -235,12 +241,13 @@ const LeadershipSection = ({ teamMembers }: { teamMembers: any[] }) => {
 
                 <Link 
                   href={`/team-member/${member.slug}`}
-                  className="inline-flex items-center justify-center w-full px-8 py-4 bg-gray-900 text-white font-semibold text-sm rounded-xl shadow-lg hover:shadow-xl hover:bg-gray-800 transition-all duration-300 group-hover:scale-105 transform mt-auto"
+                  className="inline-flex items-center justify-center w-full px-8 py-4 bg-gradient-to-r from-gray-900 to-gray-800 text-white font-semibold text-sm rounded-xl shadow-lg hover:shadow-xl hover:from-blue-900 hover:to-blue-800 transition-all duration-500 group-hover:scale-105 transform mt-auto relative overflow-hidden"
                 >
-                  View Profile
-                  <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <span className="relative z-10">View Profile</span>
+                  <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300 relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 </Link>
               </div>
             </motion.article>
@@ -292,14 +299,15 @@ const AllTeamSection = ({ teamMembers }: { teamMembers: any[] }) => {
             <motion.article
               key={member.id}
               variants={slideUp}
-              className="group bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-400 hover:-translate-y-2 border border-gray-100 overflow-hidden flex flex-col"
+              className="group relative bg-gradient-to-br from-white via-gray-50 to-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-3 border border-gray-200/50 overflow-hidden flex flex-col backdrop-blur-sm"
             >
               {/* Team Member Photo */}
-              <div className="relative aspect-square overflow-hidden">
+              <div className="relative aspect-square overflow-hidden group-hover:scale-105 transition-transform duration-500">
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-50/10 to-purple-50/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
                 <Image
                   src={member.image || ''}
                   alt={`${member.fullName} - ${member.title}`}
-                  className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                  className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500"
                   fill
                   style={{ objectFit: 'cover' }}
                   unoptimized
@@ -315,8 +323,13 @@ const AllTeamSection = ({ teamMembers }: { teamMembers: any[] }) => {
               </div>
 
               {/* Content */}
-              <div className="p-6 flex flex-col flex-grow">
-                <h3 className="text-lg font-bold mb-2 text-gray-900 group-hover:text-gray-700 transition-colors duration-200">
+              <div className="p-6 flex flex-col flex-grow relative">
+                {/* Subtle background pattern */}
+                <div className="absolute inset-0 opacity-3">
+                  <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-100 to-purple-100 rounded-full blur-2xl"></div>
+                </div>
+                
+                <h3 className="text-lg font-bold mb-2 text-gray-900 group-hover:text-blue-900 transition-colors duration-500 relative z-10">
                   {member.fullName}
                 </h3>
                 
@@ -333,12 +346,12 @@ const AllTeamSection = ({ teamMembers }: { teamMembers: any[] }) => {
                 </div>
 
                 {/* Key Skills */}
-                <div className="mb-6 flex-grow">
+                <div className="mb-6 flex-grow relative z-10">
                   <div className="flex flex-wrap gap-1.5">
                     {member.skills.slice(0, 3).map((skill: string, skillIndex: number) => (
                       <span 
                         key={skillIndex}
-                        className="px-2 py-1 bg-gray-100 text-gray-700 rounded-md text-xs font-medium"
+                        className="px-2.5 py-1.5 bg-gradient-to-r from-gray-100 to-gray-200 text-gray-700 rounded-md text-xs font-medium border border-gray-300/50 hover:from-blue-100 hover:to-blue-200 hover:text-blue-800 hover:border-blue-300/50 transition-all duration-300 group-hover:shadow-sm"
                       >
                         {skill}
                       </span>
@@ -348,12 +361,13 @@ const AllTeamSection = ({ teamMembers }: { teamMembers: any[] }) => {
 
                 <Link 
                   href={`/team-member/${member.slug}`}
-                  className="inline-flex items-center justify-center w-full px-4 py-3 bg-gray-900 text-white font-semibold text-sm rounded-lg shadow-md hover:shadow-lg hover:bg-gray-800 transition-all duration-300 group-hover:scale-105 transform mt-auto"
+                  className="inline-flex items-center justify-center w-full px-4 py-3 bg-gradient-to-r from-gray-900 to-gray-800 text-white font-semibold text-sm rounded-lg shadow-md hover:shadow-lg hover:from-blue-900 hover:to-blue-800 transition-all duration-500 group-hover:scale-105 transform mt-auto relative overflow-hidden"
                 >
-                  View Profile
-                  <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <span className="relative z-10">View Profile</span>
+                  <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300 relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 </Link>
               </div>
             </motion.article>
