@@ -290,7 +290,7 @@ export const teamMembers: TeamMember[] = [
         field: 'Sustainable Development and Architecture'
       },
       {
-        degree: 'Bachelor of Science Program in Architecture (International Program)',
+        degree: 'Bachelor of Science Program in Architecture',
         institution: 'King Mongkut\'s Institute of Technology Ladkrabang (KMITL)',
         location: 'Bangkok, Thailand',
         level: 'bachelor',
