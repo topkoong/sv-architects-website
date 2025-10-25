@@ -289,14 +289,17 @@ const HeroSection = ({ member }: { member: TeamMember }) => {
       bg-white // Clean white background
       overflow-hidden // Hide overflow
     ">
-      <div className="container-responsive py-12 md:py-16 lg:py-20">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+      <div className="container-responsive py-8 md:py-12 lg:py-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center">
           
           {/* Team Member Photo - Full Image Display */}
           <div className="
             relative // Position context
             aspect-square // Square aspect ratio
-            max-w-md // Maximum width
+            w-full // Full width on mobile
+            max-w-sm // Smaller max width on mobile
+            sm:max-w-md // Medium max width on small screens
+            lg:max-w-lg // Large max width on desktop
             mx-auto // Center horizontally
             lg:mx-0 // Left align on desktop
             rounded-3xl // More rounded corners
@@ -317,9 +320,9 @@ const HeroSection = ({ member }: { member: TeamMember }) => {
           </div>
 
           {/* Team Member Information */}
-          <div className="text-center lg:text-left space-y-6">
+          <div className="text-center lg:text-left space-y-4 md:space-y-6">
             {/* Name */}
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black leading-tight">
+            <h1 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-black leading-tight">
               {member.fullName}
             </h1>
             
