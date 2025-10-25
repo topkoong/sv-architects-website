@@ -48,6 +48,8 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 
 // Import Next.js Link component for client-side navigation
 import Link from 'next/link';
+// Import Next.js Image component for optimized images
+import Image from 'next/image';
 
 // Import Next.js hook to get current route pathname
 import { usePathname } from 'next/navigation';
@@ -389,7 +391,6 @@ export const Header = () => {
                 className={`
                   text-sm font-medium tracking-wide    // Typography styling
                   transition-colors duration-200        // Smooth color transitions
-                  relative group                         // Relative positioning for underline
                   ${isActiveLink(item.href)             // Conditional styling based on active state
                     ? 'text-black font-semibold'        // Active: black text, semibold weight
                     : 'text-gray-800 hover:text-black'  // Default: gray text, black on hover
@@ -399,16 +400,6 @@ export const Header = () => {
               >
                 {/* Link text content */}
                 {item.label}
-                
-                {/* Animated underline element */}
-                <span className={`
-                  absolute bottom-[-2px] left-0 h-px bg-black  // Positioned underline
-                  transition-all duration-200                   // Smooth width transitions
-                  ${isActiveLink(item.href)                    // Conditional width based on active state
-                    ? 'w-full'                                  // Active: full width underline
-                    : 'w-0 group-hover:w-full'                  // Default: no width, full on hover
-                  }
-                `} />
               </Link>
             ))}
           </nav>

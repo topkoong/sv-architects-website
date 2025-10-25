@@ -272,11 +272,13 @@ const projects: Project[] = [
       'Master planning integration'
     ],
     images: {
-      thumbnail: '/sv-architects-website/images/projects/somdech-phra-nangchao-sirikit-hospital.jpg',
+      thumbnail: '/sv-architects-website/images/projects/phra-nangchao-sirikit-hospital/phra-nangchao-sirikit-hospital.jpg',
       gallery: [
-        '/sv-architects-website/images/projects/somdech-phra-nangchao-sirikit-hospital.jpg',
-        '/sv-architects-website/images/projects/healthcare-facility.jpg',
-        '/sv-architects-website/images/projects/government-savings-bank.jpg'
+        '/sv-architects-website/images/projects/phra-nangchao-sirikit-hospital/phra-nangchao-sirikit-hospital.jpg',
+        '/sv-architects-website/images/projects/somdech-phra-nangchao-sirikit-hospital-1.jpg',
+        '/sv-architects-website/images/projects/somdech-phra-nangchao-sirikit-hospital-2.jpg',
+        '/sv-architects-website/images/projects/somdech-phra-nangchao-sirikit-hospital-3.jpg',
+        '/sv-architects-website/images/projects/somdech-phra-nangchao-sirikit-hospital-4.jpg'
       ]
     },
     sustainability: {

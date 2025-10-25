@@ -26,6 +26,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
           fill
           className="object-cover"
           priority
+          unoptimized
         />
         <div className="absolute inset-0 bg-black bg-opacity-40" />
         <div className="absolute inset-0 flex items-center justify-center">
@@ -66,6 +67,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
                       alt={`${project.name} - Image ${index + 1}`}
                       fill
                       className="object-cover hover:scale-105 transition-transform duration-300"
+                      unoptimized
                     />
                   </div>
                 ))}
