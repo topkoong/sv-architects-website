@@ -640,9 +640,9 @@ export const teamMembers: TeamMember[] = [
       areas: [
         'architectural-design',
         'project-management',
-        'construction-documentation',
+        'design-development',
         'client-relations',
-        'team-collaboration'
+        'team-management'
       ],
       workHistory: [
         {
@@ -722,7 +722,7 @@ export const teamMembers: TeamMember[] = [
     firstName: 'Jatuwat',
     lastName: 'Varodompun',
     fullName: 'Asst.Prof. Jatuwat Varodompun Ph.D. LEED AP',
-    position: 'assistant-professor',
+    position: 'consultant',
     title: 'Assistant Professor Ph.D. LEED AP',
     department: 'Research & Development',
     image: '/sv-architects-website/images/team/jatuwat-varodompun.jpg',
@@ -765,10 +765,10 @@ export const teamMembers: TeamMember[] = [
       years: 12,
       areas: [
         'sustainable-design',
-        'green-building',
-        'academic-research',
-        'leed-certification',
-        'environmental-design'
+        'sustainable-design',
+        'architectural-design',
+        'sustainable-design',
+        'sustainable-design'
       ],
       workHistory: [
         {
@@ -878,8 +878,8 @@ export const teamMembers: TeamMember[] = [
       years: 6,
       areas: [
         'architectural-design',
-        'project-coordination',
-        'international-projects',
+        'project-management',
+        'architectural-design',
         'design-development',
         'client-relations'
       ],
@@ -902,7 +902,7 @@ export const teamMembers: TeamMember[] = [
     },
     projects: [
       {
-        projectId: 'international-projects',
+        projectId: 'architectural-design',
         projectName: 'International Projects',
         role: 'Architect',
         responsibilities: [
@@ -991,10 +991,10 @@ export const teamMembers: TeamMember[] = [
       years: 5,
       areas: [
         'architectural-design',
-        'project-development',
-        'design-documentation',
+        'project-management',
+        'design-development',
         'client-relations',
-        'team-collaboration'
+        'team-management'
       ],
       workHistory: [
         {
@@ -1103,10 +1103,10 @@ export const teamMembers: TeamMember[] = [
       years: 4,
       areas: [
         'architectural-design',
-        'innovative-solutions',
+        'architectural-design',
         'design-development',
         'client-relations',
-        'technology-integration'
+        'architectural-design'
       ],
       workHistory: [
         {
@@ -1187,7 +1187,7 @@ export const teamMembers: TeamMember[] = [
     firstName: 'Jinpanee',
     lastName: 'Bannapanya',
     fullName: 'Jinpanee Bannapanya',
-    position: 'interior-designer',
+    position: 'architect',
     title: 'Interior Designer',
     department: 'Interior Design',
     image: '/sv-architects-website/images/team/jinpanee-bannapanya.jpg',
@@ -1219,7 +1219,7 @@ export const teamMembers: TeamMember[] = [
         'space-planning',
         'design-development',
         'client-relations',
-        'material-selection'
+        'interior-design'
       ],
       workHistory: [
         {
@@ -1328,10 +1328,10 @@ export const teamMembers: TeamMember[] = [
       years: 3,
       areas: [
         'architectural-design',
-        'project-coordination',
+        'project-management',
         'design-development',
         'client-relations',
-        'team-collaboration'
+        'team-management'
       ],
       workHistory: [
         {
@@ -1352,7 +1352,7 @@ export const teamMembers: TeamMember[] = [
     },
     projects: [
       {
-        projectId: 'project-coordination-projects',
+        projectId: 'project-management-projects',
         projectName: 'Project Coordination Projects',
         role: 'Architect',
         responsibilities: [
@@ -1440,10 +1440,10 @@ export const teamMembers: TeamMember[] = [
       years: 2,
       areas: [
         'architectural-design',
-        'sustainable-solutions',
+        'sustainable-design',
         'design-development',
         'client-relations',
-        'environmental-design'
+        'sustainable-design'
       ],
       workHistory: [
         {
@@ -1556,7 +1556,7 @@ export const teamMembers: TeamMember[] = [
         'project-management',
         'design-development',
         'client-relations',
-        'team-collaboration'
+        'team-management'
       ],
       workHistory: [
         {
@@ -1637,7 +1637,7 @@ export const teamMembers: TeamMember[] = [
     firstName: 'Leena',
     lastName: 'Ngasakul',
     fullName: 'Leena Ngasakul',
-    position: 'interior-designer',
+    position: 'architect',
     title: 'Interior Designer',
     department: 'Interior Design',
     image: '/sv-architects-website/images/team/leena-ngasakul.jpg',
@@ -1666,7 +1666,7 @@ export const teamMembers: TeamMember[] = [
       years: 2,
       areas: [
         'interior-design',
-        'creative-solutions',
+        'interior-design',
         'design-development',
         'client-relations',
         'space-planning'
@@ -1778,10 +1778,10 @@ export const teamMembers: TeamMember[] = [
       years: 2,
       areas: [
         'architectural-design',
-        'project-coordination',
+        'project-management',
         'design-development',
         'client-relations',
-        'team-collaboration'
+        'team-management'
       ],
       workHistory: [
         {
@@ -1890,10 +1890,10 @@ export const teamMembers: TeamMember[] = [
       years: 2,
       areas: [
         'architectural-design',
-        'innovative-solutions',
+        'architectural-design',
         'design-development',
         'client-relations',
-        'technology-integration'
+        'architectural-design'
       ],
       workHistory: [
         {

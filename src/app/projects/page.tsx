@@ -322,38 +322,6 @@ const projects: Project[] = [
     }
   },
   {
-    id: 'office-tower',
-    name: 'Bangkok Office Tower',
-    category: 'Commercial',
-    type: 'Office Building',
-    location: 'Bangkok, Thailand',
-    year: 2020,
-    status: 'completed',
-    size: '95,000 sqm',
-    client: 'Property Development Corporation',
-    description: 'Modern office tower with flexible workspace design and advanced building systems for optimal tenant experience.',
-    features: [
-      'Flexible workspace design',
-      'Advanced building systems',
-      'Tenant experience optimization',
-      'Smart building technology',
-      'Sustainable office design'
-    ],
-    images: {
-      thumbnail: '/sv-architects-website/images/projects/office-tower-thumb.jpg',
-      gallery: [
-        '/sv-architects-website/images/projects/office-tower-thumb.jpg',
-        '/sv-architects-website/images/projects/government-savings-bank.jpg',
-        '/sv-architects-website/images/projects/innovation-center.jpg'
-      ]
-    },
-    sustainability: {
-      leed: true,
-      greenBuilding: true,
-      energyEfficient: true
-    }
-  },
-  {
     id: 'jet-villa-residence',
     name: 'Jet Villa Residence',
     category: 'Residential',

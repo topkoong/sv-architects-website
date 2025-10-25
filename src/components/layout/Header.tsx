@@ -48,8 +48,6 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 
 // Import Next.js Link component for client-side navigation
 import Link from 'next/link';
-// Import Next.js Image component for optimized images
-import Image from 'next/image';
 
 // Import Next.js hook to get current route pathname
 import { usePathname } from 'next/navigation';
