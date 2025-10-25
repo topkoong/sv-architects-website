@@ -84,7 +84,7 @@ interface Project {
  * Mock project data - replace with actual data from CMS or API
  * ============================================================================
  */
-export const projects: Project[] = [
+const projects: Project[] = [
   {
     id: 'u-tapao-airport',
     name: 'U-Tapao Airport New Terminal',

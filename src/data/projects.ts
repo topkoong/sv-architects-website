@@ -101,33 +101,32 @@ export const projects: Project[] = [
     }
   },
   {
-    id: 'somdech-phra-nangchao-sirikit-hospital',
-    name: 'Somdech Phra Nangchao Sirikit Hospital',
-    category: 'Healthcare',
-    type: 'Medical Facility',
+    id: 'villa-perpetual',
+    name: 'Villa Perpetual',
+    category: 'Residential',
+    type: 'Luxury Villa',
     location: 'Bangkok, Thailand',
-    year: 2022,
+    year: 2020,
     status: 'completed',
-    size: '45,000 sqm',
-    client: 'Somdech Phra Nangchao Sirikit Hospital',
-    description: 'State-of-the-art medical hub for clinical excellence. Architectural design works done in collaboration with Team SQ. This project encompasses both Master Planning and Healthcare project types.',
+    size: '1,800 sqm',
+    client: 'Perpetual Properties Ltd.',
+    description: 'An epitome of luxury and modern elegance.',
     features: [
-      'State-of-the-art medical facilities',
-      'Clinical excellence design',
-      'Advanced medical technology integration',
-      'Healing environment design',
-      'Collaborative design approach',
-      'Modern healthcare infrastructure',
-      'Master planning integration'
+      'Epitome of luxury design',
+      'Modern elegance',
+      'Timeless design principles',
+      'Premium finishes',
+      'Sophisticated living spaces',
+      'Private outdoor areas',
+      'High-end materials',
+      'Luxury villa amenities'
     ],
     images: {
-      thumbnail: '/sv-architects-website/images/projects/phra-nangchao-sirikit-hospital/phra-nangchao-sirikit-hospital.jpg',
+      thumbnail: '/sv-architects-website/images/projects/villa-perpetual-residential/Entrance-1.jpg',
       gallery: [
-        '/sv-architects-website/images/projects/phra-nangchao-sirikit-hospital/phra-nangchao-sirikit-hospital.jpg',
-        '/sv-architects-website/images/projects/somdech-phra-nangchao-sirikit-hospital-1.jpg',
-        '/sv-architects-website/images/projects/somdech-phra-nangchao-sirikit-hospital-2.jpg',
-        '/sv-architects-website/images/projects/somdech-phra-nangchao-sirikit-hospital-3.jpg',
-        '/sv-architects-website/images/projects/somdech-phra-nangchao-sirikit-hospital-4.jpg'
+        '/sv-architects-website/images/projects/villa-perpetual-residential/Entrance-1.jpg',
+        '/sv-architects-website/images/projects/villa-perpetual-residential/Bird-eye-view-1-1.jpg',
+        '/sv-architects-website/images/projects/villa-perpetual-residential/Landscape-1.jpg'
       ]
     },
     sustainability: {

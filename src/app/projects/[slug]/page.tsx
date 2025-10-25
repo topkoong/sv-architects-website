@@ -1,7 +1,10 @@
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
-import { projects } from '@/data/projects';
+
+// Import projects from the main projects page
+// We'll extract the projects array from the main page
+import { projects } from '../page';
 
 interface ProjectPageProps {
   params: {

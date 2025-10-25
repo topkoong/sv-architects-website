@@ -42,13 +42,13 @@
 
 // Import Framer Motion components for animations
 import { AnimatePresence, motion } from 'framer-motion';
-
 // Import React hooks for state management and side effects
 import { useCallback, useEffect, useRef, useState } from 'react';
 
+// Import Next.js Image component for optimized images
+import Image from 'next/image';
 // Import Next.js Link component for client-side navigation
 import Link from 'next/link';
-
 // Import Next.js hook to get current route pathname
 import { usePathname } from 'next/navigation';
 
@@ -372,11 +372,14 @@ export const Header = () => {
             onClick={closeMobileMenu}
             aria-label="SV Architects Home"
           >
-            {/* Text-based logo */}
-            <div className="flex flex-col group-hover:scale-105 transition-transform duration-200">
-              <div className="text-xl font-bold text-black leading-none">SV</div>
-              <div className="text-xs font-medium text-black leading-none">ARCHITECTS</div>
-            </div>
+            <Image
+              src="/sv-architects-website/images/logos/sv.png"
+              alt="SV Architects Logo"
+              width={40}
+              height={40}
+              className="group-hover:scale-105 transition-transform duration-200"
+              unoptimized // Required for static export
+            />
           </Link>
 
           {/* Desktop Navigation */}
