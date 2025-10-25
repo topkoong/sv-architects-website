@@ -193,7 +193,7 @@ const LeadershipSection = ({ teamMembers }: { teamMembers: any[] }) => {
               className="group bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 border border-gray-100 overflow-hidden"
             >
               {/* Team Member Photo */}
-              <div className="relative aspect-square mx-auto mb-8 w-40 rounded-full overflow-hidden shadow-2xl ring-4 ring-white group-hover:ring-gray-200 transition-all duration-500">
+              <div className="relative aspect-square mx-auto mb-8 w-40 rounded-full overflow-hidden shadow-2xl ring-4 ring-white group-hover:ring-gray-200 transition-all duration-500 mt-6">
                 <Image
                   src={member.image || ''}
                   alt={`${member.fullName} - ${member.title}`}
@@ -295,7 +295,7 @@ const AllTeamSection = ({ teamMembers }: { teamMembers: any[] }) => {
               className="group bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-400 hover:-translate-y-2 border border-gray-100 overflow-hidden"
             >
               {/* Team Member Photo */}
-              <div className="relative aspect-square overflow-hidden">
+              <div className="relative aspect-square overflow-hidden mt-4">
                 <Image
                   src={member.image || ''}
                   alt={`${member.fullName} - ${member.title}`}
