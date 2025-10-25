@@ -375,8 +375,8 @@ export const Header = () => {
             <Image
               src="/sv-architects-website/images/logos/logo-sv-black.png"
               alt="SV Architects Logo"
-              width={120}
-              height={40}
+              width={60}
+              height={24}
               className="group-hover:scale-105 transition-transform duration-200"
               unoptimized // Required for static export
             />

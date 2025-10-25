@@ -311,8 +311,13 @@ export default function AboutPage() {
             className="object-cover"
             priority
             unoptimized
+            onError={(e) => {
+              console.error('Hero image failed to load:', e);
+              // Fallback to a solid background if image fails
+              e.currentTarget.style.display = 'none';
+            }}
           />
-          <div className="absolute inset-0 bg-black bg-opacity-60" />
+          <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-black bg-opacity-70" />
         </div>
 
         {/* Hero content */}
@@ -324,7 +329,7 @@ export default function AboutPage() {
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               {/* Company tagline */}
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
                 First Class Design
               </h1>
               
@@ -334,7 +339,7 @@ export default function AboutPage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.4 }}
-                  className="text-lg md:text-xl lg:text-2xl mb-8 leading-relaxed"
+                  className="text-lg md:text-xl lg:text-2xl mb-8 leading-relaxed text-gray-100"
                 >
                   We believe that creativity and innovation flourish through collaborative team efforts rather than individual work alone. With this philosophy, combined with the right environment, we attract many young, talented design enthusiasts who share this commitment to excellence.
                 </motion.p>
@@ -344,7 +349,7 @@ export default function AboutPage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.6 }}
-                  className="text-xl md:text-2xl lg:text-3xl font-semibold italic"
+                  className="text-xl md:text-2xl lg:text-3xl font-semibold italic text-white border-l-4 border-white pl-6"
                 >
                   "SV is committed to design excellence and progressive innovation"
                 </motion.blockquote>
@@ -365,8 +370,9 @@ export default function AboutPage() {
        * - Navigation arrows and dot indicators
        * - Responsive design for all devices
        * - Accessibility features
+       * - Error handling and fallbacks
        */
-      <section className="py-16 md:py-20 lg:py-24 bg-gray-50">
+      <section className="py-16 md:py-20 lg:py-24 bg-gradient-to-br from-gray-50 to-gray-100">
         <div className="container mx-auto px-4">
           {/* Section title */}
           <motion.div
@@ -374,12 +380,12 @@ export default function AboutPage() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="text-center mb-12"
+            className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Our Team & Environment
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               Discover the collaborative workspace and talented team that drives our design excellence
             </p>
           </motion.div>
@@ -390,10 +396,10 @@ export default function AboutPage() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="relative max-w-6xl mx-auto"
+            className="relative max-w-7xl mx-auto"
           >
             {/* Image display area */}
-            <div className="relative aspect-[16/10] overflow-hidden rounded-lg shadow-lg">
+            <div className="relative aspect-[16/10] overflow-hidden rounded-2xl shadow-2xl ring-1 ring-gray-200">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={currentImageIndex}
@@ -404,11 +410,16 @@ export default function AboutPage() {
                   className="absolute inset-0"
                 >
                   <Image
-                    src={CAROUSEL_IMAGES[currentImageIndex]?.src || getImagePath('/images/placeholder.jpg')}
+                    src={CAROUSEL_IMAGES[currentImageIndex]?.src || getImagePath('/images/about/DSC_4275-1.jpg')}
                     alt={CAROUSEL_IMAGES[currentImageIndex]?.alt || 'Office image'}
                     fill
                     className="object-cover"
                     unoptimized
+                    onError={(e) => {
+                      console.error('Carousel image failed to load:', e.currentTarget.src);
+                      // Try to load a fallback image
+                      e.currentTarget.src = getImagePath('/images/about/DSC_4275-1.jpg');
+                    }}
                   />
                 </motion.div>
               </AnimatePresence>
@@ -416,39 +427,67 @@ export default function AboutPage() {
               {/* Navigation arrows */}
               <button
                 onClick={handlePreviousImage}
-                className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 bg-white/80 backdrop-blur-sm hover:bg-white transition-all duration-300 rounded-full p-3 text-gray-800"
+                className="absolute left-6 top-1/2 transform -translate-y-1/2 z-20 bg-white/90 backdrop-blur-sm hover:bg-white transition-all duration-300 rounded-full p-4 text-gray-800 shadow-lg hover:shadow-xl group"
                 aria-label="Previous image"
               >
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                 </svg>
               </button>
               
               <button
                 onClick={handleNextImage}
-                className="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 bg-white/80 backdrop-blur-sm hover:bg-white transition-all duration-300 rounded-full p-3 text-gray-800"
+                className="absolute right-6 top-1/2 transform -translate-y-1/2 z-20 bg-white/90 backdrop-blur-sm hover:bg-white transition-all duration-300 rounded-full p-4 text-gray-800 shadow-lg hover:shadow-xl group"
                 aria-label="Next image"
               >
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </button>
 
               {/* Image indicators */}
-              <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-20 flex space-x-2">
+              <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-20 flex space-x-3">
                 {CAROUSEL_IMAGES.map((_, index) => (
                   <button
                     key={index}
                     onClick={() => setCurrentImageIndex(index)}
-                    className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                    className={`w-4 h-4 rounded-full transition-all duration-300 ${
                       index === currentImageIndex
-                        ? 'bg-white'
-                        : 'bg-white/50 hover:bg-white/75'
+                        ? 'bg-white shadow-lg'
+                        : 'bg-white/60 hover:bg-white/80'
                     }`}
                     aria-label={`Go to image ${index + 1}`}
                   />
                 ))}
               </div>
+
+              {/* Image counter */}
+              <div className="absolute top-6 right-6 z-20 bg-black/50 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm font-medium">
+                {currentImageIndex + 1} / {CAROUSEL_IMAGES.length}
+              </div>
+            </div>
+
+            {/* Image thumbnails */}
+            <div className="mt-8 flex justify-center space-x-3 overflow-x-auto pb-2">
+              {CAROUSEL_IMAGES.map((image, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentImageIndex(index)}
+                  className={`relative w-20 h-12 rounded-lg overflow-hidden transition-all duration-300 ${
+                    index === currentImageIndex
+                      ? 'ring-2 ring-gray-800 scale-105'
+                      : 'hover:scale-105 opacity-70 hover:opacity-100'
+                  }`}
+                >
+                  <Image
+                    src={image.src}
+                    alt={image.alt}
+                    fill
+                    className="object-cover"
+                    unoptimized
+                  />
+                </button>
+              ))}
             </div>
           </motion.div>
         </div>
@@ -464,25 +503,32 @@ export default function AboutPage() {
        * - Contact information
        * - Office location details
        * - Call-to-action buttons
+       * - Enhanced visual design
        */
       <section className="py-16 md:py-20 lg:py-24 bg-white">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             {/* Company philosophy */}
             <motion.div
               variants={fadeIn}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
+              className="space-y-8"
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                About SV Architects
-              </h2>
+              <div>
+                <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                  About SV Architects
+                </h2>
+                <div className="w-20 h-1 bg-gradient-to-r from-gray-800 to-gray-400 rounded-full mb-8"></div>
+              </div>
               
               <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
-                <p>
-                  SV Architects and Associates Ltd. is committed to design excellence and progressive innovation. We believe that creativity and innovation flourish through collaborative team efforts rather than individual work alone.
-                </p>
+                <div className="bg-gray-50 p-6 rounded-xl border-l-4 border-gray-800">
+                  <p className="font-medium">
+                    SV Architects and Associates Ltd. is committed to design excellence and progressive innovation. We believe that creativity and innovation flourish through collaborative team efforts rather than individual work alone.
+                  </p>
+                </div>
                 
                 <p>
                   Our philosophy centers on creating the right environment that attracts young, talented design enthusiasts who share our commitment to excellence. We foster a culture of collaboration, continuous learning, and innovative thinking.
@@ -494,18 +540,24 @@ export default function AboutPage() {
               </div>
 
               {/* Call-to-action buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 mt-8">
+              <div className="flex flex-col sm:flex-row gap-4 pt-6">
                 <Link
                   href="/projects"
-                  className="btn-primary hover-lift"
+                  className="inline-flex items-center justify-center px-8 py-4 bg-gray-900 text-white font-semibold rounded-xl hover:bg-gray-800 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
                 >
                   View Our Projects
+                  <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
                 </Link>
                 <Link
                   href="/contact"
-                  className="btn-secondary hover-lift"
+                  className="inline-flex items-center justify-center px-8 py-4 border-2 border-gray-900 text-gray-900 font-semibold rounded-xl hover:bg-gray-900 hover:text-white transition-all duration-300"
                 >
                   Get In Touch
+                  <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
                 </Link>
               </div>
             </motion.div>
@@ -516,22 +568,27 @@ export default function AboutPage() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="bg-gray-50 p-8 rounded-lg"
+              className="bg-gradient-to-br from-gray-50 to-gray-100 p-8 rounded-2xl shadow-lg ring-1 ring-gray-200"
             >
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                Contact Information
-              </h3>
+              <div className="mb-8">
+                <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                  Contact Information
+                </h3>
+                <div className="w-16 h-1 bg-gradient-to-r from-gray-800 to-gray-400 rounded-full"></div>
+              </div>
               
-              <div className="space-y-4">
+              <div className="space-y-6">
                 {/* Office address */}
-                <div className="flex items-start space-x-3">
-                  <svg className="w-6 h-6 text-gray-600 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
+                <div className="flex items-start space-x-4 p-4 bg-white rounded-xl shadow-sm">
+                  <div className="flex-shrink-0 w-12 h-12 bg-gray-900 rounded-lg flex items-center justify-center">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                  </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900">Head Office</h4>
-                    <p className="text-gray-600">
+                    <h4 className="font-bold text-gray-900 text-lg mb-2">Head Office</h4>
+                    <p className="text-gray-600 leading-relaxed">
                       61/120 4FL, ECO BUILDING, RAMA 9 ROAD<br />
                       HUAI-KHWANG, HUAI-KHWANG<br />
                       BANGKOK, THAILAND 10310
@@ -540,26 +597,30 @@ export default function AboutPage() {
                 </div>
 
                 {/* Phone number */}
-                <div className="flex items-center space-x-3">
-                  <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                  </svg>
+                <div className="flex items-center space-x-4 p-4 bg-white rounded-xl shadow-sm">
+                  <div className="flex-shrink-0 w-12 h-12 bg-gray-900 rounded-lg flex items-center justify-center">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                  </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900">Phone</h4>
-                    <a href="tel:+662-162-0838" className="text-gray-600 hover:text-gray-900 transition-colors">
+                    <h4 className="font-bold text-gray-900 text-lg mb-1">Phone</h4>
+                    <a href="tel:+662-162-0838" className="text-gray-600 hover:text-gray-900 transition-colors text-lg">
                       +662-162-0838
                     </a>
                   </div>
                 </div>
 
                 {/* Email */}
-                <div className="flex items-center space-x-3">
-                  <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                  </svg>
+                <div className="flex items-center space-x-4 p-4 bg-white rounded-xl shadow-sm">
+                  <div className="flex-shrink-0 w-12 h-12 bg-gray-900 rounded-lg flex items-center justify-center">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                  </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900">Email</h4>
-                    <a href="mailto:info@sv-arch.com" className="text-gray-600 hover:text-gray-900 transition-colors">
+                    <h4 className="font-bold text-gray-900 text-lg mb-1">Email</h4>
+                    <a href="mailto:info@sv-arch.com" className="text-gray-600 hover:text-gray-900 transition-colors text-lg">
                       info@sv-arch.com
                     </a>
                   </div>
