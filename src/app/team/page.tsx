@@ -166,7 +166,7 @@ const LeadershipSection = ({ teamMembers }: { teamMembers: any[] }) => {
           viewport={{ once: true }} // Only animate once
           className="text-center mb-12 md:mb-16"
         >
-          <h2 className="heading-lg mb-4">Leadership Team</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-black">Leadership Team</h2>
           <p className="body-lg max-w-3xl mx-auto text-text-secondary">
             Our leadership team brings together decades of experience and expertise 
             to guide our architectural vision and ensure exceptional project delivery.
