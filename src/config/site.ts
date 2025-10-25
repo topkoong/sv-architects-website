@@ -48,6 +48,16 @@ export const getFullUrl = (path: string): string => {
 };
 
 /**
+ * Get the internal link path with base path
+ * @param path - The internal path (with or without leading slash)
+ * @returns The internal path with base path if needed
+ */
+export const getInternalPath = (path: string): string => {
+  const cleanPath = path.startsWith('/') ? path.slice(1) : path;
+  return BASE_PATH ? `${BASE_PATH}/${cleanPath}` : `/${cleanPath}`;
+};
+
+/**
  * Navigation configuration
  */
 export const NAVIGATION = {

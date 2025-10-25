@@ -36,6 +36,8 @@
 import { fadeIn, slideUp, staggerContainer } from '@/lib/animations';
 // Import team data
 import { getAllTeamMembers, getLeadershipTeam } from '@/data/team';
+// Import site config for internal links
+import { getInternalPath } from '@/config/site';
 
 // Import Next.js components
 import Link from 'next/link';
@@ -232,7 +234,7 @@ const LeadershipSection = ({ teamMembers }: { teamMembers: any[] }) => {
                 </div>
 
                 <Link 
-                  href={`/team-member/${member.slug}`}
+                  href={getInternalPath(`/team-member/${member.slug}`)}
                   className="inline-flex items-center justify-center w-full px-8 py-4 bg-gradient-to-r from-gray-900 to-gray-800 text-white font-semibold text-sm rounded-xl shadow-lg hover:shadow-xl hover:from-purple-900 hover:to-purple-800 transition-all duration-500 group-hover:scale-105 transform mt-auto relative overflow-hidden"
                 >
                   <span className="relative z-10">View Profile</span>
@@ -346,7 +348,7 @@ const AllTeamSection = ({ teamMembers }: { teamMembers: any[] }) => {
                 </div>
 
                 <Link 
-                  href={`/team-member/${member.slug}`}
+                  href={getInternalPath(`/team-member/${member.slug}`)}
                   className="inline-flex items-center justify-center w-full px-4 py-3 bg-gradient-to-r from-gray-900 to-gray-800 text-white font-semibold text-sm rounded-lg shadow-md hover:shadow-lg hover:from-purple-900 hover:to-purple-800 transition-all duration-500 group-hover:scale-105 transform mt-auto relative overflow-hidden"
                 >
                   <span className="relative z-10">View Profile</span>
@@ -456,7 +458,7 @@ const CultureSection = () => {
             who share our passion for innovative design and sustainable architecture.
           </p>
           <Link
-            href="/contact"
+            href={getInternalPath('/contact')}
             className="inline-flex items-center px-8 py-4 bg-gray-900 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl hover:bg-gray-800 transition-all duration-300 transform hover:-translate-y-1"
           >
             View Open Positions
