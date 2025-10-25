@@ -36,9 +36,9 @@ import { AnimatePresence, motion } from 'framer-motion';
 // Import animation variants
 import { fadeIn, slideUp, staggerContainer } from '@/lib/animations';
 
+import Image from 'next/image';
 // Import Next.js components
 import Link from 'next/link';
-import Image from 'next/image';
 // Import custom components
 // Import React components
 import { useState } from 'react';
@@ -84,7 +84,7 @@ interface Project {
  * Mock project data - replace with actual data from CMS or API
  * ============================================================================
  */
-export const projects: Project[] = [
+const projects: Project[] = [
   {
     id: 'u-tapao-airport',
     name: 'U-Tapao Airport New Terminal',
