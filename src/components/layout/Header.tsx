@@ -373,7 +373,7 @@ export const Header = () => {
             aria-label="SV Architects Home"
           >
             <Image
-              src="/sv-architects-website/images/logos/sv.png"
+              src="/sv-architects-website/images/logos/logo-sv-black.svg"
               alt="SV Architects Logo"
               width={40}
               height={40}
