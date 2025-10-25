@@ -419,14 +419,13 @@ export const Header = () => {
             aria-controls="mobile-menu"          // Associates button with menu element
             type="button"                        // Explicit button type
           >
-            /**
-             * Animated icon container
+            {/* Animated icon container
              * 
              * ANIMATION:
              * - Rotates 180 degrees when menu opens
              * - Smooth 0.3s transition
              * - pointer-events-none prevents interference with button clicks
-             */
+             */}
             <motion.div
               animate={{ rotate: isMobileMenuOpen ? 180 : 0 }} // Conditional rotation
               transition={{ duration: 0.3 }}                   // Smooth transition
@@ -434,24 +433,12 @@ export const Header = () => {
             >
               {/* Conditional icon rendering based on menu state */}
               {isMobileMenuOpen ? (
-                /**
-                 * Close icon (X) - shown when menu is open
-                 * 
-                 * ACCESSIBILITY:
-                 * - aria-hidden="true" - decorative icon, not read by screen readers
-                 * - Proper stroke attributes for visibility
-                 */
+                // Close icon (X) - shown when menu is open
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 </svg>
               ) : (
-                /**
-                 * Hamburger icon (three lines) - shown when menu is closed
-                 * 
-                 * ACCESSIBILITY:
-                 * - aria-hidden="true" - decorative icon, not read by screen readers
-                 * - Proper stroke attributes for visibility
-                 */
+                // Hamburger icon (three lines) - shown when menu is closed
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
@@ -485,17 +472,7 @@ export const Header = () => {
             <div className="flex flex-col p-4 space-y-1">
               {/* Map through navigation items for mobile menu */}
               {NAV_ITEMS.map((item) => (
-                /**
-                 * Mobile navigation link
-                 * 
-                 * FEATURES:
-                 * - Block-level display for touch targets
-                 * - Proper padding for mobile interaction
-                 * - Active state highlighting
-                 * - Hover effects
-                 * - Closes menu on click
-                 * - Accessibility attributes
-                 */
+                // Mobile navigation link with accessibility features
                 <Link
                   key={item.href}               // Unique key for React rendering
                   href={item.href}              // Link destination

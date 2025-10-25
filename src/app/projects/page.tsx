@@ -233,12 +233,12 @@ const projects: Project[] = [
       'Smart building technology'
     ],
     images: {
-      thumbnail: '/sv-architects-website/images/projects/centerpoint-siamsquare-1.png',
+      thumbnail: '/sv-architects-website/images/projects/centerpoint-siamsquare-commercial/centerpoint-siamsquare-bts-lower.png',
       gallery: [
-        '/sv-architects-website/images/projects/centerpoint-siamsquare-1.png',
-        '/sv-architects-website/images/projects/centerpoint-siamsquare-2.jpg',
-        '/sv-architects-website/images/projects/centerpoint-siamsquare-3.jpg',
-        '/sv-architects-website/images/projects/centerpoint-siamsquare-4.jpg'
+        '/sv-architects-website/images/projects/centerpoint-siamsquare-commercial/centerpoint-siamsquare-bts-lower.png',
+        '/sv-architects-website/images/projects/centerpoint-siamsquare-commercial/centerpoint-siamsquare-4th-floor.jpg',
+        '/sv-architects-website/images/projects/centerpoint-siamsquare-commercial/centerpoint-siamsquare-2nd-floor-2.jpg',
+        '/sv-architects-website/images/projects/centerpoint-siamsquare-commercial/centerpoint-siamsquare-2nd-floor-1.jpg'
       ]
     },
     sustainability: {
@@ -366,18 +366,18 @@ const projects: Project[] = [
       'Smart home technology'
     ],
     images: {
-      thumbnail: '/sv-architects-website/images/projects/jet-villa-residence-1.jpg',
+      thumbnail: '/sv-architects-website/images/projects/jet-villa-residence-residential/jet-villa-air-view.jpg',
       gallery: [
-        '/sv-architects-website/images/projects/jet-villa-residence-1.jpg',
-        '/sv-architects-website/images/projects/jet-villa-residence-2.jpg',
-        '/sv-architects-website/images/projects/jet-villa-residence-3.jpg',
-        '/sv-architects-website/images/projects/jet-villa-residence-4.jpg',
-        '/sv-architects-website/images/projects/jet-villa-residence-5.jpg',
-        '/sv-architects-website/images/projects/jet-villa-residence-6.jpg',
-        '/sv-architects-website/images/projects/jet-villa-residence-7.jpg',
-        '/sv-architects-website/images/projects/jet-villa-residence-8.jpg',
-        '/sv-architects-website/images/projects/jet-villa-residence-9.jpg',
-        '/sv-architects-website/images/projects/jet-villa-residence-10.jpg'
+        '/sv-architects-website/images/projects/jet-villa-residence-residential/jet-villa-air-view.jpg',
+        '/sv-architects-website/images/projects/jet-villa-residence-residential/jet-villa-view2.jpg',
+        '/sv-architects-website/images/projects/jet-villa-residence-residential/jet-villa-view3.jpg',
+        '/sv-architects-website/images/projects/jet-villa-residence-residential/jet-villa-view4.jpg',
+        '/sv-architects-website/images/projects/jet-villa-residence-residential/jet-villa-view5.jpg',
+        '/sv-architects-website/images/projects/jet-villa-residence-residential/jet-villa-view6.jpg',
+        '/sv-architects-website/images/projects/jet-villa-residence-residential/jet-villa-view7.jpg',
+        '/sv-architects-website/images/projects/jet-villa-residence-residential/jet-villa-view8.jpg',
+        '/sv-architects-website/images/projects/jet-villa-residence-residential/jet-villa-view9.jpg',
+        '/sv-architects-website/images/projects/jet-villa-residence-residential/jet-villa-view10.jpg'
       ]
     },
     sustainability: {
@@ -1167,9 +1167,9 @@ const projects: Project[] = [
       'Commercial integration'
     ],
     images: {
-      thumbnail: '/sv-architects-website/images/projects/mahachai-airport-luxe-city-master-plan/mahachai-airport-luxe-city.jpg',
+      thumbnail: '/sv-architects-website/images/projects/mahachai-airport-luxe-city-master-planning/mahachai-airport-luxe-city.jpg',
       gallery: [
-        '/sv-architects-website/images/projects/mahachai-airport-luxe-city-master-plan/mahachai-airport-luxe-city.jpg'
+        '/sv-architects-website/images/projects/mahachai-airport-luxe-city-master-planning/mahachai-airport-luxe-city.jpg'
       ]
     },
     sustainability: {
