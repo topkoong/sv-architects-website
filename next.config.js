@@ -42,10 +42,10 @@ const nextConfig = {
   },
 
   // CRITICAL: Enable static export for GitHub Pages
-  output: 'export',
+  output: process.env.NODE_ENV === 'production' ? 'export' : undefined,
   
   // Set base path to repository name for GitHub Pages
-  basePath: '/sv-architects-website',
+  basePath: process.env.NODE_ENV === 'production' ? '/sv-architects-website' : '',
   
   // Disable trailing slash to fix hydration errors
   trailingSlash: false,
