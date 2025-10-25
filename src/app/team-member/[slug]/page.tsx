@@ -336,8 +336,8 @@ const HeroSection = ({ member }: { member: TeamMember }) => {
                 </span>
               </div>
               
-              <div className="inline-flex items-center px-4 py-2 bg-blue-50 rounded-full ring-1 ring-blue-200">
-                <span className="text-sm font-medium text-blue-700">
+              <div className="inline-flex items-center px-4 py-2 bg-purple-50 rounded-full ring-1 ring-purple-200">
+                <span className="text-sm font-medium text-purple-700">
                   {member.experience.years}+ Years Experience
                 </span>
               </div>
@@ -409,7 +409,7 @@ const ContentSection = ({ member }: { member: TeamMember }) => {
                 <h3 className="text-xl font-bold text-black mb-2">
                   {edu.degree}
                 </h3>
-                <p className="text-lg text-blue-600 font-semibold mb-2">
+                <p className="text-lg text-purple-600 font-semibold mb-2">
                   {edu.institution}
                 </p>
                 <p className="text-gray-600">
@@ -448,7 +448,7 @@ const ContentSection = ({ member }: { member: TeamMember }) => {
                 {member.experience.areas.map((area, index) => (
                   <div 
                     key={index}
-                    className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500"
+                    className="bg-purple-50 p-4 rounded-lg border-l-4 border-purple-500"
                   >
                     <span className="text-sm font-semibold text-gray-800">
                       {area.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}
@@ -465,13 +465,13 @@ const ContentSection = ({ member }: { member: TeamMember }) => {
                 {member.experience.workHistory.map((work, index) => (
                   <div key={index} className="border-l-2 border-gray-200 pl-6 relative">
                     {/* Timeline dot */}
-                    <div className="absolute left-[-6px] top-2 w-3 h-3 bg-blue-500 rounded-full" />
+                    <div className="absolute left-[-6px] top-2 w-3 h-3 bg-purple-500 rounded-full" />
                     
                     <div className="mb-3">
                       <h4 className="text-lg font-bold text-black">
                         {work.position}
                       </h4>
-                      <p className="text-blue-600 font-semibold">
+                      <p className="text-purple-600 font-semibold">
                         {work.company}
                       </p>
                       <p className="text-sm text-gray-600">
@@ -530,7 +530,7 @@ const ContentSection = ({ member }: { member: TeamMember }) => {
                       {member.software.map((software, index) => (
                         <span 
                           key={index}
-                          className="px-3 py-2 bg-blue-50 text-blue-700 rounded-full text-sm font-medium"
+                          className="px-3 py-2 bg-purple-50 text-purple-700 rounded-full text-sm font-medium"
                         >
                           {software}
                         </span>
@@ -596,7 +596,7 @@ const ContentSection = ({ member }: { member: TeamMember }) => {
                         <h3 className="text-lg font-bold text-black mb-1">
                           {project.projectName}
                         </h3>
-                        <p className="text-blue-600 font-semibold">
+                        <p className="text-purple-600 font-semibold">
                           {project.role}
                         </p>
                       </div>
