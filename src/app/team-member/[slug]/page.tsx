@@ -289,7 +289,7 @@ const HeroSection = ({ member }: { member: TeamMember }) => {
       bg-white // Clean white background
       overflow-hidden // Hide overflow
     ">
-      <div className="container-responsive py-8 md:py-12 lg:py-16">
+      <div className="container-responsive pt-20 md:pt-24 lg:pt-28 pb-8 md:pb-12 lg:pb-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center">
           
           {/* Team Member Photo - Full Image Display */}
