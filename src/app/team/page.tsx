@@ -392,7 +392,7 @@ const AllTeamSection = ({ teamMembers }: { teamMembers: any[] }) => {
 
               {/* Content */}
               <div className="p-6">
-                <h3 className="heading-sm mb-2 group-hover:text-black transition-colors duration-200">
+                <h3 className="text-xl font-bold mb-2 text-black group-hover:text-black transition-colors duration-200">
                   {member.fullName}
                 </h3>
                 
@@ -546,7 +546,7 @@ const CultureSection = () => {
               <div className="text-4xl mb-4">{value.icon}</div>
               
               {/* Value Title */}
-              <h3 className="heading-sm mb-4">{value.title}</h3>
+              <h3 className="text-xl font-bold mb-4 text-black">{value.title}</h3>
               
               {/* Value Description */}
               <p className="body-sm text-text-secondary">{value.description}</p>
@@ -562,7 +562,7 @@ const CultureSection = () => {
           viewport={{ once: true }} // Only animate once
           className="text-center mt-16"
         >
-          <h3 className="heading-md mb-4">Join Our Team</h3>
+          <h3 className="text-2xl font-bold mb-4 text-black">Join Our Team</h3>
           <p className="body-lg mb-8 text-text-secondary max-w-2xl mx-auto">
             We're always looking for talented architects, designers, and project managers 
             who share our passion for innovative design and sustainable architecture.
