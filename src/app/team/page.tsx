@@ -36,6 +36,8 @@
 import { fadeIn, slideUp, staggerContainer } from '@/lib/animations';
 // Import team data
 import { getAllTeamMembers, getLeadershipTeam } from '@/data/team';
+// Import image path helper
+import { getImagePath } from '@/config/site';
 
 // Import Next.js components
 import Link from 'next/link';
@@ -94,7 +96,7 @@ const HeroSection = () => {
     ">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0 bg-[url('/sv-architects-website/images/patterns/architecture-pattern.svg')] bg-repeat" />
+        <div className="absolute inset-0 bg-[url('/images/patterns/architecture-pattern.svg')] bg-repeat" />
       </div>
       
       <div className="container-responsive relative">

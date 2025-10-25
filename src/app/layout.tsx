@@ -25,6 +25,12 @@ import { Inter, Playfair_Display } from 'next/font/google';
 import './globals.css';
 import { Header } from '@/components/layout/Header';
 
+// Helper function for favicon paths
+const getFaviconPath = (path: string) => {
+  const basePath = process.env.NODE_ENV === 'production' ? '/sv-architects-website' : '';
+  return `${basePath}${path}`;
+};
+
 // ===== FONT CONFIGURATION =====
 
 /**
@@ -235,11 +241,11 @@ export default function RootLayout({
         />
         
         {/* Favicon and app icons */}
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-        <link rel="manifest" href="/site.webmanifest" />
+        <link rel="icon" href={getFaviconPath("/favicon.ico")} />
+        <link rel="apple-touch-icon" sizes="180x180" href={getFaviconPath("/apple-touch-icon.png")} />
+        <link rel="icon" type="image/png" sizes="32x32" href={getFaviconPath("/favicon-32x32.png")} />
+        <link rel="icon" type="image/png" sizes="16x16" href={getFaviconPath("/favicon-16x16.png")} />
+        <link rel="manifest" href={getFaviconPath("/site.webmanifest")} />
       </head>
       
       <body className="font-sans antialiased">

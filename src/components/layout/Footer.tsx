@@ -9,6 +9,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
+import { getImagePath } from '@/config/site';
 
 export const Footer = () => {
   return (
@@ -19,11 +20,12 @@ export const Footer = () => {
           <div className="md:col-span-2">
             <div className="mb-6">
               <Image
-                src="/sv-architects-website/images/logos/logo-sv-black.png"
+                src={getImagePath("/images/logos/logo-sv-black.png")}
                 alt="SV Architects Logo"
                 width={200}
                 height={60}
                 className="h-12 w-auto"
+                unoptimized
               />
             </div>
             <p className="text-gray-300 mb-4 max-w-md">

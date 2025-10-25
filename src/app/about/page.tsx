@@ -103,37 +103,37 @@ export default function AboutPage() {
   const CAROUSEL_IMAGES = [
     {
       id: 1,
-      src: '/sv-architects-website/images/about/DSC_4275-1.jpg',
+      src: getImagePath('/images/about/DSC_4275-1.jpg'),
       alt: 'SV Architects modern office environment showcasing professional workspace and collaborative design area'
     },
     {
       id: 2,
-      src: '/sv-architects-website/images/about/DSC_4380-1-1.jpg',
+      src: getImagePath('/images/about/DSC_4380-1-1.jpg'),
       alt: 'Contemporary office space at SV Architects with innovative design elements and natural lighting'
     },
     {
       id: 3,
-      src: '/sv-architects-website/images/about/DSC_4407-1-1.jpg',
+      src: getImagePath('/images/about/DSC_4407-1-1.jpg'),
       alt: 'Professional workspace at SV Architects featuring modern architectural design and team collaboration areas'
     },
     {
       id: 4,
-      src: '/sv-architects-website/images/about/05.jpg',
+      src: getImagePath('/images/about/05.jpg'),
       alt: 'SV Architects team members working together on architectural projects in collaborative environment'
     },
     {
       id: 5,
-      src: '/sv-architects-website/images/about/06.jpg',
+      src: getImagePath('/images/about/06.jpg'),
       alt: 'Professional architects at SV Architects discussing design concepts and project development'
     },
     {
       id: 6,
-      src: '/sv-architects-website/images/about/DSC_4394-1-1.jpg',
+      src: getImagePath('/images/about/DSC_4394-1-1.jpg'),
       alt: 'SV Architects team in creative workspace developing innovative architectural solutions'
     },
     {
       id: 7,
-      src: '/sv-architects-website/images/about/DSC_4325-2-1.jpg',
+      src: getImagePath('/images/about/DSC_4325-2-1.jpg'),
       alt: 'Modern office design at SV Architects showcasing contemporary architectural workspace'
     }
   ];
@@ -305,7 +305,7 @@ export default function AboutPage() {
         {/* Background image with overlay */}
         <div className="absolute inset-0">
           <Image
-            src="/sv-architects-website/images/about/DSC_4275-1.jpg"
+            src={getImagePath('/images/about/DSC_4275-1.jpg')}
             alt="SV Architects office and team environment"
             fill
             className="object-cover"
@@ -410,7 +410,7 @@ export default function AboutPage() {
                   className="absolute inset-0"
                 >
                   <Image
-                    src={CAROUSEL_IMAGES[currentImageIndex]?.src || '/sv-architects-website/images/about/DSC_4275-1.jpg'}
+                    src={CAROUSEL_IMAGES[currentImageIndex]?.src || getImagePath('/images/about/DSC_4275-1.jpg')}
                     alt={CAROUSEL_IMAGES[currentImageIndex]?.alt || 'Office image'}
                     fill
                     className="object-cover"
@@ -418,7 +418,7 @@ export default function AboutPage() {
                     onError={(e) => {
                       console.error('Carousel image failed to load:', e.currentTarget.src);
                       // Try to load a fallback image
-                      e.currentTarget.src = '/sv-architects-website/images/about/DSC_4275-1.jpg';
+                      e.currentTarget.src = getImagePath('/images/about/DSC_4275-1.jpg');
                     }}
                   />
                 </motion.div>

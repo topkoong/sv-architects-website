@@ -51,6 +51,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 // Import Next.js hook to get current route pathname
 import { usePathname } from 'next/navigation';
+// Import image path helper
+import { getImagePath } from '@/config/site';
 
 /**
  * ============================================================================
@@ -373,7 +375,7 @@ export const Header = () => {
             aria-label="SV Architects Home"
           >
             <Image
-              src="/sv-architects-website/images/logos/logo-sv-black.png"
+              src={getImagePath("/images/logos/logo-sv-black.png")}
               alt="SV Architects Logo"
               width={60}
               height={24}

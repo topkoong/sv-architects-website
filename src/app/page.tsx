@@ -12,6 +12,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 
 import Link from 'next/link';
+import { getImagePath } from '@/config/site';
 
 // Hero slides data
 const heroSlides = [
@@ -20,7 +21,7 @@ const heroSlides = [
     title: "Phra Nangchao Sirikit Hospital",
     subtitle: "International Premium Clinic",
     description: "State-of-the-art medical facility designed for optimal patient care with advanced medical technology integration and healing environment design.",
-    image: "/sv-architects-website/images/homepage/phra-nangchao-sirikit-hospital.jpg",
+    image: getImagePath("/images/homepage/phra-nangchao-sirikit-hospital.jpg"),
     ctaText: "View Project",
     ctaLink: "/projects/phra-nangchao-sirikit-hospital"
   },
@@ -29,7 +30,7 @@ const heroSlides = [
     title: "U-Tapao Airport New Passenger Terminal",
     subtitle: "Modern Aviation Infrastructure",
     description: "Modern passenger terminal with sustainable design principles, featuring advanced passenger flow systems and energy-efficient building systems.",
-    image: "/sv-architects-website/images/homepage/u-tapao-airport-new-terminal.jpg",
+    image: getImagePath("/images/homepage/u-tapao-airport-new-terminal.jpg"),
     ctaText: "View Project",
     ctaLink: "/projects/u-tapao-airport-new-terminal"
   },
@@ -38,7 +39,7 @@ const heroSlides = [
     title: "High Speed Rail (HSR) Stations",
     subtitle: "Transportation Infrastructure Excellence",
     description: "Modern high-speed rail station complex featuring efficient passenger flow, sustainable design, and integrated transportation systems.",
-    image: "/sv-architects-website/images/homepage/high-speed-rail-stations.png",
+    image: getImagePath("/images/homepage/high-speed-rail-stations.png"),
     ctaText: "View Project",
     ctaLink: "/projects/high-speed-rail-stations"
   },
@@ -47,7 +48,7 @@ const heroSlides = [
     title: "Bunditpatanasilpa Institute Auditorium",
     subtitle: "Cultural Excellence in Nakhon Pathom",
     description: "Modern cultural auditorium featuring state-of-the-art acoustic design, flexible performance spaces, and cultural integration for educational and community events.",
-    image: "/sv-architects-website/images/homepage/bunditpatanasilpa-auditorium.jpg",
+    image: getImagePath("/images/homepage/bunditpatanasilpa-auditorium.jpg"),
     ctaText: "View Project",
     ctaLink: "/projects/bunditpatanasilpa-institute-auditorium"
   },
@@ -56,7 +57,7 @@ const heroSlides = [
     title: "Chaopraya Mahanatee Riverside Condominium",
     subtitle: "Luxury Riverside Living",
     description: "Riverside condominium development offering stunning river views and luxury amenities in prime Bangkok location.",
-    image: "/sv-architects-website/images/homepage/chaopraya-mahanatee-riverside-condominium.jpg",
+    image: getImagePath("/images/homepage/chaopraya-mahanatee-riverside-condominium.jpg"),
     ctaText: "View Project",
     ctaLink: "/projects/chaopraya-mahanatee-riverside-condominium"
   },
@@ -65,7 +66,7 @@ const heroSlides = [
     title: "SIAMESE RAMA 9",
     subtitle: "High-Rise Residential Excellence",
     description: "High-rise residential development featuring contemporary design and comprehensive amenities for modern urban living.",
-    image: "/sv-architects-website/images/homepage/siamese-rama9.jpg",
+    image: getImagePath("/images/homepage/siamese-rama9.jpg"),
     ctaText: "View Project",
     ctaLink: "/projects/siamese-rama9"
   }
