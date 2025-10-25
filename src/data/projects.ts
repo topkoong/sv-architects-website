@@ -2,207 +2,1196 @@
  * ============================================================================
  * FILE: src/data/projects.ts
  * ============================================================================
- * DESCRIPTION: Projects data for SV Architects portfolio
- * Centralized data source for all project information
+ * DESCRIPTION: Centralized project data for SV Architects website
+ * 
+ * This file contains ALL project data in one place. Each project can be
+ * displayed in two modes:
+ * 
+ * 1. FULL MODE: Complete project details with all information
+ * 2. GALLERY-ONLY MODE: Just images carousel for projects without full details
+ * 
+ * @author SV Architects Development Team
+ * @version 1.0.0
  * ============================================================================
  */
 
-export interface Project {
-  id: string;
-  name: string;
-  category: string;
-  categories?: string[];
-  type: string;
-  location: string;
-  year: number;
-  status: 'completed' | 'ongoing' | 'planned';
-  size: string;
-  client: string;
-  description: string;
-  features: string[];
-  images: {
-    thumbnail: string;
-    gallery: string[];
-  };
-  awards?: string[];
-  sustainability?: {
-    leed: boolean;
-    greenBuilding: boolean;
-    energyEfficient: boolean;
-  };
-}
+import { ProjectData, ProjectCategory } from '@/types/project';
+import { getImagePath } from '@/config/site';
 
-export const projects: Project[] = [
+/**
+ * All projects data
+ * Add new projects to this array
+ */
+export const projects: ProjectData[] = [
+  // ========== FULL DETAIL PROJECTS ==========
+  
   {
-    id: 'u-tapao-airport',
-    name: 'U-Tapao Airport New Terminal',
-    category: 'Aviation',
-    type: 'Airport Terminal',
+    id: 'centerpoint-siamsquare',
+    name: 'Centerpoint Siamsquare',
+    category: 'commercial',
+    displayMode: 'full',
+    
+    tagline: 'COMMERCIAL DEVELOPMENT EXCELLENCE',
+    description: 'Commercial development featuring retail, office, and entertainment spaces in the heart of Bangkok. This landmark project represents the future of integrated commercial spaces, combining modern design with sustainable practices.',
+    
+    location: 'Bangkok, Thailand',
+    year: 2022,
+    status: 'completed',
+    size: '120,000 sqm',
+    client: 'Central Group',
+    type: 'Commercial Development',
+    
+    features: [
+      'Integrated retail and office spaces',
+      'Entertainment facilities',
+      'Public plaza and green spaces',
+      'Underground parking system',
+      'Smart building technology',
+      'Modern commercial amenities'
+    ],
+    
+    sustainability: {
+      leed: true,
+      greenBuilding: true,
+      energyEfficient: true
+    },
+    
+    images: [
+      {
+        url: getImagePath('/images/projects/centerpoint-siamsquare-1.jpg'),
+        alt: 'Centerpoint Siamsquare exterior view',
+        caption: 'Main entrance and public plaza'
+      },
+      {
+        url: getImagePath('/images/projects/centerpoint-siamsquare-2.jpg'),
+        alt: 'Centerpoint Siamsquare retail space',
+        caption: 'Modern retail environment with natural lighting'
+      },
+      {
+        url: getImagePath('/images/projects/centerpoint-siamsquare-3.jpg'),
+        alt: 'Centerpoint Siamsquare office tower at night',
+        caption: 'Office tower illuminated at night'
+      },
+      {
+        url: getImagePath('/images/projects/centerpoint-siamsquare-4.jpg'),
+        alt: 'Centerpoint Siamsquare green spaces',
+        caption: 'Public plaza with landscaped green spaces'
+      }
+    ],
+    
+    metaDescription: 'Centerpoint Siamsquare - A landmark 120,000 sqm commercial development in Bangkok featuring integrated retail, office, and entertainment spaces with sustainable design.',
+    keywords: ['commercial development', 'Bangkok', 'retail', 'office space', 'mixed-use', 'sustainable design', 'LEED certified']
+  },
+
+  {
+    id: 'siamese-rama9',
+    name: 'Siamese Rama 9',
+    category: 'residential',
+    displayMode: 'full',
+    
+    tagline: 'AWARD-WINNING RESIDENTIAL DEVELOPMENT',
+    description: 'An Award-winning residential development encompassing cutting-edge technology for a superior and premium lifestyle. This iconic mixed-use development has received multiple international awards for its innovative design and sustainable features.',
+    
+    location: 'Bangkok, Thailand',
+    year: 2021,
+    status: 'completed',
+    size: '45,000 sqm',
+    client: 'Siamese Development Co.',
+    type: 'High-Rise Residential',
+    
+    features: [
+      'Award-winning residential development',
+      'Cutting-edge technology integration',
+      'Superior and premium lifestyle',
+      'Contemporary high-rise design',
+      'Comprehensive amenities',
+      'Modern urban living spaces',
+      'Rooftop facilities',
+      'Underground parking'
+    ],
+    
+    sustainability: {
+      leed: true,
+      greenBuilding: true,
+      energyEfficient: true,
+      additionalFeatures: ['Solar panels', 'Rainwater harvesting', 'Green roof system']
+    },
+    
+    images: [
+      {
+        url: getImagePath('/images/projects/siamese-rama9-1.jpg'),
+        alt: 'Siamese Rama 9 towers',
+        caption: 'Twin towers with distinctive architecture'
+      },
+      {
+        url: getImagePath('/images/projects/siamese-rama9-2.jpg'),
+        alt: 'Siamese Rama 9 retail area',
+        caption: 'Modern retail podium'
+      },
+      {
+        url: getImagePath('/images/projects/siamese-rama9-3.jpg'),
+        alt: 'Siamese Rama 9 sky garden',
+        caption: 'Rooftop sky garden with city views'
+      },
+      {
+        url: getImagePath('/images/projects/siamese-rama9-4.jpg'),
+        alt: 'Siamese Rama 9 at night',
+        caption: 'Illuminated facade at night'
+      }
+    ],
+    
+    additionalInfo: {
+      awards: [
+        'MIPIM Asia Awards 2021 - Best Residential Development',
+        'Thailand Property Awards 2021 - Best High-Rise Development',
+        'Asia Property Awards 2021 - Best Mixed-Use Development'
+      ],
+      style: 'Contemporary Modern',
+      duration: '36 months'
+    },
+    
+    metaDescription: 'Siamese Rama 9 - Award-winning residential development in Bangkok featuring cutting-edge technology and premium lifestyle amenities.',
+    keywords: ['residential', 'Bangkok', 'award-winning', 'high-rise', 'sustainable design', 'LEED', 'premium lifestyle']
+  },
+
+  {
+    id: 'baan-huahin',
+    name: 'Baan Huahin',
+    category: 'residential',
+    displayMode: 'full',
+    
+    tagline: 'LITTLE HOUSE IN FOREST',
+    description: 'Little house in forest - A luxury villa designed to harmonize with nature, featuring sustainable design principles and forest integration. This project represents the perfect blend of modern luxury and environmental consciousness.',
+    
+    location: 'Hua Hin, Thailand',
+    year: 2019,
+    status: 'completed',
+    size: '2,500 sqm',
+    client: 'Private Client',
+    type: 'Luxury Villa',
+    
+    features: [
+      'Forest integration design',
+      'Sustainable architecture',
+      'Natural material usage',
+      'Privacy and seclusion',
+      'Luxury villa amenities',
+      'Environmental harmony',
+      'Modern forest living'
+    ],
+    
+    sustainability: {
+      leed: true,
+      greenBuilding: true,
+      energyEfficient: true
+    },
+    
+    images: [
+      {
+        url: getImagePath('/images/projects/baan-huahin-1.jpg'),
+        alt: 'Baan Huahin exterior view',
+        caption: 'Villa integrated with forest environment'
+      },
+      {
+        url: getImagePath('/images/projects/baan-huahin-2.jpg'),
+        alt: 'Baan Huahin living space',
+        caption: 'Modern living space with natural materials'
+      },
+      {
+        url: getImagePath('/images/projects/baan-huahin-3.jpg'),
+        alt: 'Baan Huahin garden view',
+        caption: 'Seamless indoor-outdoor connection'
+      },
+      {
+        url: getImagePath('/images/projects/baan-huahin-4.jpg'),
+        alt: 'Baan Huahin forest integration',
+        caption: 'Harmonious forest integration'
+      }
+    ],
+    
+    metaDescription: 'Baan Huahin - A luxury villa in Hua Hin designed to harmonize with nature, featuring sustainable design and forest integration.',
+    keywords: ['luxury villa', 'Hua Hin', 'forest integration', 'sustainable design', 'natural materials', 'privacy']
+  },
+
+  {
+    id: 'u-tapao-airport-new-passenger-terminal',
+    name: 'U-Tapao Airport New Passenger Terminal',
+    category: 'aviation',
+    displayMode: 'full',
+    
+    tagline: 'NEXT-GENERATION AVIATION INFRASTRUCTURE',
+    description: 'Designing Thailand\'s future aviation hub with state-of-the-art passenger terminal facilities. This project supports the Eastern Economic Corridor (EEC) development and positions U-Tapao as a major international gateway.',
+    
     location: 'Rayong, Thailand',
+    year: 2024,
+    status: 'ongoing',
+    size: '150,000 sqm',
+    client: 'Department of Airports',
+    type: 'Aviation Infrastructure',
+    
+    features: [
+      'International terminal capacity for 15 million passengers/year',
+      'Modern check-in and immigration facilities',
+      'Retail and dining concourses',
+      'VIP lounges',
+      'Ground transportation hub',
+      'Sustainable design with natural ventilation'
+    ],
+    
+    sustainability: {
+      greenBuilding: true,
+      energyEfficient: true,
+      additionalFeatures: ['Natural lighting', 'Solar energy', 'Water recycling system']
+    },
+    
+    images: [
+      {
+        url: getImagePath('/images/projects/u-tapao-airport-new-passenger-terminal-1.jpg'),
+        alt: 'U-Tapao Airport Terminal exterior',
+        caption: 'Modern terminal facade with distinctive roof design'
+      },
+      {
+        url: getImagePath('/images/projects/u-tapao-airport-new-passenger-terminal-2.jpg'),
+        alt: 'U-Tapao Airport Terminal interior',
+        caption: 'Spacious departure hall with natural lighting'
+      },
+      {
+        url: getImagePath('/images/projects/u-tapao-airport-new-passenger-terminal-3.jpg'),
+        alt: 'U-Tapao Airport Terminal concourse',
+        caption: 'Retail and dining concourse'
+      },
+      {
+        url: getImagePath('/images/projects/u-tapao-airport-new-passenger-terminal-4.jpg'),
+        alt: 'U-Tapao Airport Terminal aerial view',
+        caption: 'Aerial view of terminal complex'
+      }
+    ],
+    
+    metaDescription: 'U-Tapao Airport New Passenger Terminal - A next-generation aviation facility designed to serve 15 million passengers annually as part of Thailand\'s Eastern Economic Corridor.',
+    keywords: ['aviation', 'airport', 'U-Tapao', 'EEC', 'passenger terminal', 'infrastructure', 'Thailand']
+  },
+
+  {
+    id: 'don-mueang-airport-terminal3',
+    name: 'Don Mueang International Airport Terminal 3',
+    category: 'aviation',
+    displayMode: 'full',
+    
+    tagline: 'INTERNATIONAL AVIATION HUB',
+    description: 'International aviation hub bridging heritage and embracing the future. Modern terminal expansion featuring advanced passenger processing systems and sustainable design principles.',
+    
+    location: 'Bangkok, Thailand',
+    year: 2023,
+    status: 'ongoing',
+    size: '160,000 sqm',
+    client: 'AOT',
+    type: 'Airport Terminal',
+    
+    features: [
+      'Advanced passenger processing systems',
+      'International departure facilities',
+      'Sustainable terminal design',
+      'Modern security infrastructure',
+      'Enhanced passenger experience',
+      'Heritage integration design'
+    ],
+    
+    sustainability: {
+      leed: true,
+      greenBuilding: true,
+      energyEfficient: true
+    },
+    
+    images: [
+      {
+        url: getImagePath('/images/projects/don-mueang-airport-terminal3-1.jpg'),
+        alt: 'Don Mueang Airport Terminal 3 exterior',
+        caption: 'Modern terminal expansion'
+      },
+      {
+        url: getImagePath('/images/projects/don-mueang-airport-terminal3-2.jpg'),
+        alt: 'Don Mueang Airport Terminal 3 interior',
+        caption: 'Spacious departure hall'
+      },
+      {
+        url: getImagePath('/images/projects/don-mueang-airport-terminal3-3.jpg'),
+        alt: 'Don Mueang Airport Terminal 3 concourse',
+        caption: 'Retail and dining areas'
+      },
+      {
+        url: getImagePath('/images/projects/don-mueang-airport-terminal3-4.jpg'),
+        alt: 'Don Mueang Airport Terminal 3 aerial view',
+        caption: 'Aerial view of terminal complex'
+      }
+    ],
+    
+    metaDescription: 'Don Mueang International Airport Terminal 3 - Modern terminal expansion featuring advanced passenger processing systems and sustainable design.',
+    keywords: ['aviation', 'airport', 'Don Mueang', 'terminal', 'Bangkok', 'passenger processing', 'sustainable design']
+  },
+
+  {
+    id: 'chaopraya-mahanatee-hotel',
+    name: 'Chaopraya Mahanatee Hotel',
+    category: 'hospitality',
+    displayMode: 'full',
+    
+    tagline: 'RIVERSIDE HOSPITALITY EXCELLENCE',
+    description: 'Luxury riverside hotel offering unparalleled views of the Chao Phraya River. This hospitality project combines traditional Thai architecture with modern amenities and sustainable design principles.',
+    
+    location: 'Bangkok, Thailand',
+    year: 2022,
+    status: 'completed',
+    size: '25,000 sqm',
+    client: 'Mahanatee Group',
+    type: 'Luxury Hotel',
+    
+    features: [
+      'Riverside location with panoramic views',
+      'Luxury accommodation facilities',
+      'Traditional Thai architectural elements',
+      'Modern hospitality amenities',
+      'Sustainable design integration',
+      'Cultural heritage preservation'
+    ],
+    
+    sustainability: {
+      greenBuilding: true,
+      energyEfficient: true,
+      additionalFeatures: ['Water conservation', 'Local material usage', 'Energy-efficient systems']
+    },
+    
+    images: [
+      {
+        url: getImagePath('/images/projects/chaopraya-hotel-1.jpg'),
+        alt: 'Chaopraya Mahanatee Hotel exterior',
+        caption: 'Riverside hotel facade'
+      },
+      {
+        url: getImagePath('/images/projects/chaopraya-hotel-2.jpg'),
+        alt: 'Chaopraya Mahanatee Hotel lobby',
+        caption: 'Elegant lobby design'
+      },
+      {
+        url: getImagePath('/images/projects/chaopraya-hotel-3.jpg'),
+        alt: 'Chaopraya Mahanatee Hotel room',
+        caption: 'Luxury accommodation with river views'
+      },
+      {
+        url: getImagePath('/images/projects/chaopraya-hotel-4.jpg'),
+        alt: 'Chaopraya Mahanatee Hotel restaurant',
+        caption: 'Riverside dining experience'
+      }
+    ],
+    
+    metaDescription: 'Chaopraya Mahanatee Hotel - Luxury riverside hotel in Bangkok featuring traditional Thai architecture and modern amenities.',
+    keywords: ['hospitality', 'hotel', 'Chao Phraya', 'riverside', 'luxury', 'Bangkok', 'traditional architecture']
+  },
+
+  {
+    id: 'bunditpatanasilpa-institute-auditorium',
+    name: 'Bunditpatanasilpa Institute Auditorium',
+    category: 'institutional',
+    displayMode: 'full',
+    
+    tagline: 'CULTURAL INSTITUTION EXCELLENCE',
+    description: 'State-of-the-art auditorium facility for the Bunditpatanasilpa Institute, designed to support cultural and educational activities with modern acoustics and flexible performance spaces.',
+    
+    location: 'Bangkok, Thailand',
+    year: 2021,
+    status: 'completed',
+    size: '8,500 sqm',
+    client: 'Bunditpatanasilpa Institute',
+    type: 'Cultural Institution',
+    
+    features: [
+      'State-of-the-art acoustics',
+      'Flexible performance spaces',
+      'Modern cultural facilities',
+      'Educational support spaces',
+      'Accessibility compliance',
+      'Cultural heritage integration'
+    ],
+    
+    sustainability: {
+      greenBuilding: true,
+      energyEfficient: true
+    },
+    
+    images: [
+      {
+        url: getImagePath('/images/projects/bunditpatanasilpa-gallery.jpg'),
+        alt: 'Bunditpatanasilpa Institute Auditorium exterior',
+        caption: 'Modern cultural institution facade'
+      },
+      {
+        url: getImagePath('/images/projects/bunditpatanasilpa-interior1.jpg'),
+        alt: 'Bunditpatanasilpa Institute Auditorium interior',
+        caption: 'Main auditorium space'
+      },
+      {
+        url: getImagePath('/images/projects/bunditpatanasilpa-interior2.jpg'),
+        alt: 'Bunditpatanasilpa Institute Auditorium stage',
+        caption: 'Performance stage area'
+      }
+    ],
+    
+    metaDescription: 'Bunditpatanasilpa Institute Auditorium - State-of-the-art cultural facility with modern acoustics and flexible performance spaces.',
+    keywords: ['cultural institution', 'auditorium', 'acoustics', 'performance', 'education', 'Bangkok']
+  },
+
+  {
+    id: 'somdech-phra-nangchao-sirikit-hospital',
+    name: 'Somdech Phra Nangchao Sirikit Hospital',
+    category: 'healthcare',
+    displayMode: 'full',
+    
+    tagline: 'MODERN HEALTHCARE FACILITY',
+    description: 'Comprehensive healthcare facility designed to provide modern medical services with patient-centered design and advanced medical technology integration.',
+    
+    location: 'Bangkok, Thailand',
     year: 2023,
     status: 'completed',
     size: '45,000 sqm',
-    client: 'Airports of Thailand Public Company Limited',
-    description: 'Modern passenger terminal with sustainable design principles, featuring advanced passenger flow systems and energy-efficient building systems.',
+    client: 'Ministry of Public Health',
+    type: 'General Hospital',
+    
     features: [
-      'Advanced passenger flow systems',
-      'Energy-efficient HVAC systems',
-      'Sustainable materials and construction',
+      'Patient-centered design',
+      'Advanced medical technology',
+      'Comprehensive healthcare services',
+      'Modern medical facilities',
       'Accessibility compliance',
-      'Modern security systems'
+      'Healing environment design'
     ],
-    images: {
-      thumbnail: '/sv-architects-website/images/projects/u-tapao-airport-new-terminal/u-tapao-airport-new-terminal.jpg',
-      gallery: [
-        '/sv-architects-website/images/projects/u-tapao-airport-new-terminal/u-tapao-airport-new-terminal.jpg'
-      ]
-    },
-    awards: ['Best Airport Design 2023', 'Sustainable Design Excellence'],
+    
     sustainability: {
-      leed: true,
       greenBuilding: true,
-      energyEfficient: true
-    }
+      energyEfficient: true,
+      additionalFeatures: ['Natural lighting', 'Air quality systems', 'Sustainable materials']
+    },
+    
+    images: [
+      {
+        url: getImagePath('/images/projects/somdech-phra-nangchao-sirikit-hospital-1.jpg'),
+        alt: 'Somdech Phra Nangchao Sirikit Hospital exterior',
+        caption: 'Modern healthcare facility'
+      },
+      {
+        url: getImagePath('/images/projects/somdech-phra-nangchao-sirikit-hospital-2.jpg'),
+        alt: 'Somdech Phra Nangchao Sirikit Hospital lobby',
+        caption: 'Patient-friendly lobby design'
+      },
+      {
+        url: getImagePath('/images/projects/somdech-phra-nangchao-sirikit-hospital-3.jpg'),
+        alt: 'Somdech Phra Nangchao Sirikit Hospital ward',
+        caption: 'Modern patient care areas'
+      },
+      {
+        url: getImagePath('/images/projects/somdech-phra-nangchao-sirikit-hospital-4.jpg'),
+        alt: 'Somdech Phra Nangchao Sirikit Hospital garden',
+        caption: 'Healing garden spaces'
+      }
+    ],
+    
+    metaDescription: 'Somdech Phra Nangchao Sirikit Hospital - Modern healthcare facility with patient-centered design and advanced medical technology.',
+    keywords: ['healthcare', 'hospital', 'medical facility', 'patient care', 'Bangkok', 'modern medicine']
   },
+
+  // ========== GALLERY-ONLY PROJECTS ==========
+  
   {
-    id: 'don-mueang-airport-terminal3',
-    name: 'Don Mueang International Airport Terminal 3',
-    category: 'Aviation',
-    type: 'Airport Terminal',
+    id: 'jet-villa-residence',
+    name: 'Jet Villa Residence',
+    category: 'residential',
+    displayMode: 'gallery-only',
+    
     location: 'Bangkok, Thailand',
     year: 2023,
-    status: 'ongoing',
-    size: '160,000 sqm',
-    client: 'AOT',
-    description: 'International aviation hub bridging heritage and embracing the future. Modern terminal expansion featuring advanced passenger processing systems and sustainable design principles.',
-    features: [
-      'Advanced passenger processing systems',
-      'International departure facilities',
-      'Sustainable terminal design',
-      'Modern security infrastructure',
-      'Enhanced passenger experience',
-      'Heritage integration design'
-    ],
-    images: {
-      thumbnail: '/sv-architects-website/images/projects/don-mueang-international-airport-terminal-3-aviation/IMG_2621.jpeg',
-      gallery: [
-        '/sv-architects-website/images/projects/don-mueang-international-airport-terminal-3-aviation/IMG_2621.jpeg',
-        '/sv-architects-website/images/projects/don-mueang-international-airport-terminal-3-aviation/IMG_2622.jpeg',
-        '/sv-architects-website/images/projects/don-mueang-international-airport-terminal-3-aviation/IMG_2623.jpeg',
-        '/sv-architects-website/images/projects/don-mueang-international-airport-terminal-3-aviation/IMG_2624.jpeg',
-        '/sv-architects-website/images/projects/don-mueang-international-airport-terminal-3-aviation/IMG_2625.jpeg'
-      ]
-    },
-    awards: ['Airport Design Excellence 2023'],
-    sustainability: {
-      leed: true,
-      greenBuilding: true,
-      energyEfficient: true
-    }
+    
+    images: [
+      {
+        url: getImagePath('/images/projects/jet-villa-residence-1.jpg'),
+        alt: 'Jet Villa Residence aerial view'
+      },
+      {
+        url: getImagePath('/images/projects/jet-villa-residence-2.jpg'),
+        alt: 'Jet Villa Residence exterior design'
+      },
+      {
+        url: getImagePath('/images/projects/jet-villa-residence-3.jpg'),
+        alt: 'Jet Villa Residence garden and landscape'
+      },
+      {
+        url: getImagePath('/images/projects/jet-villa-residence-4.jpg'),
+        alt: 'Jet Villa Residence pool area'
+      }
+    ]
   },
+
   {
     id: 'villa-perpetual',
     name: 'Villa Perpetual',
-    category: 'Residential',
-    type: 'Luxury Villa',
+    category: 'residential',
+    displayMode: 'gallery-only',
+    
     location: 'Bangkok, Thailand',
     year: 2020,
-    status: 'completed',
-    size: '1,800 sqm',
-    client: 'Perpetual Properties Ltd.',
-    description: 'An epitome of luxury and modern elegance.',
-    features: [
-      'Epitome of luxury design',
-      'Modern elegance',
-      'Timeless design principles',
-      'Premium finishes',
-      'Sophisticated living spaces',
-      'Private outdoor areas',
-      'High-end materials',
-      'Luxury villa amenities'
-    ],
-    images: {
-      thumbnail: '/sv-architects-website/images/projects/villa-perpetual-residential/Entrance-1.jpg',
-      gallery: [
-        '/sv-architects-website/images/projects/villa-perpetual-residential/Entrance-1.jpg',
-        '/sv-architects-website/images/projects/villa-perpetual-residential/Bird-eye-view-1-1.jpg',
-        '/sv-architects-website/images/projects/villa-perpetual-residential/Landscape-1.jpg'
-      ]
-    },
-    sustainability: {
-      leed: true,
-      greenBuilding: true,
-      energyEfficient: true
-    }
+    
+    images: [
+      {
+        url: getImagePath('/images/projects/villa-perpetual-1.jpg'),
+        alt: 'Villa Perpetual exterior'
+      },
+      {
+        url: getImagePath('/images/projects/villa-perpetual-2.jpg'),
+        alt: 'Villa Perpetual pool area'
+      },
+      {
+        url: getImagePath('/images/projects/villa-perpetual-3.jpg'),
+        alt: 'Villa Perpetual living space'
+      },
+      {
+        url: getImagePath('/images/projects/villa-perpetual-4.jpg'),
+        alt: 'Villa Perpetual garden view'
+      }
+    ]
   },
+
   {
-    id: 'don-mueang-airport-terminal3',
-    name: 'Don Mueang International Airport Terminal 3',
-    category: 'Aviation',
-    type: 'Airport Terminal',
+    id: 'innovation-center',
+    name: 'Innovation Center',
+    category: 'institutional',
+    displayMode: 'gallery-only',
+    
     location: 'Bangkok, Thailand',
     year: 2023,
-    status: 'ongoing',
-    size: '160,000 sqm',
-    client: 'AOT',
-    description: 'International aviation hub bridging heritage and embracing the future. Modern terminal expansion featuring advanced passenger processing systems and sustainable design principles.',
-    features: [
-      'Advanced passenger processing systems',
-      'International departure facilities',
-      'Sustainable terminal design',
-      'Modern security infrastructure',
-      'Enhanced passenger experience',
-      'Heritage integration design'
-    ],
-    images: {
-      thumbnail: '/sv-architects-website/images/projects/don-mueang-international-airport-terminal-3-aviation/IMG_2621.jpeg',
-      gallery: [
-        '/sv-architects-website/images/projects/don-mueang-international-airport-terminal-3-aviation/IMG_2621.jpeg',
-        '/sv-architects-website/images/projects/don-mueang-international-airport-terminal-3-aviation/IMG_2622.jpeg',
-        '/sv-architects-website/images/projects/don-mueang-international-airport-terminal-3-aviation/IMG_2623.jpeg',
-        '/sv-architects-website/images/projects/don-mueang-international-airport-terminal-3-aviation/IMG_2624.jpeg',
-        '/sv-architects-website/images/projects/don-mueang-international-airport-terminal-3-aviation/IMG_2625.jpeg'
-      ]
-    },
-    awards: ['Airport Design Excellence 2023'],
-    sustainability: {
-      leed: true,
-      greenBuilding: true,
-      energyEfficient: true
-    }
+    
+    images: [
+      {
+        url: getImagePath('/images/projects/innovation-center-1.jpg'),
+        alt: 'Innovation Center exterior'
+      },
+      {
+        url: getImagePath('/images/projects/innovation-center-2.jpg'),
+        alt: 'Innovation Center interior'
+      },
+      {
+        url: getImagePath('/images/projects/innovation-center-3.jpg'),
+        alt: 'Innovation Center common area'
+      },
+      {
+        url: getImagePath('/images/projects/innovation-center-4.jpg'),
+        alt: 'Innovation Center workspace'
+      }
+    ]
   },
+
   {
-    id: 'villa-perpetual',
-    name: 'Villa Perpetual',
-    category: 'Residential',
-    type: 'Luxury Villa',
+    id: 'hi-tech-sandbox',
+    name: 'Hi-Tech Sandbox',
+    category: 'institutional',
+    displayMode: 'gallery-only',
+    
+    location: 'Bangkok, Thailand',
+    year: 2023,
+    
+    images: [
+      {
+        url: getImagePath('/images/projects/hi-tech-sandbox-1.jpg'),
+        alt: 'Hi-Tech Sandbox exterior'
+      },
+      {
+        url: getImagePath('/images/projects/hi-tech-sandbox-2.jpg'),
+        alt: 'Hi-Tech Sandbox interior'
+      },
+      {
+        url: getImagePath('/images/projects/hi-tech-sandbox-3.jpg'),
+        alt: 'Hi-Tech Sandbox workspace'
+      },
+      {
+        url: getImagePath('/images/projects/hi-tech-sandbox-4.jpg'),
+        alt: 'Hi-Tech Sandbox technology area'
+      }
+    ]
+  },
+
+  {
+    id: 'hh-park-residence',
+    name: 'HH Park Residence',
+    category: 'residential',
+    displayMode: 'gallery-only',
+    
+    location: 'Bangkok, Thailand',
+    year: 2022,
+    
+    images: [
+      {
+        url: getImagePath('/images/projects/hh-park-residence-1.jpg'),
+        alt: 'HH Park Residence exterior'
+      },
+      {
+        url: getImagePath('/images/projects/hh-park-residence-2.jpg'),
+        alt: 'HH Park Residence common area'
+      },
+      {
+        url: getImagePath('/images/projects/hh-park-residence-3.jpg'),
+        alt: 'HH Park Residence garden'
+      },
+      {
+        url: getImagePath('/images/projects/hh-park-residence-4.jpg'),
+        alt: 'HH Park Residence amenities'
+      }
+    ]
+  },
+
+  {
+    id: 'phuket-condominium',
+    name: 'Phuket Condominium',
+    category: 'residential',
+    displayMode: 'gallery-only',
+    
+    location: 'Phuket, Thailand',
+    year: 2023,
+    
+    images: [
+      {
+        url: getImagePath('/images/projects/phuket-condominium-1.jpg'),
+        alt: 'Phuket Condominium exterior'
+      },
+      {
+        url: getImagePath('/images/projects/phuket-condominium-2.jpg'),
+        alt: 'Phuket Condominium pool area'
+      },
+      {
+        url: getImagePath('/images/projects/phuket-condominium-3.jpg'),
+        alt: 'Phuket Condominium beach view'
+      },
+      {
+        url: getImagePath('/images/projects/phuket-condominium-4.jpg'),
+        alt: 'Phuket Condominium amenities'
+      }
+    ]
+  },
+
+  {
+    id: 'vivo-executive-apartment',
+    name: 'Vivo Executive Apartment',
+    category: 'residential',
+    displayMode: 'gallery-only',
+    
+    location: 'Bangkok, Thailand',
+    year: 2023,
+    
+    images: [
+      {
+        url: getImagePath('/images/projects/vivo-executive-apartment-1.jpg'),
+        alt: 'Vivo Executive Apartment exterior'
+      },
+      {
+        url: getImagePath('/images/projects/vivo-executive-apartment-2.jpg'),
+        alt: 'Vivo Executive Apartment lobby'
+      },
+      {
+        url: getImagePath('/images/projects/vivo-executive-apartment-3.jpg'),
+        alt: 'Vivo Executive Apartment unit'
+      },
+      {
+        url: getImagePath('/images/projects/vivo-executive-apartment-4.jpg'),
+        alt: 'Vivo Executive Apartment amenities'
+      }
+    ]
+  },
+
+  {
+    id: 'zen-village',
+    name: 'Zen Village',
+    category: 'residential',
+    displayMode: 'gallery-only',
+    
+    location: 'Bangkok, Thailand',
+    year: 2022,
+    
+    images: [
+      {
+        url: getImagePath('/images/projects/zen-village-1.jpg'),
+        alt: 'Zen Village exterior'
+      },
+      {
+        url: getImagePath('/images/projects/zen-village-2.jpg'),
+        alt: 'Zen Village garden'
+      },
+      {
+        url: getImagePath('/images/projects/zen-village-3.jpg'),
+        alt: 'Zen Village common area'
+      },
+      {
+        url: getImagePath('/images/projects/zen-village-4.jpg'),
+        alt: 'Zen Village amenities'
+      }
+    ]
+  },
+
+  {
+    id: 'eec-silicon-technology-park',
+    name: 'EEC Silicon Technology Park',
+    category: 'master-planning',
+    displayMode: 'gallery-only',
+    
+    location: 'Eastern Economic Corridor, Thailand',
+    year: 2024,
+    
+    images: [
+      {
+        url: getImagePath('/images/projects/eec-silicon-technology-park-1.jpg'),
+        alt: 'EEC Silicon Technology Park master plan'
+      },
+      {
+        url: getImagePath('/images/projects/eec-silicon-technology-park-2.jpg'),
+        alt: 'EEC Silicon Technology Park facilities'
+      },
+      {
+        url: getImagePath('/images/projects/eec-silicon-technology-park-3.jpg'),
+        alt: 'EEC Silicon Technology Park infrastructure'
+      },
+      {
+        url: getImagePath('/images/projects/eec-silicon-technology-park-4.jpg'),
+        alt: 'EEC Silicon Technology Park development'
+      }
+    ]
+  },
+
+  {
+    id: 'geo-valley-apartment-master-plan',
+    name: 'Geo Valley Apartment Master Plan',
+    category: 'master-planning',
+    displayMode: 'gallery-only',
+    
+    location: 'Bangkok, Thailand',
+    year: 2023,
+    
+    images: [
+      {
+        url: getImagePath('/images/projects/geo-valley-apartment-master-plan-1.jpg'),
+        alt: 'Geo Valley Apartment Master Plan overview'
+      },
+      {
+        url: getImagePath('/images/projects/geo-valley-apartment-master-plan-2.jpg'),
+        alt: 'Geo Valley Apartment Master Plan layout'
+      },
+      {
+        url: getImagePath('/images/projects/geo-valley-apartment-master-plan-3.jpg'),
+        alt: 'Geo Valley Apartment Master Plan facilities'
+      },
+      {
+        url: getImagePath('/images/projects/geo-valley-apartment-master-plan-4.jpg'),
+        alt: 'Geo Valley Apartment Master Plan amenities'
+      }
+    ]
+  },
+
+  {
+    id: 'mahachai-airport-luxe-city-master-plan',
+    name: 'Mahachai Airport Luxe City Master Plan',
+    category: 'master-planning',
+    displayMode: 'gallery-only',
+    
+    location: 'Samut Sakhon, Thailand',
+    year: 2024,
+    
+    images: [
+      {
+        url: getImagePath('/images/projects/mahachai-airport-luxe-city-master-plan-1.jpg'),
+        alt: 'Mahachai Airport Luxe City Master Plan overview'
+      },
+      {
+        url: getImagePath('/images/projects/mahachai-airport-luxe-city-master-plan-2.jpg'),
+        alt: 'Mahachai Airport Luxe City Master Plan layout'
+      },
+      {
+        url: getImagePath('/images/projects/mahachai-airport-luxe-city-master-plan-3.jpg'),
+        alt: 'Mahachai Airport Luxe City Master Plan facilities'
+      },
+      {
+        url: getImagePath('/images/projects/mahachai-airport-luxe-city-master-plan-4.jpg'),
+        alt: 'Mahachai Airport Luxe City Master Plan development'
+      }
+    ]
+  },
+
+  {
+    id: 'maintenance-repair-operation-u-tapao-airport',
+    name: 'Maintenance Repair Operation U-Tapao Airport',
+    category: 'aviation',
+    displayMode: 'gallery-only',
+    
+    location: 'Rayong, Thailand',
+    year: 2023,
+    
+    images: [
+      {
+        url: getImagePath('/images/projects/maintenance-repair-operation-u-tapao-airport-1.jpg'),
+        alt: 'Maintenance Repair Operation U-Tapao Airport facility'
+      },
+      {
+        url: getImagePath('/images/projects/maintenance-repair-operation-u-tapao-airport-2.jpg'),
+        alt: 'Maintenance Repair Operation U-Tapao Airport hangar'
+      },
+      {
+        url: getImagePath('/images/projects/maintenance-repair-operation-u-tapao-airport-3.jpg'),
+        alt: 'Maintenance Repair Operation U-Tapao Airport workshop'
+      },
+      {
+        url: getImagePath('/images/projects/maintenance-repair-operation-u-tapao-airport-4.jpg'),
+        alt: 'Maintenance Repair Operation U-Tapao Airport operations'
+      }
+    ]
+  },
+
+  {
+    id: 'service-apartment-selangor-malaysia',
+    name: 'Service Apartment Selangor Malaysia',
+    category: 'residential',
+    displayMode: 'gallery-only',
+    
+    location: 'Selangor, Malaysia',
+    year: 2023,
+    
+    images: [
+      {
+        url: getImagePath('/images/projects/service-apartment-selangor-malaysia-1.jpg'),
+        alt: 'Service Apartment Selangor Malaysia exterior'
+      },
+      {
+        url: getImagePath('/images/projects/service-apartment-selangor-malaysia-2.jpg'),
+        alt: 'Service Apartment Selangor Malaysia lobby'
+      },
+      {
+        url: getImagePath('/images/projects/service-apartment-selangor-malaysia-3.jpg'),
+        alt: 'Service Apartment Selangor Malaysia unit'
+      },
+      {
+        url: getImagePath('/images/projects/service-apartment-selangor-malaysia-4.jpg'),
+        alt: 'Service Apartment Selangor Malaysia amenities'
+      }
+    ]
+  },
+
+  {
+    id: 'sukhumvit-hills',
+    name: 'Sukhumvit Hills',
+    category: 'mixed-use',
+    displayMode: 'gallery-only',
+    
+    location: 'Bangkok, Thailand',
+    year: 2022,
+    
+    images: [
+      {
+        url: getImagePath('/images/projects/sukhumvit-hills-1.jpg'),
+        alt: 'Sukhumvit Hills exterior'
+      },
+      {
+        url: getImagePath('/images/projects/sukhumvit-hills-2.jpg'),
+        alt: 'Sukhumvit Hills retail area'
+      },
+      {
+        url: getImagePath('/images/projects/sukhumvit-hills-3.jpg'),
+        alt: 'Sukhumvit Hills residential'
+      },
+      {
+        url: getImagePath('/images/projects/sukhumvit-hills-4.jpg'),
+        alt: 'Sukhumvit Hills amenities'
+      }
+    ]
+  },
+
+  {
+    id: 'transit-oriented-development-tod',
+    name: 'Transit-Oriented Development TOD',
+    category: 'master-planning',
+    displayMode: 'gallery-only',
+    
+    location: 'Bangkok, Thailand',
+    year: 2024,
+    
+    images: [
+      {
+        url: getImagePath('/images/projects/transit-oriented-development-tod-1.jpg'),
+        alt: 'Transit-Oriented Development TOD master plan'
+      },
+      {
+        url: getImagePath('/images/projects/transit-oriented-development-tod-2.jpg'),
+        alt: 'Transit-Oriented Development TOD layout'
+      },
+      {
+        url: getImagePath('/images/projects/transit-oriented-development-tod-3.jpg'),
+        alt: 'Transit-Oriented Development TOD facilities'
+      },
+      {
+        url: getImagePath('/images/projects/transit-oriented-development-tod-4.jpg'),
+        alt: 'Transit-Oriented Development TOD development'
+      }
+    ]
+  },
+
+  // ========== INTERIOR DESIGN PROJECTS ==========
+  
+  {
+    id: 'phuket-condominium-interior-design',
+    name: 'Phuket Condominium Interior Design',
+    category: 'interior-design',
+    displayMode: 'gallery-only',
+    
+    location: 'Phuket, Thailand',
+    year: 2023,
+    
+    images: [
+      {
+        url: getImagePath('/images/projects/phuket-condominium-interior-design/'),
+        alt: 'Phuket Condominium Interior Design living room'
+      },
+      {
+        url: getImagePath('/images/projects/phuket-condominium-interior-design/'),
+        alt: 'Phuket Condominium Interior Design bedroom'
+      },
+      {
+        url: getImagePath('/images/projects/phuket-condominium-interior-design/'),
+        alt: 'Phuket Condominium Interior Design kitchen'
+      },
+      {
+        url: getImagePath('/images/projects/phuket-condominium-interior-design/'),
+        alt: 'Phuket Condominium Interior Design bathroom'
+      }
+    ]
+  },
+
+  {
+    id: 'villa-perpetual-interior-design',
+    name: 'Villa Perpetual Interior Design',
+    category: 'interior-design',
+    displayMode: 'gallery-only',
+    
     location: 'Bangkok, Thailand',
     year: 2020,
-    status: 'completed',
-    size: '1,800 sqm',
-    client: 'Perpetual Properties Ltd.',
-    description: 'An epitome of luxury and modern elegance.',
-    features: [
-      'Epitome of luxury design',
-      'Modern elegance',
-      'Timeless design principles',
-      'Premium finishes',
-      'Sophisticated living spaces',
-      'Private outdoor areas',
-      'High-end materials',
-      'Luxury villa amenities'
-    ],
-    images: {
-      thumbnail: '/sv-architects-website/images/projects/villa-perpetual-residential/Entrance-1.jpg',
-      gallery: [
-        '/sv-architects-website/images/projects/villa-perpetual-residential/Entrance-1.jpg',
-        '/sv-architects-website/images/projects/villa-perpetual-residential/Bird-eye-view-1-1.jpg',
-        '/sv-architects-website/images/projects/villa-perpetual-residential/Landscape-1.jpg'
-      ]
-    },
-    sustainability: {
-      leed: true,
-      greenBuilding: true,
-      energyEfficient: true
-    }
-  }];
+    
+    images: [
+      {
+        url: getImagePath('/images/projects/villa-perpetual-interior-design-1.jpg'),
+        alt: 'Villa Perpetual Interior Design living space'
+      },
+      {
+        url: getImagePath('/images/projects/villa-perpetual-interior-design-2.jpg'),
+        alt: 'Villa Perpetual Interior Design bedroom'
+      },
+      {
+        url: getImagePath('/images/projects/villa-perpetual-interior-design-3.jpg'),
+        alt: 'Villa Perpetual Interior Design kitchen'
+      },
+      {
+        url: getImagePath('/images/projects/villa-perpetual-interior-design-4.jpg'),
+        alt: 'Villa Perpetual Interior Design bathroom'
+      }
+    ]
+  },
+
+  {
+    id: 'baan-huahin-interior-design',
+    name: 'Baan Huahin Interior Design',
+    category: 'interior-design',
+    displayMode: 'gallery-only',
+    
+    location: 'Hua Hin, Thailand',
+    year: 2019,
+    
+    images: [
+      {
+        url: getImagePath('/images/projects/baan-huahin-interior-design/'),
+        alt: 'Baan Huahin Interior Design living room'
+      },
+      {
+        url: getImagePath('/images/projects/baan-huahin-interior-design/'),
+        alt: 'Baan Huahin Interior Design bedroom'
+      },
+      {
+        url: getImagePath('/images/projects/baan-huahin-interior-design/'),
+        alt: 'Baan Huahin Interior Design kitchen'
+      },
+      {
+        url: getImagePath('/images/projects/baan-huahin-interior-design/'),
+        alt: 'Baan Huahin Interior Design bathroom'
+      }
+    ]
+  },
+
+  {
+    id: 'hi-tech-sandbox-interior-design',
+    name: 'Hi-Tech Sandbox Interior Design',
+    category: 'interior-design',
+    displayMode: 'gallery-only',
+    
+    location: 'Bangkok, Thailand',
+    year: 2023,
+    
+    images: [
+      {
+        url: getImagePath('/images/projects/hi-tech-sandbox-interior-design/'),
+        alt: 'Hi-Tech Sandbox Interior Design workspace'
+      },
+      {
+        url: getImagePath('/images/projects/hi-tech-sandbox-interior-design/'),
+        alt: 'Hi-Tech Sandbox Interior Design meeting room'
+      },
+      {
+        url: getImagePath('/images/projects/hi-tech-sandbox-interior-design/'),
+        alt: 'Hi-Tech Sandbox Interior Design common area'
+      },
+      {
+        url: getImagePath('/images/projects/hi-tech-sandbox-interior-design/'),
+        alt: 'Hi-Tech Sandbox Interior Design technology area'
+      }
+    ]
+  },
+
+  {
+    id: 'innovation-center-interior-design',
+    name: 'Innovation Center Interior Design',
+    category: 'interior-design',
+    displayMode: 'gallery-only',
+    
+    location: 'Bangkok, Thailand',
+    year: 2023,
+    
+    images: [
+      {
+        url: getImagePath('/images/projects/innovation-center-interior-design/'),
+        alt: 'Innovation Center Interior Design workspace'
+      },
+      {
+        url: getImagePath('/images/projects/innovation-center-interior-design/'),
+        alt: 'Innovation Center Interior Design meeting room'
+      },
+      {
+        url: getImagePath('/images/projects/innovation-center-interior-design/'),
+        alt: 'Innovation Center Interior Design common area'
+      },
+      {
+        url: getImagePath('/images/projects/innovation-center-interior-design/'),
+        alt: 'Innovation Center Interior Design collaboration space'
+      }
+    ]
+  },
+
+  // ========== AWARD PROJECTS ==========
+  
+  {
+    id: 'siamese-rama9-award',
+    name: 'Siamese Rama 9 Award',
+    category: 'institutional',
+    displayMode: 'gallery-only',
+    
+    location: 'Bangkok, Thailand',
+    year: 2021,
+    
+    images: [
+      {
+        url: getImagePath('/images/projects/siamese-rama9-award-1.jpg'),
+        alt: 'Siamese Rama 9 Award ceremony'
+      },
+      {
+        url: getImagePath('/images/projects/siamese-rama9-award-2.jpg'),
+        alt: 'Siamese Rama 9 Award recognition'
+      },
+      {
+        url: getImagePath('/images/projects/siamese-rama9-award-3.jpg'),
+        alt: 'Siamese Rama 9 Award presentation'
+      },
+      {
+        url: getImagePath('/images/projects/siamese-rama9-award-4.jpg'),
+        alt: 'Siamese Rama 9 Award celebration'
+      }
+    ]
+  }
+];
+
+/**
+ * ============================================================================
+ * HELPER FUNCTIONS
+ * ============================================================================
+ */
+
+/**
+ * Get all project slugs for static generation
+ */
+export function getAllProjectSlugs(): string[] {
+  return projects.map(project => project.id);
+}
+
+/**
+ * Get project by slug
+ */
+export function getProjectBySlug(slug: string): ProjectData | undefined {
+  return projects.find(project => project.id === slug);
+}
+
+/**
+ * Get projects by category
+ */
+export function getProjectsByCategory(category: ProjectCategory): ProjectData[] {
+  return projects.filter(project => project.category === category);
+}
+
+/**
+ * Get all categories that have projects
+ */
+export function getAvailableCategories(): ProjectCategory[] {
+  const categories = new Set<ProjectCategory>();
+  projects.forEach(project => categories.add(project.category));
+  return Array.from(categories);
+}
+
+/**
+ * Get featured projects (for homepage, etc.)
+ * Returns completed projects with full details
+ */
+export function getFeaturedProjects(count: number = 6): ProjectData[] {
+  return projects
+    .filter(p => p.status === 'completed' && p.displayMode === 'full')
+    .slice(0, count);
+}
+
+/**
+ * Get recent projects
+ */
+export function getRecentProjects(count: number = 6): ProjectData[] {
+  return projects
+    .sort((a, b) => (b.year || 0) - (a.year || 0))
+    .slice(0, count);
+}
+
+/**
+ * Search projects by name or description
+ */
+export function searchProjects(query: string): ProjectData[] {
+  const lowerQuery = query.toLowerCase();
+  return projects.filter(project => 
+    project.name.toLowerCase().includes(lowerQuery) ||
+    project.description?.toLowerCase().includes(lowerQuery) ||
+    project.location?.toLowerCase().includes(lowerQuery)
+  );
+}
+
+/**
+ * Get project statistics
+ */
+export function getProjectStats() {
+  return {
+    total: projects.length,
+    completed: projects.filter(p => p.status === 'completed').length,
+    ongoing: projects.filter(p => p.status === 'ongoing').length,
+    upcoming: projects.filter(p => p.status === 'upcoming').length,
+    byCategory: getAvailableCategories().map(category => ({
+      category,
+      count: getProjectsByCategory(category).length
+    }))
+  };
+}

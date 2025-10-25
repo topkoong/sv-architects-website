@@ -300,6 +300,7 @@ const HeroSection = ({ member }: { member: TeamMember }) => {
           className="w-full h-full object-cover object-[center_top] opacity-30"
           fill
           objectFit="cover"
+          unoptimized
         />
       </div>
       

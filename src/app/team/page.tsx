@@ -218,6 +218,7 @@ const LeadershipSection = ({ teamMembers }: { teamMembers: any[] }) => {
                   className="w-full h-full object-cover object-[center_top] group-hover:scale-105 transition-transform duration-500"
                   fill
                   objectFit="cover"
+                  unoptimized
                 />
               </div>
 
@@ -359,6 +360,7 @@ const AllTeamSection = ({ teamMembers }: { teamMembers: any[] }) => {
                   className="w-full h-full object-cover object-[center_top] group-hover:scale-105 transition-transform duration-500"
                   fill
                   objectFit="cover"
+                  unoptimized
                 />
                 
                 {/* Overlay */}

@@ -1,171 +1,87 @@
-import Image from 'next/image';
-import Link from 'next/link';
+/**
+ * ============================================================================
+ * FILE: src/app/projects/[slug]/page.tsx
+ * ============================================================================
+ * DESCRIPTION: Dynamic project page that handles both display modes
+ * 
+ * This page supports two display modes:
+ * 1. FULL MODE: Complete project details with all sections
+ * 2. GALLERY-ONLY MODE: Beautiful image carousel for projects without full details
+ * 
+ * @author SV Architects Development Team
+ * @version 1.0.0
+ * ============================================================================
+ */
+
 import { notFound } from 'next/navigation';
-import { projects } from '@/data/projects';
+import { Metadata } from 'next';
+import { getProjectBySlug, getAllProjectSlugs } from '@/data/projects';
+import FullDetailView from './FullDetailView';
+import GalleryOnlyView from './GalleryOnlyView';
 
 interface ProjectPageProps {
-  params: {
+  params: Promise<{
     slug: string;
+  }>;
+}
+
+/**
+ * Generate metadata for SEO
+ */
+export async function generateMetadata({ params }: ProjectPageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const project = getProjectBySlug(slug);
+  
+  if (!project) {
+    return {
+      title: 'Project Not Found | SV Architects',
+      description: 'The requested project could not be found.',
+      robots: { index: false, follow: false }
+    };
+  }
+  
+  return {
+    title: `${project.name} | SV Architects`,
+    description: project.metaDescription || project.description || `${project.name} - ${project.category} project by SV Architects`,
+    openGraph: {
+      title: `${project.name} | SV Architects`,
+      description: project.metaDescription || project.description || `${project.name} - ${project.category} project`,
+      images: project.images.length > 0 ? [project.images[0]?.url || ''] : [],
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${project.name} | SV Architects`,
+      description: project.metaDescription || project.description || `${project.name} - ${project.category} project`,
+      images: project.images.length > 0 ? [project.images[0]?.url || ''] : [],
+    },
+    keywords: project.keywords?.join(', ') || `${project.name}, ${project.category}, architecture, SV Architects`,
   };
 }
 
-export default function ProjectPage({ params }: ProjectPageProps) {
-  const project = projects.find(p => p.id === params.slug);
+/**
+ * Generate static params for all projects
+ */
+export async function generateStaticParams() {
+  const slugs = getAllProjectSlugs();
+  return slugs.map(slug => ({ slug }));
+}
 
+/**
+ * Main project page component
+ */
+export default async function ProjectPage({ params }: ProjectPageProps) {
+  const { slug } = await params;
+  const project = getProjectBySlug(slug);
+  
   if (!project) {
     notFound();
   }
-
-  return (
-    <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <div className="relative h-[60vh] overflow-hidden">
-        <Image
-          src={project.images.thumbnail}
-          alt={project.name}
-          fill
-          className="object-cover"
-          priority
-          unoptimized
-        />
-        <div className="absolute inset-0 bg-black bg-opacity-40" />
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="text-center text-white">
-            <h1 className="text-4xl md:text-6xl font-bold mb-4">{project.name}</h1>
-            <p className="text-xl md:text-2xl">{project.category} • {project.type}</p>
-          </div>
-        </div>
-      </div>
-
-      {/* Project Details */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-          {/* Main Content */}
-          <div className="lg:col-span-2">
-            <div className="prose prose-lg max-w-none">
-              <h2 className="text-3xl font-bold mb-6">Project Overview</h2>
-              <p className="text-gray-700 mb-8">{project.description}</p>
-              
-              {/* Features */}
-              <h3 className="text-2xl font-bold mb-4">Key Features</h3>
-              <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-                {project.features.map((feature, index) => (
-                  <li key={index} className="flex items-start">
-                    <span className="text-blue-600 mr-2">•</span>
-                    <span className="text-gray-700">{feature}</span>
-                  </li>
-                ))}
-              </ul>
-
-              {/* Gallery */}
-              <h3 className="text-2xl font-bold mb-6">Project Gallery</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {project.images.gallery.map((image, index) => (
-                  <div key={index} className="relative aspect-[4/3] overflow-hidden rounded-lg">
-                    <Image
-                      src={image}
-                      alt={`${project.name} - Image ${index + 1}`}
-                      fill
-                      className="object-cover hover:scale-105 transition-transform duration-300"
-                      unoptimized
-                    />
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* Sidebar */}
-          <div className="lg:col-span-1">
-            <div className="bg-gray-50 p-6 rounded-lg sticky top-8">
-              <h3 className="text-xl font-bold mb-4">Project Details</h3>
-              
-              <div className="space-y-4">
-                <div>
-                  <span className="font-semibold text-gray-900">Category:</span>
-                  <span className="ml-2 text-gray-700">{project.category}</span>
-                </div>
-                
-                <div>
-                  <span className="font-semibold text-gray-900">Type:</span>
-                  <span className="ml-2 text-gray-700">{project.type}</span>
-                </div>
-                
-                <div>
-                  <span className="font-semibold text-gray-900">Location:</span>
-                  <span className="ml-2 text-gray-700">{project.location}</span>
-                </div>
-                
-                <div>
-                  <span className="font-semibold text-gray-900">Year:</span>
-                  <span className="ml-2 text-gray-700">{project.year}</span>
-                </div>
-                
-                <div>
-                  <span className="font-semibold text-gray-900">Status:</span>
-                  <span className="ml-2 text-gray-700 capitalize">{project.status}</span>
-                </div>
-                
-                <div>
-                  <span className="font-semibold text-gray-900">Size:</span>
-                  <span className="ml-2 text-gray-700">{project.size}</span>
-                </div>
-                
-                <div>
-                  <span className="font-semibold text-gray-900">Client:</span>
-                  <span className="ml-2 text-gray-700">{project.client}</span>
-                </div>
-              </div>
-
-              {/* Awards */}
-              {project.awards && project.awards.length > 0 && (
-                <div className="mt-6">
-                  <h4 className="font-semibold text-gray-900 mb-2">Awards</h4>
-                  <ul className="space-y-1">
-                    {project.awards.map((award, index) => (
-                      <li key={index} className="text-gray-700 text-sm">• {award}</li>
-                    ))}
-                  </ul>
-                </div>
-              )}
-
-              {/* Sustainability */}
-              {project.sustainability && (
-                <div className="mt-6">
-                  <h4 className="font-semibold text-gray-900 mb-2">Sustainability</h4>
-                  <div className="space-y-1 text-sm">
-                    {project.sustainability.leed && (
-                      <div className="text-green-600">✓ LEED Certified</div>
-                    )}
-                    {project.sustainability.greenBuilding && (
-                      <div className="text-green-600">✓ Green Building</div>
-                    )}
-                    {project.sustainability.energyEfficient && (
-                      <div className="text-green-600">✓ Energy Efficient</div>
-                    )}
-                  </div>
-                </div>
-              )}
-
-              {/* Back to Projects */}
-              <div className="mt-8">
-                <Link
-                  href="/projects"
-                  className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-                >
-                  ← Back to Projects
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-export async function generateStaticParams() {
-  return projects.map((project) => ({
-    slug: project.id,
-  }));
+  
+  // DECISION POINT: Which display mode?
+  if (project.displayMode === 'gallery-only') {
+    return <GalleryOnlyView project={project} />;
+  }
+  
+  return <FullDetailView project={project} />;
 }

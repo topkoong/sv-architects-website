@@ -20,6 +20,7 @@
 
 // Import type definitions
 import { TeamMember } from '@/types/team';
+import { getImagePath } from '@/config/site';
 
 /**
  * ============================================================================
@@ -41,7 +42,7 @@ export const teamMembers: TeamMember[] = [
     position: 'principal',
     title: 'Principal',
     department: 'Leadership',
-    image: '/sv-architects-website/images/team/suchart-bannapanya.jpg',
+    image: getImagePath('/images/team/suchart-bannapanya.jpg'),
     bio: 'Suchart Bannapanya serves as Principal of SV Architects and Associates Ltd., providing strategic leadership and vision for the firm. With extensive experience in architectural practice, he oversees major projects and guides the firm\'s growth and development.',
     shortBio: 'Principal providing strategic leadership and vision for SV Architects, overseeing major projects and firm development.',
     education: [
@@ -152,7 +153,7 @@ export const teamMembers: TeamMember[] = [
     position: 'managing-director',
     title: 'Managing Director',
     department: 'Leadership',
-    image: '/sv-architects-website/images/team/vichien-wongnimmarn.jpg',
+    image: getImagePath('/images/team/vichien-wongnimmarn.jpg'),
     bio: 'Vichien Wongnimmarn serves as Managing Director of SV Architects and Associates Ltd. With extensive experience in aviation and infrastructure projects, he aims to provide aesthetic and higher level service and innovation to drive the future growth of aviation and infrastructure projects.',
     shortBio: 'Managing Director specializing in aviation and infrastructure projects with focus on innovation and service excellence.',
     education: [
@@ -277,7 +278,7 @@ export const teamMembers: TeamMember[] = [
     position: 'head-of-architect',
     title: 'Head of Architect',
     department: 'Architecture',
-    image: '/sv-architects-website/images/team/picharn-foongkiatcharoen.jpg',
+    image: getImagePath('/images/team/picharn-foongkiatcharoen.jpg'),
     bio: 'Picharn Foongkiatcharoen serves as Head of Architect at SV Architects and Associates Ltd., leading the architectural design team and overseeing design development for major projects.',
     shortBio: 'Head of Architect leading design development and architectural innovation for major projects.',
     education: [
@@ -389,7 +390,7 @@ export const teamMembers: TeamMember[] = [
     position: 'associate',
     title: 'Associate | Head of Interior Design',
     department: 'Interior Design',
-    image: '/sv-architects-website/images/team/nobpadol-suvachananonda.jpg',
+    image: getImagePath('/images/team/nobpadol-suvachananonda.jpg'),
     bio: 'Nobpadol Suvachananonda serves as Associate and Head of Interior Design at SV Architects and Associates Ltd., leading the interior design team and overseeing interior design projects.',
     shortBio: 'Associate and Head of Interior Design leading interior design projects and team development.',
     education: [
@@ -501,7 +502,7 @@ export const teamMembers: TeamMember[] = [
     position: 'senior-architect',
     title: 'Senior Business Development | Senior Architect',
     department: 'Business Development',
-    image: '/sv-architects-website/images/team/supassara-bannapanya.jpg',
+    image: getImagePath('/images/team/supassara-bannapanya.jpg'),
     bio: 'Supassara Bannapanya serves as Senior Business Development and Senior Architect at SV Architects and Associates Ltd., combining architectural expertise with business development skills.',
     shortBio: 'Senior Architect and Business Development specialist combining design expertise with business growth.',
     education: [
@@ -613,7 +614,7 @@ export const teamMembers: TeamMember[] = [
     position: 'senior-architect',
     title: 'Senior Architect',
     department: 'Architecture',
-    image: '/sv-architects-website/images/team/vetapong-uabhaibool.jpg',
+    image: getImagePath('/images/team/vetapong-uabhaibool.jpg'),
     bio: 'Vetapong Uabhaibool serves as Senior Architect at SV Architects and Associates Ltd., bringing extensive experience in architectural design and project management.',
     shortBio: 'Senior Architect with expertise in architectural design and project management.',
     education: [
@@ -725,7 +726,7 @@ export const teamMembers: TeamMember[] = [
     position: 'consultant',
     title: 'Assistant Professor Ph.D. LEED AP',
     department: 'Research & Development',
-    image: '/sv-architects-website/images/team/jatuwat-varodompun.jpg',
+    image: getImagePath('/images/team/jatuwat-varodompun.jpg'),
     bio: 'Asst.Prof. Jatuwat Varodompun Ph.D. LEED AP serves as Assistant Professor and LEED Accredited Professional at SV Architects and Associates Ltd., bringing academic expertise and sustainable design knowledge.',
     shortBio: 'Assistant Professor Ph.D. LEED AP specializing in sustainable design and academic research.',
     education: [
@@ -852,7 +853,7 @@ export const teamMembers: TeamMember[] = [
     position: 'architect',
     title: 'Architect',
     department: 'Architecture',
-    image: '/sv-architects-website/images/team/jovenel-baldomaro-monilla.jpg',
+    image: getImagePath('/images/team/jovenel-baldomaro-monilla.jpg'),
     bio: 'Jovenel Baldomaro Monilla serves as Architect at SV Architects and Associates Ltd., bringing international perspective and design expertise to the team.',
     shortBio: 'Architect with international perspective and design expertise.',
     education: [
@@ -965,7 +966,7 @@ export const teamMembers: TeamMember[] = [
     position: 'architect',
     title: 'Architect',
     department: 'Architecture',
-    image: '/sv-architects-website/images/team/sarot-deeluan.jpg',
+    image: getImagePath('/images/team/sarot-deeluan.jpg'),
     bio: 'Sarot Deeluan serves as Architect at SV Architects and Associates Ltd., specializing in architectural design and project development.',
     shortBio: 'Architect specializing in architectural design and project development.',
     education: [
@@ -1077,7 +1078,7 @@ export const teamMembers: TeamMember[] = [
     position: 'architect',
     title: 'Architect',
     department: 'Architecture',
-    image: '/sv-architects-website/images/team/chayut-sukrattanachaisakul.jpg',
+    image: getImagePath('/images/team/chayut-sukrattanachaisakul.jpg'),
     bio: 'Chayut Sukrattanachaisakul serves as Architect at SV Architects and Associates Ltd., bringing fresh perspective and innovative design solutions.',
     shortBio: 'Architect with fresh perspective and innovative design solutions.',
     education: [
@@ -1190,7 +1191,7 @@ export const teamMembers: TeamMember[] = [
     position: 'architect',
     title: 'Interior Designer',
     department: 'Interior Design',
-    image: '/sv-architects-website/images/team/jinpanee-bannapanya.jpg',
+    image: getImagePath('/images/team/jinpanee-bannapanya.jpg'),
     bio: 'Jinpanee Bannapanya serves as Interior Designer at SV Architects and Associates Ltd., specializing in interior design and space planning.',
     shortBio: 'Interior Designer specializing in interior design and space planning.',
     education: [
@@ -1302,7 +1303,7 @@ export const teamMembers: TeamMember[] = [
     position: 'architect',
     title: 'Architect',
     department: 'Architecture',
-    image: '/sv-architects-website/images/team/sippawich-rouyoo.jpg',
+    image: getImagePath('/images/team/sippawich-rouyoo.jpg'),
     bio: 'Sippawich Rouyoo serves as Architect at SV Architects and Associates Ltd., bringing expertise in architectural design and project coordination.',
     shortBio: 'Architect with expertise in architectural design and project coordination.',
     education: [
@@ -1414,7 +1415,7 @@ export const teamMembers: TeamMember[] = [
     position: 'architect',
     title: 'Architect',
     department: 'Architecture',
-    image: '/sv-architects-website/images/team/jakkaporn-sutthiragsa.jpg',
+    image: getImagePath('/images/team/jakkaporn-sutthiragsa.jpg'),
     bio: 'Jakkaporn Sutthiragsa serves as Architect at SV Architects and Associates Ltd., specializing in architectural design and sustainable solutions.',
     shortBio: 'Architect specializing in architectural design and sustainable solutions.',
     education: [
@@ -1527,7 +1528,7 @@ export const teamMembers: TeamMember[] = [
     position: 'architect',
     title: 'Architect',
     department: 'Architecture',
-    image: '/sv-architects-website/images/team/alongkorn-sirnamkham.jpg',
+    image: getImagePath('/images/team/alongkorn-sirnamkham.jpg'),
     bio: 'Alongkorn Sirnamkham serves as Architect at SV Architects and Associates Ltd., bringing expertise in architectural design and project management.',
     shortBio: 'Architect with expertise in architectural design and project management.',
     education: [
@@ -1640,7 +1641,7 @@ export const teamMembers: TeamMember[] = [
     position: 'architect',
     title: 'Interior Designer',
     department: 'Interior Design',
-    image: '/sv-architects-website/images/team/leena-ngasakul.jpg',
+    image: getImagePath('/images/team/leena-ngasakul.jpg'),
     bio: 'Leena Ngasakul serves as Interior Designer at SV Architects and Associates Ltd., specializing in interior design and creative solutions.',
     shortBio: 'Interior Designer specializing in interior design and creative solutions.',
     education: [
@@ -1752,7 +1753,7 @@ export const teamMembers: TeamMember[] = [
     position: 'architect',
     title: 'Architect',
     department: 'Architecture',
-    image: '/sv-architects-website/images/team/puncharat-bannapanya.jpg',
+    image: getImagePath('/images/team/puncharat-bannapanya.jpg'),
     bio: 'Puncharat Bannapanya serves as Architect at SV Architects and Associates Ltd., bringing expertise in architectural design and project coordination.',
     shortBio: 'Architect with expertise in architectural design and project coordination.',
     education: [
@@ -1864,7 +1865,7 @@ export const teamMembers: TeamMember[] = [
     position: 'architect',
     title: 'Architect',
     department: 'Architecture',
-    image: '/sv-architects-website/images/team/kriangdesk-wachirawanit.jpg',
+    image: getImagePath('/images/team/kriangdesk-wachirawanit.jpg'),
     bio: 'Kriangdesk Wachirawanit serves as Architect at SV Architects and Associates Ltd., bringing expertise in architectural design and innovative solutions.',
     shortBio: 'Architect with expertise in architectural design and innovative solutions.',
     education: [
