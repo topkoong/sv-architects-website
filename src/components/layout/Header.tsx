@@ -291,14 +291,23 @@ export const Header = () => {
    * 
    * @returns {void}
    */
-  const toggleMobileMenu = useCallback(() => {
+  const toggleMobileMenu = useCallback((e?: React.MouseEvent) => {
+    // Prevent event bubbling
+    if (e) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+    
     // Debug logging for development (can be removed in production)
-    console.log('Toggle mobile menu clicked');
+    console.log('Toggle mobile menu clicked', isMobileMenuOpen);
     
     // Toggle mobile menu state using functional update
     // Functional update ensures we get the latest state value
-    setIsMobileMenuOpen(prev => !prev);
-  }, []); // Empty dependency array - function never changes
+    setIsMobileMenuOpen(prev => {
+      console.log('Previous state:', prev, 'New state:', !prev);
+      return !prev;
+    });
+  }, [isMobileMenuOpen]); // Include isMobileMenuOpen in dependencies
 
   /**
    * Check if navigation link is currently active
@@ -406,7 +415,7 @@ export const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
-            onClick={toggleMobileMenu}          // Toggle mobile menu on click
+            onClick={(e) => toggleMobileMenu(e)}          // Toggle mobile menu on click
             className="
               md:hidden p-2 text-gray-800       // Mobile-only, padding, text color
               hover:text-black transition-colors // Hover effects
