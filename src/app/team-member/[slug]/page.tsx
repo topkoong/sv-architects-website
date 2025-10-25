@@ -399,27 +399,27 @@ const ContentSection = ({ member }: { member: TeamMember }) => {
       <div className="space-y-12">
 
         {/* Education Section */}
-        <div >
-          <h2 className="heading-md mb-6 text-text-primary">
+        <div>
+          <h2 className="text-2xl font-bold text-black mb-6">
             Education
           </h2>
           <div className="space-y-4">
             {member.education.map((edu, index) => (
-              <div key={index} className="card p-6">
-                <h3 className="heading-sm mb-2 text-text-primary">
+              <div key={index} className="bg-white rounded-2xl p-6 ring-1 ring-gray-200">
+                <h3 className="text-xl font-bold text-black mb-2">
                   {edu.degree}
                 </h3>
-                <p className="body-md text-primary-600 font-semibold mb-2">
+                <p className="text-lg text-blue-600 font-semibold mb-2">
                   {edu.institution}
                 </p>
-                <p className="body-sm text-text-tertiary">
+                <p className="text-gray-600">
                   {edu.location}
                   {edu.year && ` • ${edu.year}`}
                 </p>
                 {edu.honors && edu.honors.length > 0 && (
-                  <div className="mt-3">
-                    <p className="text-sm font-medium text-text-secondary mb-1">Honors:</p>
-                    <ul className="text-sm text-text-tertiary">
+                  <div className="mt-4">
+                    <p className="text-sm font-semibold text-gray-700 mb-2">Honors:</p>
+                    <ul className="text-sm text-gray-600 space-y-1">
                       {edu.honors.map((honor, honorIndex) => (
                         <li key={honorIndex}>• {honor}</li>
                       ))}
@@ -432,31 +432,25 @@ const ContentSection = ({ member }: { member: TeamMember }) => {
         </div>
 
         {/* Professional Experience Section */}
-        <div >
-          <h2 className="heading-md mb-6 text-text-primary">
+        <div>
+          <h2 className="text-2xl font-bold text-black mb-6">
             Professional Experience
           </h2>
-          <div className="card p-8">
-            <p className="body-lg text-text-secondary mb-6">
+          <div className="bg-white rounded-2xl p-8 ring-1 ring-gray-200">
+            <p className="text-lg text-gray-600 mb-8 leading-relaxed">
               {member.experience.summary}
             </p>
             
             {/* Expertise areas */}
             <div className="mb-8">
-              <h3 className="heading-sm mb-4 text-text-primary">Areas of Expertise</h3>
+              <h3 className="text-xl font-bold text-black mb-4">Areas of Expertise</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {member.experience.areas.map((area, index) => (
                   <div 
                     key={index}
-                    className="
-                      bg-primary-50 // Light blue background
-                      p-3 // 12px padding
-                      rounded-lg // Rounded corners
-                      border-l-4 // Left border
-                      border-primary-600 // Blue left border
-                    "
+                    className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500"
                   >
-                    <span className="text-sm font-medium text-text-primary">
+                    <span className="text-sm font-semibold text-gray-800">
                       {area.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}
                     </span>
                   </div>
@@ -466,46 +460,33 @@ const ContentSection = ({ member }: { member: TeamMember }) => {
 
             {/* Work History */}
             <div>
-              <h3 className="heading-sm mb-4 text-text-primary">Work History</h3>
+              <h3 className="text-xl font-bold text-black mb-6">Work History</h3>
               <div className="space-y-6">
                 {member.experience.workHistory.map((work, index) => (
-                  <div key={index} className="
-                    border-l-2 // Left border
-                    border-primary-200 // Light blue border
-                    pl-6 // Left padding
-                    relative // Position context
-                  ">
+                  <div key={index} className="border-l-2 border-gray-200 pl-6 relative">
                     {/* Timeline dot */}
-                    <div className="
-                      absolute // Position absolute
-                      left-[-6px] // Position left of border
-                      top-2 // Top position
-                      w-3 // 12px width
-                      h-3 // 12px height
-                      bg-primary-600 // Blue background
-                      rounded-full // Circular
-                    " />
+                    <div className="absolute left-[-6px] top-2 w-3 h-3 bg-blue-500 rounded-full" />
                     
-                    <div className="mb-2">
-                      <h4 className="font-semibold text-text-primary">
+                    <div className="mb-3">
+                      <h4 className="text-lg font-bold text-black">
                         {work.position}
                       </h4>
-                      <p className="text-primary-600 font-medium">
+                      <p className="text-blue-600 font-semibold">
                         {work.company}
                       </p>
-                      <p className="text-sm text-text-tertiary">
+                      <p className="text-sm text-gray-600">
                         {work.location} • {work.startDate.split('-')[0]} - {work.endDate ? work.endDate.split('-')[0] : 'Present'}
                       </p>
                     </div>
                     
-                    <p className="text-sm text-text-secondary mb-3">
+                    <p className="text-gray-600 mb-4 leading-relaxed">
                       {work.description}
                     </p>
                     
                     {work.achievements && work.achievements.length > 0 && (
                       <div>
-                        <p className="text-sm font-medium text-text-secondary mb-2">Key Achievements:</p>
-                        <ul className="text-sm text-text-tertiary space-y-1">
+                        <p className="text-sm font-semibold text-gray-700 mb-2">Key Achievements:</p>
+                        <ul className="text-sm text-gray-600 space-y-1">
                           {work.achievements.map((achievement, achievementIndex) => (
                             <li key={achievementIndex}>• {achievement}</li>
                           ))}
@@ -520,29 +501,22 @@ const ContentSection = ({ member }: { member: TeamMember }) => {
         </div>
 
         {/* Skills and Certifications Section */}
-        <div >
+        <div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Skills */}
             <div>
-              <h2 className="heading-md mb-6 text-text-primary">
+              <h2 className="text-2xl font-bold text-black mb-6">
                 Skills & Expertise
               </h2>
-              <div className="card p-6">
-                <div className="space-y-4">
+              <div className="bg-white rounded-2xl p-6 ring-1 ring-gray-200">
+                <div className="space-y-6">
                   <div>
-                    <h3 className="font-semibold text-text-primary mb-3">Technical Skills</h3>
+                    <h3 className="text-lg font-bold text-black mb-4">Technical Skills</h3>
                     <div className="flex flex-wrap gap-2">
                       {member.skills.map((skill, index) => (
                         <span 
                           key={index}
-                          className="
-                            px-3 // 12px horizontal padding
-                            py-1 // 4px vertical padding
-                            bg-neutral-100 // Light gray background
-                            text-neutral-700 // Dark gray text
-                            rounded-full // Rounded pill
-                            text-sm // Small text
-                          "
+                          className="px-3 py-2 bg-gray-100 text-gray-700 rounded-full text-sm font-medium"
                         >
                           {skill}
                         </span>
@@ -551,19 +525,12 @@ const ContentSection = ({ member }: { member: TeamMember }) => {
                   </div>
                   
                   <div>
-                    <h3 className="font-semibold text-text-primary mb-3">Software Proficiency</h3>
+                    <h3 className="text-lg font-bold text-black mb-4">Software Proficiency</h3>
                     <div className="flex flex-wrap gap-2">
                       {member.software.map((software, index) => (
                         <span 
                           key={index}
-                          className="
-                            px-3 // 12px horizontal padding
-                            py-1 // 4px vertical padding
-                            bg-primary-100 // Light blue background
-                            text-primary-700 // Blue text
-                            rounded-full // Rounded pill
-                            text-sm // Small text
-                          "
+                          className="px-3 py-2 bg-blue-50 text-blue-700 rounded-full text-sm font-medium"
                         >
                           {software}
                         </span>
@@ -576,36 +543,26 @@ const ContentSection = ({ member }: { member: TeamMember }) => {
 
             {/* Certifications */}
             <div>
-              <h2 className="heading-md mb-6 text-text-primary">
+              <h2 className="text-2xl font-bold text-black mb-6">
                 Certifications
               </h2>
-              <div className="card p-6">
+              <div className="bg-white rounded-2xl p-6 ring-1 ring-gray-200">
                 <div className="space-y-4">
                   {member.certifications.map((cert, index) => (
-                    <div key={index} className="
-                      p-4 // 16px padding
-                      bg-neutral-50 // Light background
-                      rounded-lg // Rounded corners
-                      border // Border
-                      border-neutral-200 // Light border
-                    ">
-                      <h3 className="font-semibold text-text-primary mb-1">
+                    <div key={index} className="p-4 bg-gray-50 rounded-lg border border-gray-200">
+                      <h3 className="text-lg font-bold text-black mb-1">
                         {cert.name}
                       </h3>
-                      <p className="text-sm text-text-secondary mb-2">
+                      <p className="text-gray-600 mb-2">
                         {cert.issuingBody}
                       </p>
-                      <p className="text-xs text-text-tertiary">
+                      <p className="text-sm text-gray-500 mb-3">
                         Issued: {new Date(cert.issueDate).toLocaleDateString()}
                         {cert.expiryDate && ` • Expires: ${new Date(cert.expiryDate).toLocaleDateString()}`}
                       </p>
-                      <div className="mt-2">
+                      <div>
                         <span className={`
-                          px-2 // 8px horizontal padding
-                          py-1 // 4px vertical padding
-                          rounded-full // Rounded pill
-                          text-xs // Extra small text
-                          font-medium // Medium weight
+                          px-3 py-1 rounded-full text-xs font-semibold
                           ${cert.status === 'active' 
                             ? 'bg-green-100 text-green-700' 
                             : cert.status === 'expired'
@@ -626,51 +583,41 @@ const ContentSection = ({ member }: { member: TeamMember }) => {
 
         {/* Project Involvement Section */}
         {member.projects && member.projects.length > 0 && (
-          <div >
-            <h2 className="heading-md mb-6 text-text-primary">
+          <div>
+            <h2 className="text-2xl font-bold text-black mb-6">
               Project Involvement
             </h2>
-            <div className="card p-6">
+            <div className="bg-white rounded-2xl p-6 ring-1 ring-gray-200">
               <div className="space-y-4">
                 {member.projects.map((project, index) => (
-                  <div key={index} className="
-                    p-4 // 16px padding
-                    bg-neutral-50 // Light background
-                    rounded-lg // Rounded corners
-                    border // Border
-                    border-neutral-200 // Light border
-                  ">
+                  <div key={index} className="p-4 bg-gray-50 rounded-lg border border-gray-200">
                     <div className="flex justify-between items-start mb-3">
                       <div>
-                        <h3 className="font-semibold text-text-primary mb-1">
+                        <h3 className="text-lg font-bold text-black mb-1">
                           {project.projectName}
                         </h3>
-                        <p className="text-sm text-primary-600 font-medium">
+                        <p className="text-blue-600 font-semibold">
                           {project.role}
                         </p>
                       </div>
                       <span className={`
-                        px-2 // 8px horizontal padding
-                        py-1 // 4px vertical padding
-                        rounded-full // Rounded pill
-                        text-xs // Extra small text
-                        font-medium // Medium weight
+                        px-3 py-1 rounded-full text-xs font-semibold
                         ${project.isActive 
                           ? 'bg-green-100 text-green-700' 
-                          : 'bg-neutral-100 text-neutral-700'
+                          : 'bg-gray-100 text-gray-700'
                         }
                       `}>
                         {project.isActive ? 'Active' : 'Completed'}
                       </span>
                     </div>
                     
-                    <p className="text-sm text-text-secondary mb-3">
+                    <p className="text-sm text-gray-600 mb-3">
                       {project.startDate.split('-')[0]} - {project.endDate ? project.endDate.split('-')[0] : 'Present'}
                     </p>
                     
                     <div>
-                      <p className="text-sm font-medium text-text-secondary mb-2">Responsibilities:</p>
-                      <ul className="text-sm text-text-tertiary space-y-1">
+                      <p className="text-sm font-semibold text-gray-700 mb-2">Responsibilities:</p>
+                      <ul className="text-sm text-gray-600 space-y-1">
                         {project.responsibilities.map((responsibility, respIndex) => (
                           <li key={respIndex}>• {responsibility}</li>
                         ))}
