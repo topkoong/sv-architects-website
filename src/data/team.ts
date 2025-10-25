@@ -279,12 +279,19 @@ export const teamMembers: TeamMember[] = [
     title: 'Head of Architect',
     department: 'Architecture',
     image: getImagePath('/images/team/picharn-foongkiatcharoen.jpg'),
-    bio: 'Picharn Foongkiatcharoen serves as Head of Architect at SV Architects and Associates Ltd., leading the architectural design team and overseeing design development for major projects.',
-    shortBio: 'Head of Architect leading design development and architectural innovation for major projects.',
+    bio: 'Picharn Foongkiatcharoen serves as Head of Architect at SV Architects and Associates Ltd., bringing over 15 years of comprehensive experience across diverse architectural sectors. With advanced degrees from both Thailand and Australia, he leads the architectural design team and oversees design development for major projects spanning commercial architecture, hospitality design, healthcare facilities, transportation infrastructure, aviation facilities, mixed-use developments, office spaces, and residential projects.',
+    shortBio: 'Head of Architect with 15+ years of comprehensive experience across diverse architectural sectors including commercial, hospitality, healthcare, transportation, aviation, mixed-use, office, and residential projects.',
     education: [
       {
-        degree: 'Bachelor of Architecture',
-        institution: 'Chulalongkorn University',
+        degree: 'Master of the Built Environment in Sustainable Development and Architecture',
+        institution: 'University of New South Wales (UNSW)',
+        location: 'Sydney, Australia',
+        level: 'master',
+        field: 'Sustainable Development and Architecture'
+      },
+      {
+        degree: 'Bachelor of Science Program in Architecture (International Program)',
+        institution: 'King Mongkut\'s Institute of Technology Ladkrabang (KMITL)',
         location: 'Bangkok, Thailand',
         level: 'bachelor',
         field: 'Architecture'
@@ -300,14 +307,17 @@ export const teamMembers: TeamMember[] = [
       }
     ],
     experience: {
-      summary: 'Over 15 years of experience in architectural design and project leadership.',
+      summary: 'Over 15 years of comprehensive experience across diverse architectural sectors including commercial architecture, hospitality design, healthcare facilities, transportation infrastructure, aviation facilities, mixed-use developments, office spaces, and residential projects.',
       years: 15,
       areas: [
-        'architectural-design',
-        'project-leadership',
-        'design-development',
-        'team-management',
-        'client-relations'
+        'commercial-architecture',
+        'hospitality-design',
+        'healthcare-facilities',
+        'transportation-infrastructure',
+        'aviation-facilities',
+        'mixed-use-developments',
+        'office-spaces',
+        'residential-projects'
       ],
       workHistory: [
         {
@@ -343,7 +353,14 @@ export const teamMembers: TeamMember[] = [
       }
     ],
     skills: [
-      'Architectural Design',
+      'Commercial Architecture',
+      'Hospitality Design',
+      'Healthcare Facilities',
+      'Transportation Infrastructure',
+      'Aviation Facilities',
+      'Mixed-Use Developments',
+      'Office Spaces',
+      'Residential Projects',
       'Project Leadership',
       'Team Management',
       'Design Development',
