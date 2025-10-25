@@ -58,22 +58,22 @@ export const projects: ProjectData[] = [
     
     images: [
       {
-        url: getImagePath('/images/projects/centerpoint-siamsquare-1.jpg'),
+        url: getImagePath('/images/projects/centerpoint-siamsquare-commercial/centerpoint-siamsquare-2nd-floor-1.jpg'),
         alt: 'Centerpoint Siamsquare exterior view',
         caption: 'Main entrance and public plaza'
       },
       {
-        url: getImagePath('/images/projects/centerpoint-siamsquare-2.jpg'),
+        url: getImagePath('/images/projects/centerpoint-siamsquare-commercial/centerpoint-siamsquare-2nd-floor-2.jpg'),
         alt: 'Centerpoint Siamsquare retail space',
         caption: 'Modern retail environment with natural lighting'
       },
       {
-        url: getImagePath('/images/projects/centerpoint-siamsquare-3.jpg'),
+        url: getImagePath('/images/projects/centerpoint-siamsquare-commercial/centerpoint-siamsquare-4th-floor.jpg'),
         alt: 'Centerpoint Siamsquare office tower at night',
         caption: 'Office tower illuminated at night'
       },
       {
-        url: getImagePath('/images/projects/centerpoint-siamsquare-4.jpg'),
+        url: getImagePath('/images/projects/centerpoint-siamsquare-commercial/centerpoint-siamsquare-bts-lower.png'),
         alt: 'Centerpoint Siamsquare green spaces',
         caption: 'Public plaza with landscaped green spaces'
       }
@@ -119,24 +119,19 @@ export const projects: ProjectData[] = [
     
     images: [
       {
-        url: getImagePath('/images/projects/siamese-rama9-1.jpg'),
+        url: getImagePath('/images/projects/siamese-rama9-award-winning/siamese-rama9-view1.jpg'),
         alt: 'Siamese Rama 9 towers',
         caption: 'Twin towers with distinctive architecture'
       },
       {
-        url: getImagePath('/images/projects/siamese-rama9-2.jpg'),
+        url: getImagePath('/images/projects/siamese-rama9-award-winning/siamese-rama9-view2.jpg'),
         alt: 'Siamese Rama 9 retail area',
         caption: 'Modern retail podium'
       },
       {
-        url: getImagePath('/images/projects/siamese-rama9-3.jpg'),
+        url: getImagePath('/images/projects/siamese-rama9-award-winning/siamese-rama9-view3.jpg'),
         alt: 'Siamese Rama 9 sky garden',
         caption: 'Rooftop sky garden with city views'
-      },
-      {
-        url: getImagePath('/images/projects/siamese-rama9-4.jpg'),
-        alt: 'Siamese Rama 9 at night',
-        caption: 'Illuminated facade at night'
       }
     ],
     
@@ -188,24 +183,14 @@ export const projects: ProjectData[] = [
     
     images: [
       {
-        url: getImagePath('/images/projects/baan-huahin-1.jpg'),
+        url: getImagePath('/images/projects/baan-huahin-residential/baan-huahin-1.jpg'),
         alt: 'Baan Huahin exterior view',
         caption: 'Villa integrated with forest environment'
       },
       {
-        url: getImagePath('/images/projects/baan-huahin-2.jpg'),
+        url: getImagePath('/images/projects/baan-huahin-residential/baan-huahin-2.jpg'),
         alt: 'Baan Huahin living space',
         caption: 'Modern living space with natural materials'
-      },
-      {
-        url: getImagePath('/images/projects/baan-huahin-3.jpg'),
-        alt: 'Baan Huahin garden view',
-        caption: 'Seamless indoor-outdoor connection'
-      },
-      {
-        url: getImagePath('/images/projects/baan-huahin-4.jpg'),
-        alt: 'Baan Huahin forest integration',
-        caption: 'Harmonious forest integration'
       }
     ],
     
@@ -246,24 +231,9 @@ export const projects: ProjectData[] = [
     
     images: [
       {
-        url: getImagePath('/images/projects/u-tapao-airport-new-passenger-terminal-1.jpg'),
+        url: getImagePath('/images/projects/u-tapao-airport-new-terminal/u-tapao-airport-new-terminal.jpg'),
         alt: 'U-Tapao Airport Terminal exterior',
         caption: 'Modern terminal facade with distinctive roof design'
-      },
-      {
-        url: getImagePath('/images/projects/u-tapao-airport-new-passenger-terminal-2.jpg'),
-        alt: 'U-Tapao Airport Terminal interior',
-        caption: 'Spacious departure hall with natural lighting'
-      },
-      {
-        url: getImagePath('/images/projects/u-tapao-airport-new-passenger-terminal-3.jpg'),
-        alt: 'U-Tapao Airport Terminal concourse',
-        caption: 'Retail and dining concourse'
-      },
-      {
-        url: getImagePath('/images/projects/u-tapao-airport-new-passenger-terminal-4.jpg'),
-        alt: 'U-Tapao Airport Terminal aerial view',
-        caption: 'Aerial view of terminal complex'
       }
     ],
     
@@ -304,24 +274,29 @@ export const projects: ProjectData[] = [
     
     images: [
       {
-        url: getImagePath('/images/projects/don-mueang-airport-terminal3-1.jpg'),
+        url: getImagePath('/images/projects/don-mueang-international-airport-terminal-3-aviation/IMG_2621.jpeg'),
         alt: 'Don Mueang Airport Terminal 3 exterior',
         caption: 'Modern terminal expansion'
       },
       {
-        url: getImagePath('/images/projects/don-mueang-airport-terminal3-2.jpg'),
+        url: getImagePath('/images/projects/don-mueang-international-airport-terminal-3-aviation/IMG_2622.jpeg'),
         alt: 'Don Mueang Airport Terminal 3 interior',
         caption: 'Spacious departure hall'
       },
       {
-        url: getImagePath('/images/projects/don-mueang-airport-terminal3-3.jpg'),
+        url: getImagePath('/images/projects/don-mueang-international-airport-terminal-3-aviation/IMG_2623.jpeg'),
         alt: 'Don Mueang Airport Terminal 3 concourse',
         caption: 'Retail and dining areas'
       },
       {
-        url: getImagePath('/images/projects/don-mueang-airport-terminal3-4.jpg'),
+        url: getImagePath('/images/projects/don-mueang-international-airport-terminal-3-aviation/IMG_2624.jpeg'),
         alt: 'Don Mueang Airport Terminal 3 aerial view',
         caption: 'Aerial view of terminal complex'
+      },
+      {
+        url: getImagePath('/images/projects/don-mueang-international-airport-terminal-3-aviation/IMG_2625.jpeg'),
+        alt: 'Don Mueang Airport Terminal 3 gate area',
+        caption: 'Passenger boarding gates'
       }
     ],
     
@@ -362,22 +337,22 @@ export const projects: ProjectData[] = [
     
     images: [
       {
-        url: getImagePath('/images/projects/chaopraya-hotel-1.jpg'),
+        url: getImagePath('/images/projects/chaopraya-mahanatee-hotel-hospitality/chaopraya-mahanatee-hotel-night.jpg'),
         alt: 'Chaopraya Mahanatee Hotel exterior',
         caption: 'Riverside hotel facade'
       },
       {
-        url: getImagePath('/images/projects/chaopraya-hotel-2.jpg'),
+        url: getImagePath('/images/projects/chaopraya-mahanatee-hotel-hospitality/chaopraya-mahanatee-hotel-pool.jpg'),
         alt: 'Chaopraya Mahanatee Hotel lobby',
         caption: 'Elegant lobby design'
       },
       {
-        url: getImagePath('/images/projects/chaopraya-hotel-3.jpg'),
+        url: getImagePath('/images/projects/chaopraya-mahanatee-hotel-hospitality/chaopraya-mahanatee-hotel-river.jpg'),
         alt: 'Chaopraya Mahanatee Hotel room',
         caption: 'Luxury accommodation with river views'
       },
       {
-        url: getImagePath('/images/projects/chaopraya-hotel-4.jpg'),
+        url: getImagePath('/images/projects/chaopraya-mahanatee-hotel-hospitality/chaopraya-mahanatee-hotel-view10.jpg'),
         alt: 'Chaopraya Mahanatee Hotel restaurant',
         caption: 'Riverside dining experience'
       }
@@ -510,20 +485,44 @@ export const projects: ProjectData[] = [
     
     images: [
       {
-        url: getImagePath('/images/projects/jet-villa-residence-1.jpg'),
+        url: getImagePath('/images/projects/jet-villa-residence-residential/jet-villa-air-view.jpg'),
         alt: 'Jet Villa Residence aerial view'
       },
       {
-        url: getImagePath('/images/projects/jet-villa-residence-2.jpg'),
+        url: getImagePath('/images/projects/jet-villa-residence-residential/jet-villa-view2.jpg'),
         alt: 'Jet Villa Residence exterior design'
       },
       {
-        url: getImagePath('/images/projects/jet-villa-residence-3.jpg'),
+        url: getImagePath('/images/projects/jet-villa-residence-residential/jet-villa-view3.jpg'),
         alt: 'Jet Villa Residence garden and landscape'
       },
       {
-        url: getImagePath('/images/projects/jet-villa-residence-4.jpg'),
+        url: getImagePath('/images/projects/jet-villa-residence-residential/jet-villa-view4.jpg'),
         alt: 'Jet Villa Residence pool area'
+      },
+      {
+        url: getImagePath('/images/projects/jet-villa-residence-residential/jet-villa-view5.jpg'),
+        alt: 'Jet Villa Residence living spaces'
+      },
+      {
+        url: getImagePath('/images/projects/jet-villa-residence-residential/jet-villa-view6.jpg'),
+        alt: 'Jet Villa Residence architectural details'
+      },
+      {
+        url: getImagePath('/images/projects/jet-villa-residence-residential/jet-villa-view7.jpg'),
+        alt: 'Jet Villa Residence outdoor areas'
+      },
+      {
+        url: getImagePath('/images/projects/jet-villa-residence-residential/jet-villa-view8.jpg'),
+        alt: 'Jet Villa Residence modern design'
+      },
+      {
+        url: getImagePath('/images/projects/jet-villa-residence-residential/jet-villa-view9.jpg'),
+        alt: 'Jet Villa Residence landscape integration'
+      },
+      {
+        url: getImagePath('/images/projects/jet-villa-residence-residential/jet-villa-view10.jpg'),
+        alt: 'Jet Villa Residence complete view'
       }
     ]
   },
@@ -568,19 +567,19 @@ export const projects: ProjectData[] = [
     
     images: [
       {
-        url: getImagePath('/images/projects/innovation-center-1.jpg'),
+        url: getImagePath('/images/projects/innovation-center-interior-design/innovation-center-closeup.jpg'),
         alt: 'Innovation Center exterior'
       },
       {
-        url: getImagePath('/images/projects/innovation-center-2.jpg'),
+        url: getImagePath('/images/projects/innovation-center-interior-design/innovation-center-hall.jpg'),
         alt: 'Innovation Center interior'
       },
       {
-        url: getImagePath('/images/projects/innovation-center-3.jpg'),
+        url: getImagePath('/images/projects/innovation-center-interior-design/innovation-center-main.jpg'),
         alt: 'Innovation Center common area'
       },
       {
-        url: getImagePath('/images/projects/innovation-center-4.jpg'),
+        url: getImagePath('/images/projects/innovation-center-interior-design/innovation-center-scene2.jpg'),
         alt: 'Innovation Center workspace'
       }
     ]
@@ -597,20 +596,24 @@ export const projects: ProjectData[] = [
     
     images: [
       {
-        url: getImagePath('/images/projects/hi-tech-sandbox-1.jpg'),
+        url: getImagePath('/images/projects/hi-tech-sandbox-interior-design/hi-tech-sandbox-executive.jpg'),
         alt: 'Hi-Tech Sandbox exterior'
       },
       {
-        url: getImagePath('/images/projects/hi-tech-sandbox-2.jpg'),
+        url: getImagePath('/images/projects/hi-tech-sandbox-interior-design/hi-tech-sandbox-interior.jpg'),
         alt: 'Hi-Tech Sandbox interior'
       },
       {
-        url: getImagePath('/images/projects/hi-tech-sandbox-3.jpg'),
+        url: getImagePath('/images/projects/hi-tech-sandbox-interior-design/hi-tech-sandbox-main.jpg'),
         alt: 'Hi-Tech Sandbox workspace'
       },
       {
-        url: getImagePath('/images/projects/hi-tech-sandbox-4.jpg'),
+        url: getImagePath('/images/projects/hi-tech-sandbox-interior-design/hi-tech-sandbox-office.jpg'),
         alt: 'Hi-Tech Sandbox technology area'
+      },
+      {
+        url: getImagePath('/images/projects/hi-tech-sandbox-interior-design/hi-tech-sandbox-training-room.jpg'),
+        alt: 'Hi-Tech Sandbox training facilities'
       }
     ]
   },
@@ -887,20 +890,12 @@ export const projects: ProjectData[] = [
     
     images: [
       {
-        url: getImagePath('/images/projects/sukhumvit-hills-1.jpg'),
+        url: getImagePath('/images/projects/sukhumvit-hills-mixed-use/sukhumvit-hills-detailed.png'),
         alt: 'Sukhumvit Hills exterior'
       },
       {
-        url: getImagePath('/images/projects/sukhumvit-hills-2.jpg'),
+        url: getImagePath('/images/projects/sukhumvit-hills-mixed-use/sukhumvit-hills-main.png'),
         alt: 'Sukhumvit Hills retail area'
-      },
-      {
-        url: getImagePath('/images/projects/sukhumvit-hills-3.jpg'),
-        alt: 'Sukhumvit Hills residential'
-      },
-      {
-        url: getImagePath('/images/projects/sukhumvit-hills-4.jpg'),
-        alt: 'Sukhumvit Hills amenities'
       }
     ]
   },
@@ -916,20 +911,16 @@ export const projects: ProjectData[] = [
     
     images: [
       {
-        url: getImagePath('/images/projects/transit-oriented-development-tod-1.jpg'),
+        url: getImagePath('/images/projects/transit-oriented-development-tod/tod-hnedu.jpg'),
         alt: 'Transit-Oriented Development TOD master plan'
       },
       {
-        url: getImagePath('/images/projects/transit-oriented-development-tod-2.jpg'),
+        url: getImagePath('/images/projects/transit-oriented-development-tod/tod-st-plaza.jpg'),
         alt: 'Transit-Oriented Development TOD layout'
       },
       {
-        url: getImagePath('/images/projects/transit-oriented-development-tod-3.jpg'),
+        url: getImagePath('/images/projects/transit-oriented-development-tod/tod-walk.jpg'),
         alt: 'Transit-Oriented Development TOD facilities'
-      },
-      {
-        url: getImagePath('/images/projects/transit-oriented-development-tod-4.jpg'),
-        alt: 'Transit-Oriented Development TOD development'
       }
     ]
   },
