@@ -373,9 +373,9 @@ export const Header = () => {
             aria-label="SV Architects Home"
           >
             <Image
-              src="/sv-architects-website/images/logos/logo-sv-black.svg"
+              src="/sv-architects-website/images/logos/logo-sv-black.png"
               alt="SV Architects Logo"
-              width={40}
+              width={120}
               height={40}
               className="group-hover:scale-105 transition-transform duration-200"
               unoptimized // Required for static export
