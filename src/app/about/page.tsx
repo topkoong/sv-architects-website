@@ -101,37 +101,37 @@ export default function AboutPage() {
   const CAROUSEL_IMAGES = [
     {
       id: 1,
-      src: '/images/about/about-office-1.jpg',
+      src: '/sv-architects-website/images/about/about-office-1.jpg',
       alt: 'SV Architects modern office environment showcasing professional workspace and collaborative design area'
     },
     {
       id: 2,
-      src: '/images/about/about-office-2.jpg',
+      src: '/sv-architects-website/images/about/about-office-2.jpg',
       alt: 'Contemporary office space at SV Architects with innovative design elements and natural lighting'
     },
     {
       id: 3,
-      src: '/images/about/about-office-3.jpg',
+      src: '/sv-architects-website/images/about/about-office-3.jpg',
       alt: 'Professional workspace at SV Architects featuring modern architectural design and team collaboration areas'
     },
     {
       id: 4,
-      src: '/images/about/about-team-1.jpg',
+      src: '/sv-architects-website/images/about/about-team-1.jpg',
       alt: 'SV Architects team members working together on architectural projects in collaborative environment'
     },
     {
       id: 5,
-      src: '/images/about/about-team-2.jpg',
+      src: '/sv-architects-website/images/about/about-team-2.jpg',
       alt: 'Professional architects at SV Architects discussing design concepts and project development'
     },
     {
       id: 6,
-      src: '/images/about/about-team-3.jpg',
+      src: '/sv-architects-website/images/about/about-team-3.jpg',
       alt: 'SV Architects team in creative workspace developing innovative architectural solutions'
     },
     {
       id: 7,
-      src: '/images/about/about-office-4.jpg',
+      src: '/sv-architects-website/images/about/about-office-4.jpg',
       alt: 'Modern office design at SV Architects showcasing contemporary architectural workspace'
     }
   ];
@@ -214,7 +214,7 @@ export default function AboutPage() {
     "name": "SV Architects and Associates Ltd.",
     "alternateName": "SV Architects",
     "url": "https://sv-architects.github.io",
-    "logo": "https://sv-architects.github.io/images/logo/sv-architects-logo.png",
+    "logo": "https://sv-architects.github.io/sv-architects-website/images/logo/sv-architects-logo.png",
     "description": "Leading architectural firm in Bangkok, Thailand specializing in innovative design solutions and collaborative team approaches.",
     "foundingDate": "2010",
     "address": {
@@ -303,7 +303,7 @@ export default function AboutPage() {
         {/* Background image with overlay */}
         <div className="absolute inset-0">
           <Image
-            src="/images/about/hero-background.jpg"
+            src="/sv-architects-website/images/about/hero-background.jpg"
             alt="SV Architects office and team environment"
             fill
             className="object-cover"
@@ -401,7 +401,7 @@ export default function AboutPage() {
                   className="absolute inset-0"
                 >
                   <Image
-                    src={CAROUSEL_IMAGES[currentImageIndex]?.src || '/images/placeholder.jpg'}
+                    src={CAROUSEL_IMAGES[currentImageIndex]?.src || '/sv-architects-website/images/placeholder.jpg'}
                     alt={CAROUSEL_IMAGES[currentImageIndex]?.alt || 'Office image'}
                     fill
                     className="object-cover"

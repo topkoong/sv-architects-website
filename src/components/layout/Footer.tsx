@@ -19,7 +19,7 @@ export const Footer = () => {
           <div className="md:col-span-2">
             <div className="mb-6">
               <Image
-                src="/images/logos/logo-sv-black.png"
+                src="/sv-architects-website/images/logos/logo-sv-black.png"
                 alt="SV Architects Logo"
                 width={200}
                 height={60}

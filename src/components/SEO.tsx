@@ -54,7 +54,7 @@ const SITE_BASE_URL = 'https://sv-architects.github.io';
 /**
  * Default Open Graph image
  */
-const DEFAULT_OG_IMAGE = '/images/og-default.jpg';
+const DEFAULT_OG_IMAGE = '/sv-architects-website/images/og-default.jpg';
 
 /**
  * Default meta type
@@ -82,7 +82,7 @@ const DEFAULT_META_TYPE = 'website';
  * <SEO
  *   title="Page Title"
  *   description="Page description"
- *   image="/images/page-specific.jpg"
+ *   image="/sv-architects-website/images/page-specific.jpg"
  *   url="/page-path"
  *   type="article"
  * />

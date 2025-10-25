@@ -23,6 +23,7 @@
 import type { Metadata } from 'next';
 import { Inter, Playfair_Display } from 'next/font/google';
 import './globals.css';
+import { Header } from '@/components/layout/Header';
 
 // ===== FONT CONFIGURATION =====
 
@@ -86,7 +87,7 @@ export const metadata: Metadata = {
     siteName: 'SV Architects and Associates Ltd.',
     images: [
       {
-        url: 'https://sv-architects.github.io/images/logo/sv-architects-logo.png',
+        url: 'https://sv-architects.github.io/sv-architects-website/images/logo/sv-architects-logo.png',
         width: 1200,
         height: 630,
         alt: 'SV Architects and Associates Ltd. Logo'
@@ -100,7 +101,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'SV Architects and Associates Ltd. | Leading Architecture Firm Bangkok Thailand',
     description: 'Leading architectural firm in Bangkok, Thailand, specializing in innovative design solutions.',
-    images: ['https://sv-architects.github.io/images/logo/sv-architects-logo.png']
+    images: ['https://sv-architects.github.io/sv-architects-website/images/logo/sv-architects-logo.png']
   },
   
   // Additional meta tags
@@ -164,7 +165,7 @@ export default function RootLayout({
               "name": "SV Architects and Associates Ltd.",
               "alternateName": "SV Architects",
               "url": "https://sv-architects.github.io",
-              "logo": "https://sv-architects.github.io/images/logo/sv-architects-logo.png",
+              "logo": "https://sv-architects.github.io/sv-architects-website/images/logo/sv-architects-logo.png",
               "description": "Leading architectural firm in Bangkok, Thailand specializing in innovative design solutions and collaborative team approaches.",
               "foundingDate": "2010",
               "address": {
@@ -242,6 +243,7 @@ export default function RootLayout({
       </head>
       
       <body className="font-sans antialiased">
+        <Header />
         {children}
       </body>
     </html>

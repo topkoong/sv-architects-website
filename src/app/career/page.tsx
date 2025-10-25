@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 
 /**
  * Production-grade SEO metadata for the Career page
@@ -35,7 +36,7 @@ export const metadata: Metadata = {
     siteName: 'SV Architects and Associates Ltd.',
     images: [
       {
-        url: 'https://sv-architects.github.io/images/career/team-working.jpg',
+        url: 'https://sv-architects.github.io/sv-architects-website/images/career/team-working.jpg',
         width: 1200,
         height: 630,
         alt: 'SV Architects team working together'
@@ -49,7 +50,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Career Opportunities | SV Architects and Associates Ltd.',
     description: 'Join SV Architects and Associates Ltd., a leading architectural firm in Bangkok, Thailand.',
-    images: ['https://sv-architects.github.io/images/career/team-working.jpg']
+    images: ['https://sv-architects.github.io/sv-architects-website/images/career/team-working.jpg']
   },
   
   // Additional meta tags
@@ -101,7 +102,7 @@ export default function CareerPage() {
       "@type": "Organization",
       "name": "SV Architects and Associates Ltd.",
       "url": "https://sv-architects.github.io",
-      "logo": "https://sv-architects.github.io/images/logo/sv-architects-logo.png",
+      "logo": "https://sv-architects.github.io/sv-architects-website/images/logo/sv-architects-logo.png",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "123 Sukhumvit Road",
@@ -159,6 +160,17 @@ export default function CareerPage() {
       <main className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="relative py-16 md:py-20 lg:py-24 bg-gradient-to-br from-gray-50 to-white overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 opacity-10">
+          <Image
+            src="/sv-architects-website/images/career/newcareer.jpg"
+            alt="SV Architects team working"
+            fill
+            objectFit="cover"
+            className="object-center"
+          />
+        </div>
+        
         <div className="container mx-auto px-4 relative">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-5xl md:text-6xl font-bold mb-6 text-black">

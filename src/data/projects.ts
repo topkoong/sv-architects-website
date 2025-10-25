@@ -55,11 +55,11 @@ export const projects: Project[] = [
       'Climate control systems'
     ],
     images: {
-      thumbnail: '/images/projects/bunditpatanasilpa-auditorium.jpg',
+      thumbnail: '/sv-architects-website/images/projects/bunditpatanasilpa-auditorium.jpg',
       gallery: [
-        '/images/projects/bunditpatanasilpa-auditorium.jpg',
-        '/images/projects/bunditpatanasilpa-auditorium-2.jpg',
-        '/images/projects/bunditpatanasilpa-auditorium-3.jpg'
+        '/sv-architects-website/images/projects/bunditpatanasilpa-auditorium.jpg',
+        '/sv-architects-website/images/projects/bunditpatanasilpa-auditorium-2.jpg',
+        '/sv-architects-website/images/projects/bunditpatanasilpa-auditorium-3.jpg'
       ]
     },
     team: [
@@ -114,11 +114,11 @@ export const projects: Project[] = [
       'International standards compliance'
     ],
     images: {
-      thumbnail: '/images/projects/don-mueang-airport-terminal3.jpg',
+      thumbnail: '/sv-architects-website/images/projects/don-mueang-airport-terminal3.jpg',
       gallery: [
-        '/images/projects/don-mueang-airport-terminal3.jpg',
-        '/images/projects/don-mueang-airport-terminal3-2.jpg',
-        '/images/projects/don-mueang-airport-terminal3-3.jpg'
+        '/sv-architects-website/images/projects/don-mueang-airport-terminal3.jpg',
+        '/sv-architects-website/images/projects/don-mueang-airport-terminal3-2.jpg',
+        '/sv-architects-website/images/projects/don-mueang-airport-terminal3-3.jpg'
       ]
     },
     team: [
@@ -173,11 +173,11 @@ export const projects: Project[] = [
       'Sustainable design'
     ],
     images: {
-      thumbnail: '/images/projects/phuket-condominium-1.jpg',
+      thumbnail: '/sv-architects-website/images/projects/phuket-condominium-1.jpg',
       gallery: [
-        '/images/projects/phuket-condominium-1.jpg',
-        '/images/projects/phuket-condominium-2.jpg',
-        '/images/projects/phuket-condominium-3.jpg'
+        '/sv-architects-website/images/projects/phuket-condominium-1.jpg',
+        '/sv-architects-website/images/projects/phuket-condominium-2.jpg',
+        '/sv-architects-website/images/projects/phuket-condominium-3.jpg'
       ]
     },
     team: [

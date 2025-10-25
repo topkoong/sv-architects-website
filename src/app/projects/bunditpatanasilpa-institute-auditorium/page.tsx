@@ -13,6 +13,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { fadeIn, slideUp } from '@/lib/animations';
 import Link from 'next/link';
+import Image from "next/image";
 
 // Project data
 const project = {
@@ -35,10 +36,10 @@ const project = {
     'Modern auditorium technology'
   ],
   images: [
-    '/images/homepage/bunditpatanasilpa-auditorium.jpg',
-    '/images/projects/bunditpatanasilpa-auditorium-interior1.jpg',
-    '/images/projects/bunditpatanasilpa-auditorium-interior2.jpg',
-    '/images/projects/bunditpatanasilpa-auditorium-gallery.jpg'
+    '/sv-architects-website/images/projects/bunditpatanasilpa-auditorium.jpg',
+    '/sv-architects-website/images/projects/bunditpatanasilpa-interior1.jpg',
+    '/sv-architects-website/images/projects/bunditpatanasilpa-interior2.jpg',
+    '/sv-architects-website/images/projects/bunditpatanasilpa-gallery.jpg'
   ],
   sustainability: {
     leed: true,
@@ -76,10 +77,12 @@ export default function BunditpatanasilpaAuditoriumPage() {
               transition={{ duration: 0.8, ease: "easeInOut" }}
               className="absolute inset-0"
             >
-              <img
-                src={project.images[currentImageIndex]}
+              <Image
+                src={project.images[currentImageIndex] || ''}
                 alt={`${project.name} - Image ${currentImageIndex + 1}`}
                 className="w-full h-full object-cover"
+                fill
+                objectFit="cover"
               />
               <div className="absolute inset-0 bg-black bg-opacity-40" />
             </motion.div>
@@ -313,10 +316,12 @@ export default function BunditpatanasilpaAuditoriumPage() {
                 onClick={() => goToImage(index)}
               >
                 <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
-                  <img
-                    src={image}
+                  <Image
+                    src={image || ""}
                     alt={`${project.name} - Gallery Image ${index + 1}`}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    fill
+                    objectFit="cover"
                   />
                   <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300" />
                 </div>

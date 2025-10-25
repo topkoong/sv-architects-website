@@ -38,6 +38,7 @@ import { fadeIn, slideUp, staggerContainer } from '@/lib/animations';
 
 // Import Next.js components
 import Link from 'next/link';
+import Image from 'next/image';
 // Import custom components
 // Import React components
 import { useState } from 'react';
@@ -103,11 +104,9 @@ const projects: Project[] = [
       'Modern security systems'
     ],
     images: {
-      thumbnail: '/images/projects/u-tapao-airport-new.jpg',
+      thumbnail: '/sv-architects-website/images/projects/u-tapao-airport-new-terminal/u-tapao-airport-new-terminal.jpg',
       gallery: [
-        '/images/projects/u-tapao-airport-new.jpg',
-        '/images/projects/don-mueang-airport-terminal3.jpg',
-        '/images/projects/mahachai-airport-luxe.jpg'
+        '/sv-architects-website/images/projects/u-tapao-airport-new-terminal/u-tapao-airport-new-terminal.jpg'
       ]
     },
     awards: ['Best Airport Design 2023', 'Sustainable Design Excellence'],
@@ -137,13 +136,9 @@ const projects: Project[] = [
       'Heritage integration design'
     ],
     images: {
-      thumbnail: '/images/projects/don-mueang-airport-terminal3-1.jpg',
+      thumbnail: '/sv-architects-website/images/projects/u-tapao-airport-new-terminal/u-tapao-airport-new-terminal.jpg',
       gallery: [
-        '/images/projects/don-mueang-airport-terminal3-1.jpg',
-        '/images/projects/don-mueang-airport-terminal3-2.jpg',
-        '/images/projects/don-mueang-airport-terminal3-3.jpg',
-        '/images/projects/don-mueang-airport-terminal3-4.jpg',
-        '/images/projects/don-mueang-airport-terminal3-5.jpg'
+        '/sv-architects-website/images/projects/u-tapao-airport-new-terminal/u-tapao-airport-new-terminal.jpg'
       ]
     },
     awards: ['Airport Design Excellence 2023'],
@@ -172,11 +167,9 @@ const projects: Project[] = [
       'Sustainable development approach'
     ],
     images: {
-      thumbnail: '/images/projects/mahachai-airport-luxe.jpg',
+      thumbnail: '/sv-architects-website/images/projects/bunditpatanasilpa-auditorium/bunditpatanasilpa-auditorium.jpg',
       gallery: [
-        '/images/projects/mahachai-airport-luxe.jpg',
-        '/images/projects/don-mueang-airport-terminal3.jpg',
-        '/images/projects/u-tapao-airport-new.jpg'
+        '/sv-architects-website/images/projects/bunditpatanasilpa-auditorium/bunditpatanasilpa-auditorium.jpg'
       ]
     },
     awards: ['Luxury Airport Development 2019'],
@@ -207,11 +200,11 @@ const projects: Project[] = [
       'Space within space design concept'
     ],
     images: {
-      thumbnail: '/images/projects/u-tapao-mro-facility-1.jpg',
+      thumbnail: '/sv-architects-website/images/projects/maintenance-repair-operation-u-tapao-airport-aviation/maintenance-repair-operation-u-tapao-1.jpg',
       gallery: [
-        '/images/projects/u-tapao-mro-facility-1.jpg',
-        '/images/projects/u-tapao-mro-facility-2.jpg',
-        '/images/projects/u-tapao-mro-facility-3.jpg'
+        '/sv-architects-website/images/projects/maintenance-repair-operation-u-tapao-airport-aviation/maintenance-repair-operation-u-tapao-1.jpg',
+        '/sv-architects-website/images/projects/maintenance-repair-operation-u-tapao-airport-aviation/maintenance-repair-operation-u-tapao-2.jpg',
+        '/sv-architects-website/images/projects/maintenance-repair-operation-u-tapao-airport-aviation/maintenance-repair-operation-u-tapao-3.jpg'
       ]
     },
     awards: ['MRO Facility Excellence 2019'],
@@ -240,12 +233,12 @@ const projects: Project[] = [
       'Smart building technology'
     ],
     images: {
-      thumbnail: '/images/projects/centerpoint-siamsquare-1.png',
+      thumbnail: '/sv-architects-website/images/projects/centerpoint-siamsquare-1.png',
       gallery: [
-        '/images/projects/centerpoint-siamsquare-1.png',
-        '/images/projects/centerpoint-siamsquare-2.jpg',
-        '/images/projects/centerpoint-siamsquare-3.jpg',
-        '/images/projects/centerpoint-siamsquare-4.jpg'
+        '/sv-architects-website/images/projects/centerpoint-siamsquare-1.png',
+        '/sv-architects-website/images/projects/centerpoint-siamsquare-2.jpg',
+        '/sv-architects-website/images/projects/centerpoint-siamsquare-3.jpg',
+        '/sv-architects-website/images/projects/centerpoint-siamsquare-4.jpg'
       ]
     },
     sustainability: {
@@ -275,11 +268,11 @@ const projects: Project[] = [
       'Master planning integration'
     ],
     images: {
-      thumbnail: '/images/projects/somdech-phra-nangchao-sirikit-hospital.jpg',
+      thumbnail: '/sv-architects-website/images/projects/somdech-phra-nangchao-sirikit-hospital.jpg',
       gallery: [
-        '/images/projects/somdech-phra-nangchao-sirikit-hospital.jpg',
-        '/images/projects/healthcare-facility.jpg',
-        '/images/projects/government-savings-bank.jpg'
+        '/sv-architects-website/images/projects/somdech-phra-nangchao-sirikit-hospital.jpg',
+        '/sv-architects-website/images/projects/healthcare-facility.jpg',
+        '/sv-architects-website/images/projects/government-savings-bank.jpg'
       ]
     },
     sustainability: {
@@ -308,12 +301,12 @@ const projects: Project[] = [
       'Modern hospitality amenities'
     ],
     images: {
-      thumbnail: '/images/projects/chaopraya-mahanatee-hotel-1.jpg',
+      thumbnail: '/sv-architects-website/images/projects/chaopraya-mahanatee-hotel-1.jpg',
       gallery: [
-        '/images/projects/chaopraya-mahanatee-hotel-1.jpg',
-        '/images/projects/chaopraya-mahanatee-hotel-2.jpg',
-        '/images/projects/chaopraya-mahanatee-hotel-3.jpg',
-        '/images/projects/chaopraya-mahanatee-hotel-4.jpg'
+        '/sv-architects-website/images/projects/chaopraya-mahanatee-hotel-1.jpg',
+        '/sv-architects-website/images/projects/chaopraya-mahanatee-hotel-2.jpg',
+        '/sv-architects-website/images/projects/chaopraya-mahanatee-hotel-3.jpg',
+        '/sv-architects-website/images/projects/chaopraya-mahanatee-hotel-4.jpg'
       ]
     },
     sustainability: {
@@ -341,11 +334,11 @@ const projects: Project[] = [
       'Sustainable office design'
     ],
     images: {
-      thumbnail: '/images/projects/office-tower-thumb.jpg',
+      thumbnail: '/sv-architects-website/images/projects/office-tower-thumb.jpg',
       gallery: [
-        '/images/projects/office-tower-thumb.jpg',
-        '/images/projects/government-savings-bank.jpg',
-        '/images/projects/innovation-center.jpg'
+        '/sv-architects-website/images/projects/office-tower-thumb.jpg',
+        '/sv-architects-website/images/projects/government-savings-bank.jpg',
+        '/sv-architects-website/images/projects/innovation-center.jpg'
       ]
     },
     sustainability: {
@@ -373,18 +366,18 @@ const projects: Project[] = [
       'Smart home technology'
     ],
     images: {
-      thumbnail: '/images/projects/jet-villa-residence-1.jpg',
+      thumbnail: '/sv-architects-website/images/projects/jet-villa-residence-1.jpg',
       gallery: [
-        '/images/projects/jet-villa-residence-1.jpg',
-        '/images/projects/jet-villa-residence-2.jpg',
-        '/images/projects/jet-villa-residence-3.jpg',
-        '/images/projects/jet-villa-residence-4.jpg',
-        '/images/projects/jet-villa-residence-5.jpg',
-        '/images/projects/jet-villa-residence-6.jpg',
-        '/images/projects/jet-villa-residence-7.jpg',
-        '/images/projects/jet-villa-residence-8.jpg',
-        '/images/projects/jet-villa-residence-9.jpg',
-        '/images/projects/jet-villa-residence-10.jpg'
+        '/sv-architects-website/images/projects/jet-villa-residence-1.jpg',
+        '/sv-architects-website/images/projects/jet-villa-residence-2.jpg',
+        '/sv-architects-website/images/projects/jet-villa-residence-3.jpg',
+        '/sv-architects-website/images/projects/jet-villa-residence-4.jpg',
+        '/sv-architects-website/images/projects/jet-villa-residence-5.jpg',
+        '/sv-architects-website/images/projects/jet-villa-residence-6.jpg',
+        '/sv-architects-website/images/projects/jet-villa-residence-7.jpg',
+        '/sv-architects-website/images/projects/jet-villa-residence-8.jpg',
+        '/sv-architects-website/images/projects/jet-villa-residence-9.jpg',
+        '/sv-architects-website/images/projects/jet-villa-residence-10.jpg'
       ]
     },
     sustainability: {
@@ -421,12 +414,11 @@ const projects: Project[] = [
       'Sustainable living implementation'
     ],
     images: {
-      thumbnail: '/images/projects/siamese-rama9-detail-1.jpg',
+      thumbnail: '/sv-architects-website/images/projects/siamese-rama9-award-winning/siamese-rama9-view1.jpg',
       gallery: [
-        '/images/projects/siamese-rama9-detail-1.jpg',
-        '/images/projects/siamese-rama9-detail-2.jpg',
-        '/images/projects/siamese-rama9-detail-3.jpg',
-        '/images/projects/siamese-rama9-award.jpg'
+        '/sv-architects-website/images/projects/siamese-rama9-award-winning/siamese-rama9-view1.jpg',
+        '/sv-architects-website/images/projects/siamese-rama9-award-winning/siamese-rama9-view2.jpg',
+        '/sv-architects-website/images/projects/siamese-rama9-award-winning/siamese-rama9-view3.jpg'
       ]
     },
     sustainability: {
@@ -457,11 +449,11 @@ const projects: Project[] = [
       'Luxury villa amenities'
     ],
     images: {
-      thumbnail: '/images/projects/villa-perpetual-entrance.jpg',
+      thumbnail: '/sv-architects-website/images/projects/villa-perpetual-entrance.jpg',
       gallery: [
-        '/images/projects/villa-perpetual-entrance.jpg',
-        '/images/projects/villa-perpetual-bird-eye.jpg',
-        '/images/projects/villa-perpetual-landscape.jpg'
+        '/sv-architects-website/images/projects/villa-perpetual-entrance.jpg',
+        '/sv-architects-website/images/projects/villa-perpetual-bird-eye.jpg',
+        '/sv-architects-website/images/projects/villa-perpetual-landscape.jpg'
       ]
     },
     sustainability: {
@@ -492,11 +484,11 @@ const projects: Project[] = [
       'Sustainable living design'
     ],
     images: {
-      thumbnail: '/images/projects/hh-park-residence-1.jpg',
+      thumbnail: '/sv-architects-website/images/projects/hh-park-residence-residential/hh-park-residence-1.jpg',
       gallery: [
-        '/images/projects/hh-park-residence-1.jpg',
-        '/images/projects/hh-park-residence-2.jpg',
-        '/images/projects/hh-park-residence-3.jpg'
+        '/sv-architects-website/images/projects/hh-park-residence-residential/hh-park-residence-1.jpg',
+        '/sv-architects-website/images/projects/hh-park-residence-residential/hh-park-residence-2.jpg',
+        '/sv-architects-website/images/projects/hh-park-residence-residential/hh-park-residence-3.jpg'
       ]
     },
     sustainability: {
@@ -527,11 +519,11 @@ const projects: Project[] = [
       'Sustainable design'
     ],
     images: {
-      thumbnail: '/images/projects/phuket-condominium-1.jpg',
+      thumbnail: '/sv-architects-website/images/projects/phuket-condominium-1.jpg',
       gallery: [
-        '/images/projects/phuket-condominium-1.jpg',
-        '/images/projects/phuket-condominium-2.jpg',
-        '/images/projects/phuket-condominium-3.jpg'
+        '/sv-architects-website/images/projects/phuket-condominium-1.jpg',
+        '/sv-architects-website/images/projects/phuket-condominium-2.jpg',
+        '/sv-architects-website/images/projects/phuket-condominium-3.jpg'
       ]
     },
     sustainability: {
@@ -562,10 +554,10 @@ const projects: Project[] = [
       'Modern design'
     ],
     images: {
-      thumbnail: '/images/projects/service-apartment-selangor-1.jpg',
+      thumbnail: '/sv-architects-website/images/projects/service-apartment-selangor-malaysia/service-apartment-selangor-1.jpg',
       gallery: [
-        '/images/projects/service-apartment-selangor-1.jpg',
-        '/images/projects/service-apartment-selangor-2.jpg'
+        '/sv-architects-website/images/projects/service-apartment-selangor-malaysia/service-apartment-selangor-1.jpg',
+        '/sv-architects-website/images/projects/service-apartment-selangor-malaysia/service-apartment-selangor-2.jpg'
       ]
     },
     sustainability: {
@@ -593,11 +585,12 @@ const projects: Project[] = [
       'Premium finishes'
     ],
     images: {
-      thumbnail: '/images/projects/chaopraya-mahanatee.jpg',
+      thumbnail: '/sv-architects-website/images/projects/chaopraya-mahanatee-riverside-condominium-residential/chaopraya-mahanatee-river-view.jpg',
       gallery: [
-        '/images/projects/chaopraya-mahanatee.jpg',
-        '/images/projects/service-apartment-selangor.jpg',
-        '/images/projects/baan-huahin.jpg'
+        '/sv-architects-website/images/projects/chaopraya-mahanatee-riverside-condominium-residential/chaopraya-mahanatee-river-view.jpg',
+        '/sv-architects-website/images/projects/chaopraya-mahanatee-riverside-condominium-residential/chaopraya-mahanatee-riverside.jpg',
+        '/sv-architects-website/images/projects/chaopraya-mahanatee-riverside-condominium-residential/chaopraya-mahanatee-pool.jpg',
+        '/sv-architects-website/images/projects/chaopraya-mahanatee-riverside-condominium-residential/chaopraya-mahanatee-night.jpg'
       ]
     },
     sustainability: {
@@ -625,11 +618,11 @@ const projects: Project[] = [
       'Relaxation facilities'
     ],
     images: {
-      thumbnail: '/images/projects/baan-huahin.jpg',
+      thumbnail: '/sv-architects-website/images/projects/baan-huahin.jpg',
       gallery: [
-        '/images/projects/baan-huahin.jpg',
-        '/images/projects/chaopraya-mahanatee.jpg',
-        '/images/projects/vivo-executive-apartment.jpg'
+        '/sv-architects-website/images/projects/baan-huahin.jpg',
+        '/sv-architects-website/images/projects/chaopraya-mahanatee.jpg',
+        '/sv-architects-website/images/projects/vivo-executive-apartment.jpg'
       ]
     },
     sustainability: {
@@ -657,11 +650,11 @@ const projects: Project[] = [
       'High-end finishes'
     ],
     images: {
-      thumbnail: '/images/projects/vivo-executive-apartment.jpg',
+      thumbnail: '/sv-architects-website/images/projects/vivo-executive-apartment.jpg',
       gallery: [
-        '/images/projects/vivo-executive-apartment.jpg',
-        '/images/projects/baan-huahin.jpg',
-        '/images/projects/jet-villa-residence.jpg'
+        '/sv-architects-website/images/projects/vivo-executive-apartment.jpg',
+        '/sv-architects-website/images/projects/baan-huahin.jpg',
+        '/sv-architects-website/images/projects/jet-villa-residence.jpg'
       ]
     },
     sustainability: {
@@ -690,12 +683,12 @@ const projects: Project[] = [
       'Aviation terminal design'
     ],
     images: {
-      thumbnail: '/images/projects/u-tapao-airport-new-terminal-interior.jpg',
+      thumbnail: '/sv-architects-website/images/projects/u-tapao-airport-new-terminal-interior.jpg',
       gallery: [
-        '/images/projects/u-tapao-airport-new-terminal-interior.jpg',
-        '/images/projects/u-tapao-airport-new.jpg',
-        '/images/projects/hi-tech-sandbox.jpg',
-        '/images/projects/innovation-center-interior.jpg'
+        '/sv-architects-website/images/projects/u-tapao-airport-new-terminal-interior.jpg',
+        '/sv-architects-website/images/projects/u-tapao-airport-new.jpg',
+        '/sv-architects-website/images/projects/hi-tech-sandbox.jpg',
+        '/sv-architects-website/images/projects/innovation-center-interior.jpg'
       ]
     },
     sustainability: {
@@ -723,11 +716,11 @@ const projects: Project[] = [
       'Flexible space planning'
     ],
     images: {
-      thumbnail: '/images/projects/hi-tech-sandbox.jpg',
+      thumbnail: '/sv-architects-website/images/projects/hi-tech-sandbox.jpg',
       gallery: [
-        '/images/projects/hi-tech-sandbox.jpg',
-        '/images/projects/innovation-center-interior.jpg',
-        '/images/projects/u-tapao-airport-interior.jpg'
+        '/sv-architects-website/images/projects/hi-tech-sandbox.jpg',
+        '/sv-architects-website/images/projects/innovation-center-interior.jpg',
+        '/sv-architects-website/images/projects/u-tapao-airport-interior.jpg'
       ]
     },
     sustainability: {
@@ -755,11 +748,11 @@ const projects: Project[] = [
       'Sustainable interior materials'
     ],
     images: {
-      thumbnail: '/images/projects/innovation-center-interior.jpg',
+      thumbnail: '/sv-architects-website/images/projects/innovation-center-interior.jpg',
       gallery: [
-        '/images/projects/innovation-center-interior.jpg',
-        '/images/projects/hi-tech-sandbox.jpg',
-        '/images/projects/villa-perpetual-interior.jpg'
+        '/sv-architects-website/images/projects/innovation-center-interior.jpg',
+        '/sv-architects-website/images/projects/hi-tech-sandbox.jpg',
+        '/sv-architects-website/images/projects/villa-perpetual-interior.jpg'
       ]
     },
     sustainability: {
@@ -787,11 +780,11 @@ const projects: Project[] = [
       'High-end materials'
     ],
     images: {
-      thumbnail: '/images/projects/villa-perpetual-interior.jpg',
+      thumbnail: '/sv-architects-website/images/projects/villa-perpetual-interior.jpg',
       gallery: [
-        '/images/projects/villa-perpetual-interior.jpg',
-        '/images/projects/baan-huahin-interior.jpg',
-        '/images/projects/phuket-condominium-interior.jpg'
+        '/sv-architects-website/images/projects/villa-perpetual-interior.jpg',
+        '/sv-architects-website/images/projects/baan-huahin-interior.jpg',
+        '/sv-architects-website/images/projects/phuket-condominium-interior.jpg'
       ]
     },
     sustainability: {
@@ -819,11 +812,12 @@ const projects: Project[] = [
       'Natural material integration'
     ],
     images: {
-      thumbnail: '/images/projects/baan-huahin-interior.jpg',
+      thumbnail: '/sv-architects-website/images/projects/baan-huahin-interior-design/baan-huahin-interior-1.jpg',
       gallery: [
-        '/images/projects/baan-huahin-interior.jpg',
-        '/images/projects/villa-perpetual-interior.jpg',
-        '/images/projects/phuket-condominium-interior.jpg'
+        '/sv-architects-website/images/projects/baan-huahin-interior-design/baan-huahin-interior-1.jpg',
+        '/sv-architects-website/images/projects/baan-huahin-interior-design/baan-huahin-interior-2.jpg',
+        '/sv-architects-website/images/projects/baan-huahin-interior-design/baan-huahin-interior-3.jpg',
+        '/sv-architects-website/images/projects/baan-huahin-interior-design/baan-huahin-interior-4.jpg'
       ]
     },
     sustainability: {
@@ -851,11 +845,11 @@ const projects: Project[] = [
       'Sustainable interior materials'
     ],
     images: {
-      thumbnail: '/images/projects/phuket-condominium-interior.jpg',
+      thumbnail: '/sv-architects-website/images/projects/phuket-condominium-interior.jpg',
       gallery: [
-        '/images/projects/phuket-condominium-interior.jpg',
-        '/images/projects/baan-huahin-interior.jpg',
-        '/images/projects/villa-perpetual-interior.jpg'
+        '/sv-architects-website/images/projects/phuket-condominium-interior.jpg',
+        '/sv-architects-website/images/projects/baan-huahin-interior.jpg',
+        '/sv-architects-website/images/projects/villa-perpetual-interior.jpg'
       ]
     },
     sustainability: {
@@ -883,11 +877,11 @@ const projects: Project[] = [
       'Flexible office space planning'
     ],
     images: {
-      thumbnail: '/images/projects/hi-tech-sandbox.jpg',
+      thumbnail: '/sv-architects-website/images/projects/hi-tech-sandbox.jpg',
       gallery: [
-        '/images/projects/hi-tech-sandbox.jpg',
-        '/images/projects/government-savings-bank-intelligent-training.jpg',
-        '/images/projects/innovation-center-interior.jpg'
+        '/sv-architects-website/images/projects/hi-tech-sandbox.jpg',
+        '/sv-architects-website/images/projects/government-savings-bank-intelligent-training.jpg',
+        '/sv-architects-website/images/projects/innovation-center-interior.jpg'
       ]
     },
     sustainability: {
@@ -915,11 +909,11 @@ const projects: Project[] = [
       'Intelligent building systems'
     ],
     images: {
-      thumbnail: '/images/projects/government-savings-bank-intelligent-training.jpg',
+      thumbnail: '/sv-architects-website/images/projects/government-savings-bank-intelligent-training.jpg',
       gallery: [
-        '/images/projects/government-savings-bank-intelligent-training.jpg',
-        '/images/projects/hi-tech-sandbox.jpg',
-        '/images/projects/innovation-center-interior.jpg'
+        '/sv-architects-website/images/projects/government-savings-bank-intelligent-training.jpg',
+        '/sv-architects-website/images/projects/hi-tech-sandbox.jpg',
+        '/sv-architects-website/images/projects/innovation-center-interior.jpg'
       ]
     },
     sustainability: {
@@ -947,11 +941,11 @@ const projects: Project[] = [
       'Innovation-focused design'
     ],
     images: {
-      thumbnail: '/images/projects/innovation-center-interior.jpg',
+      thumbnail: '/sv-architects-website/images/projects/innovation-center-interior.jpg',
       gallery: [
-        '/images/projects/innovation-center-interior.jpg',
-        '/images/projects/hi-tech-sandbox.jpg',
-        '/images/projects/government-savings-bank-intelligent-training.jpg'
+        '/sv-architects-website/images/projects/innovation-center-interior.jpg',
+        '/sv-architects-website/images/projects/hi-tech-sandbox.jpg',
+        '/sv-architects-website/images/projects/government-savings-bank-intelligent-training.jpg'
       ]
     },
     sustainability: {
@@ -979,11 +973,11 @@ const projects: Project[] = [
       'Mixed-use development'
     ],
     images: {
-      thumbnail: '/images/projects/sukhumvit-hills.png',
+      thumbnail: '/sv-architects-website/images/projects/sukhumvit-hills.png',
       gallery: [
-        '/images/projects/sukhumvit-hills.png',
-        '/images/projects/hi-tech-sandbox.jpg',
-        '/images/projects/government-savings-bank-intelligent-training.jpg'
+        '/sv-architects-website/images/projects/sukhumvit-hills.png',
+        '/sv-architects-website/images/projects/hi-tech-sandbox.jpg',
+        '/sv-architects-website/images/projects/government-savings-bank-intelligent-training.jpg'
       ]
     },
     sustainability: {
@@ -1011,11 +1005,11 @@ const projects: Project[] = [
       'Mixed-use integration'
     ],
     images: {
-      thumbnail: '/images/projects/eec-silicon-technology-park-1.jpg',
+      thumbnail: '/sv-architects-website/images/projects/eec-silicon-technology-park-master-planning/eec-silicon-tech-park-view1.jpg',
       gallery: [
-        '/images/projects/eec-silicon-technology-park-1.jpg',
-        '/images/projects/eec-silicon-technology-park-2.jpg',
-        '/images/projects/eec-silicon-technology-park-3.jpg'
+        '/sv-architects-website/images/projects/eec-silicon-technology-park-master-planning/eec-silicon-tech-park-view1.jpg',
+        '/sv-architects-website/images/projects/eec-silicon-technology-park-master-planning/eec-silicon-tech-park-innovation-center.jpg',
+        '/sv-architects-website/images/projects/eec-silicon-technology-park-master-planning/eec-silicon-tech-park-view2.jpg'
       ]
     },
     sustainability: {
@@ -1043,11 +1037,11 @@ const projects: Project[] = [
       'Medical infrastructure'
     ],
     images: {
-      thumbnail: '/images/projects/somdech-phra-nangchao-sirikit-hospital-masterplan.jpg',
+      thumbnail: '/sv-architects-website/images/projects/somdech-phra-nangchao-sirikit-hospital-masterplan.jpg',
       gallery: [
-        '/images/projects/somdech-phra-nangchao-sirikit-hospital-masterplan.jpg',
-        '/images/projects/eec-silicon-technology-park.jpg',
-        '/images/projects/zen-village-masterplan.jpg'
+        '/sv-architects-website/images/projects/somdech-phra-nangchao-sirikit-hospital-masterplan.jpg',
+        '/sv-architects-website/images/projects/eec-silicon-technology-park.jpg',
+        '/sv-architects-website/images/projects/zen-village-masterplan.jpg'
       ]
     },
     sustainability: {
@@ -1075,11 +1069,11 @@ const projects: Project[] = [
       'Green space integration'
     ],
     images: {
-      thumbnail: '/images/projects/zen-village-masterplan.jpg',
+      thumbnail: '/sv-architects-website/images/projects/zen-village-masterplan.jpg',
       gallery: [
-        '/images/projects/zen-village-masterplan.jpg',
-        '/images/projects/hue-tourist-market.jpg',
-        '/images/projects/transit-oriented-development-masterplan.jpg'
+        '/sv-architects-website/images/projects/zen-village-masterplan.jpg',
+        '/sv-architects-website/images/projects/hue-tourist-market.jpg',
+        '/sv-architects-website/images/projects/transit-oriented-development-masterplan.jpg'
       ]
     },
     sustainability: {
@@ -1107,11 +1101,11 @@ const projects: Project[] = [
       'Tourist experience optimization'
     ],
     images: {
-      thumbnail: '/images/projects/hue-tourist-market.jpg',
+      thumbnail: '/sv-architects-website/images/projects/hue-tourist-market.jpg',
       gallery: [
-        '/images/projects/hue-tourist-market.jpg',
-        '/images/projects/zen-village-masterplan.jpg',
-        '/images/projects/transit-oriented-development-masterplan.jpg'
+        '/sv-architects-website/images/projects/hue-tourist-market.jpg',
+        '/sv-architects-website/images/projects/zen-village-masterplan.jpg',
+        '/sv-architects-website/images/projects/transit-oriented-development-masterplan.jpg'
       ]
     },
     sustainability: {
@@ -1139,11 +1133,11 @@ const projects: Project[] = [
       'Urban density optimization'
     ],
     images: {
-      thumbnail: '/images/projects/transit-oriented-development-masterplan.jpg',
+      thumbnail: '/sv-architects-website/images/projects/transit-oriented-development-masterplan.jpg',
       gallery: [
-        '/images/projects/transit-oriented-development-masterplan.jpg',
-        '/images/projects/mahachai-airport-luxe-masterplan.jpg',
-        '/images/projects/geo-valley-apartment-masterplan.jpg'
+        '/sv-architects-website/images/projects/transit-oriented-development-masterplan.jpg',
+        '/sv-architects-website/images/projects/mahachai-airport-luxe-masterplan.jpg',
+        '/sv-architects-website/images/projects/geo-valley-apartment-masterplan.jpg'
       ]
     },
     sustainability: {
@@ -1173,12 +1167,9 @@ const projects: Project[] = [
       'Commercial integration'
     ],
     images: {
-      thumbnail: '/images/projects/mahachai-airport-luxe-city.jpg',
+      thumbnail: '/sv-architects-website/images/projects/mahachai-airport-luxe-city-master-plan/mahachai-airport-luxe-city.jpg',
       gallery: [
-        '/images/projects/mahachai-airport-luxe-city.jpg',
-        '/images/projects/mahachai-airport-luxe-city.jpg',
-        '/images/projects/mahachai-airport-luxe-city.jpg',
-        '/images/projects/mahachai-airport-luxe-city.jpg'
+        '/sv-architects-website/images/projects/mahachai-airport-luxe-city-master-plan/mahachai-airport-luxe-city.jpg'
       ]
     },
     sustainability: {
@@ -1206,11 +1197,11 @@ const projects: Project[] = [
       'Green space design'
     ],
     images: {
-      thumbnail: '/images/projects/geo-valley-apartment-masterplan.jpg',
+      thumbnail: '/sv-architects-website/images/projects/geo-valley-apartment-masterplan.jpg',
       gallery: [
-        '/images/projects/geo-valley-apartment-masterplan.jpg',
-        '/images/projects/mahachai-airport-luxe-masterplan.jpg',
-        '/images/projects/eec-silicon-technology-park.jpg'
+        '/sv-architects-website/images/projects/geo-valley-apartment-masterplan.jpg',
+        '/sv-architects-website/images/projects/mahachai-airport-luxe-masterplan.jpg',
+        '/sv-architects-website/images/projects/eec-silicon-technology-park.jpg'
       ]
     },
     sustainability: {
@@ -1238,11 +1229,11 @@ const projects: Project[] = [
       'Accessibility compliance'
     ],
     images: {
-      thumbnail: '/images/projects/high-speed-rail-stations.png',
+      thumbnail: '/sv-architects-website/images/projects/high-speed-rail-stations.png',
       gallery: [
-        '/images/projects/high-speed-rail-stations.png',
-        '/images/projects/transit-oriented-development.jpg',
-        '/images/projects/tod-service-apartment.jpg'
+        '/sv-architects-website/images/projects/high-speed-rail-stations.png',
+        '/sv-architects-website/images/projects/transit-oriented-development.jpg',
+        '/sv-architects-website/images/projects/tod-service-apartment.jpg'
       ]
     },
     sustainability: {
@@ -1270,11 +1261,11 @@ const projects: Project[] = [
       'Sustainable rail infrastructure'
     ],
     images: {
-      thumbnail: '/images/projects/high-speed-rail-stations.png',
+      thumbnail: '/sv-architects-website/images/projects/high-speed-rail-stations.png',
       gallery: [
-        '/images/projects/high-speed-rail-stations.png',
-        '/images/projects/transit-oriented-development.jpg',
-        '/images/projects/tod-service-apartment.jpg'
+        '/sv-architects-website/images/projects/high-speed-rail-stations.png',
+        '/sv-architects-website/images/projects/transit-oriented-development.jpg',
+        '/sv-architects-website/images/projects/tod-service-apartment.jpg'
       ]
     },
     sustainability: {
@@ -1302,11 +1293,11 @@ const projects: Project[] = [
       'Urban integration'
     ],
     images: {
-      thumbnail: '/images/projects/tod-service-apartment.jpg',
+      thumbnail: '/sv-architects-website/images/projects/tod-service-apartment.jpg',
       gallery: [
-        '/images/projects/tod-service-apartment.jpg',
-        '/images/projects/transit-oriented-development.jpg',
-        '/images/projects/high-speed-rail-stations.png'
+        '/sv-architects-website/images/projects/tod-service-apartment.jpg',
+        '/sv-architects-website/images/projects/transit-oriented-development.jpg',
+        '/sv-architects-website/images/projects/high-speed-rail-stations.png'
       ]
     },
     sustainability: {
@@ -1339,10 +1330,10 @@ const projects: Project[] = [
       'Urban integration'
     ],
     images: {
-      thumbnail: '/images/projects/sukhumvit-hills-main.png',
+      thumbnail: '/sv-architects-website/images/projects/sukhumvit-hills-mixed-use/sukhumvit-hills-main.png',
       gallery: [
-        '/images/projects/sukhumvit-hills-main.png',
-        '/images/projects/sukhumvit-hills-detailed.png'
+        '/sv-architects-website/images/projects/sukhumvit-hills-mixed-use/sukhumvit-hills-main.png',
+        '/sv-architects-website/images/projects/sukhumvit-hills-mixed-use/sukhumvit-hills-detailed.png'
       ]
     },
     sustainability: {
@@ -1371,12 +1362,12 @@ const projects: Project[] = [
       'Modern auditorium technology'
     ],
     images: {
-      thumbnail: '/images/projects/bunditpatanasilpa-auditorium.jpg',
+      thumbnail: '/sv-architects-website/images/projects/bunditpatanasilpa-auditorium.jpg',
       gallery: [
-        '/images/projects/bunditpatanasilpa-auditorium.jpg',
-        '/images/projects/bunditpatanasilpa-auditorium-interior1.jpg',
-        '/images/projects/bunditpatanasilpa-auditorium-interior2.jpg',
-        '/images/projects/bunditpatanasilpa-auditorium-gallery.jpg'
+        '/sv-architects-website/images/projects/bunditpatanasilpa-auditorium.jpg',
+        '/sv-architects-website/images/projects/bunditpatanasilpa-auditorium-interior1.jpg',
+        '/sv-architects-website/images/projects/bunditpatanasilpa-auditorium-interior2.jpg',
+        '/sv-architects-website/images/projects/bunditpatanasilpa-auditorium-gallery.jpg'
       ]
     },
     sustainability: {
@@ -1406,10 +1397,10 @@ const projects: Project[] = [
       'Modern forest living'
     ],
     images: {
-      thumbnail: '/images/projects/baan-huahin-1.jpg',
+      thumbnail: '/sv-architects-website/images/projects/baan-huahin-residential/baan-huahin-1.jpg',
       gallery: [
-        '/images/projects/baan-huahin-1.jpg',
-        '/images/projects/baan-huahin-2.jpg'
+        '/sv-architects-website/images/projects/baan-huahin-residential/baan-huahin-1.jpg',
+        '/sv-architects-website/images/projects/baan-huahin-residential/baan-huahin-2.jpg'
       ]
     },
     sustainability: {
@@ -1439,10 +1430,10 @@ const projects: Project[] = [
       'International standards'
     ],
     images: {
-      thumbnail: '/images/projects/vivo-executive-apartment-1.jpg',
+      thumbnail: '/sv-architects-website/images/projects/vivo-executive-apartment/vivo-executive-apartment-1.jpg',
       gallery: [
-        '/images/projects/vivo-executive-apartment-1.jpg',
-        '/images/projects/vivo-executive-apartment-2.jpg'
+        '/sv-architects-website/images/projects/vivo-executive-apartment/vivo-executive-apartment-1.jpg',
+        '/sv-architects-website/images/projects/vivo-executive-apartment/vivo-executive-apartment-2.jpg'
       ]
     },
     sustainability: {
@@ -1472,9 +1463,9 @@ const projects: Project[] = [
       'Modern market facilities'
     ],
     images: {
-      thumbnail: '/images/projects/hue-tourist-market-placeholder.svg',
+      thumbnail: '/sv-architects-website/images/projects/hue-tourist-market-placeholder.svg',
       gallery: [
-        '/images/projects/hue-tourist-market-placeholder.svg'
+        '/sv-architects-website/images/projects/hue-tourist-market-placeholder.svg'
       ]
     },
     sustainability: {
@@ -1504,11 +1495,11 @@ const projects: Project[] = [
       'Zen-inspired architecture'
     ],
     images: {
-      thumbnail: '/images/projects/zen-village-market.jpg',
+      thumbnail: '/sv-architects-website/images/projects/zen-village-master-plan/zen-village-market.jpg',
       gallery: [
-        '/images/projects/zen-village-market.jpg',
-        '/images/projects/zen-village-boutique-square.jpg',
-        '/images/projects/zen-village-boat-station.jpg'
+        '/sv-architects-website/images/projects/zen-village-master-plan/zen-village-market.jpg',
+        '/sv-architects-website/images/projects/zen-village-master-plan/zen-village-boutique-square.jpg',
+        '/sv-architects-website/images/projects/zen-village-master-plan/zen-village-boat-station.jpg'
       ]
     },
     sustainability: {
@@ -1540,17 +1531,17 @@ const projects: Project[] = [
       'Community integration'
     ],
     images: {
-      thumbnail: '/images/projects/tod-st-plaza.jpg',
+      thumbnail: '/sv-architects-website/images/projects/tod-st-plaza.jpg',
       gallery: [
-        '/images/projects/tod-st-plaza.jpg',
-        '/images/projects/tod-walk.jpg',
-        '/images/projects/tod-hnedu.jpg',
-        '/images/projects/tod-overall.jpg',
-        '/images/projects/tod-overall-phase.jpg',
-        '/images/projects/tod-pedes-bridge.jpg',
-        '/images/projects/tod-pedes-final.jpg',
-        '/images/projects/tod-plaza.jpg',
-        '/images/projects/tod-skywalk-pedes.jpg'
+        '/sv-architects-website/images/projects/tod-st-plaza.jpg',
+        '/sv-architects-website/images/projects/tod-walk.jpg',
+        '/sv-architects-website/images/projects/tod-hnedu.jpg',
+        '/sv-architects-website/images/projects/tod-overall.jpg',
+        '/sv-architects-website/images/projects/tod-overall-phase.jpg',
+        '/sv-architects-website/images/projects/tod-pedes-bridge.jpg',
+        '/sv-architects-website/images/projects/tod-pedes-final.jpg',
+        '/sv-architects-website/images/projects/tod-plaza.jpg',
+        '/sv-architects-website/images/projects/tod-skywalk-pedes.jpg'
       ]
     },
     sustainability: {
@@ -1582,10 +1573,10 @@ const projects: Project[] = [
       'Community-focused design'
     ],
     images: {
-      thumbnail: '/images/projects/geo-valley-apartment-1.jpg',
+      thumbnail: '/sv-architects-website/images/projects/geo-valley-apartment-master-plan/geo-valley-apartment-1.jpg',
       gallery: [
-        '/images/projects/geo-valley-apartment-1.jpg',
-        '/images/projects/geo-valley-apartment-2.jpg'
+        '/sv-architects-website/images/projects/geo-valley-apartment-master-plan/geo-valley-apartment-1.jpg',
+        '/sv-architects-website/images/projects/geo-valley-apartment-master-plan/geo-valley-apartment-2.jpg'
       ]
     },
     sustainability: {
@@ -1617,13 +1608,13 @@ const projects: Project[] = [
       'Advanced meeting facilities'
     ],
     images: {
-      thumbnail: '/images/projects/hi-tech-sandbox-main.jpg',
+      thumbnail: '/sv-architects-website/images/projects/hi-tech-sandbox-interior-design/hi-tech-sandbox-main.jpg',
       gallery: [
-        '/images/projects/hi-tech-sandbox-main.jpg',
-        '/images/projects/hi-tech-sandbox-interior.jpg',
-        '/images/projects/hi-tech-sandbox-executive.jpg',
-        '/images/projects/hi-tech-sandbox-office.jpg',
-        '/images/projects/hi-tech-sandbox-training-room.jpg'
+        '/sv-architects-website/images/projects/hi-tech-sandbox-interior-design/hi-tech-sandbox-main.jpg',
+        '/sv-architects-website/images/projects/hi-tech-sandbox-interior-design/hi-tech-sandbox-interior.jpg',
+        '/sv-architects-website/images/projects/hi-tech-sandbox-interior-design/hi-tech-sandbox-executive.jpg',
+        '/sv-architects-website/images/projects/hi-tech-sandbox-interior-design/hi-tech-sandbox-office.jpg',
+        '/sv-architects-website/images/projects/hi-tech-sandbox-interior-design/hi-tech-sandbox-training-room.jpg'
       ]
     },
     sustainability: {
@@ -1655,13 +1646,11 @@ const projects: Project[] = [
       'Timeless aesthetic'
     ],
     images: {
-      thumbnail: '/images/projects/villa-perpetual-interior-living.jpg',
+      thumbnail: '/sv-architects-website/images/projects/villa-perpetual-residential/Entrance-1.jpg',
       gallery: [
-        '/images/projects/villa-perpetual-interior-living.jpg',
-        '/images/projects/villa-perpetual-interior-dining.jpg',
-        '/images/projects/villa-perpetual-interior-dining-alt.jpg',
-        '/images/projects/villa-perpetual-interior-family.jpg',
-        '/images/projects/villa-perpetual-interior-master-bedroom.jpg'
+        '/sv-architects-website/images/projects/villa-perpetual-residential/Entrance-1.jpg',
+        '/sv-architects-website/images/projects/villa-perpetual-residential/Bird-eye-view-1-1.jpg',
+        '/sv-architects-website/images/projects/villa-perpetual-residential/Landscape-1.jpg'
       ]
     },
     sustainability: {
@@ -1694,12 +1683,12 @@ const projects: Project[] = [
       'Hall and presentation spaces'
     ],
     images: {
-      thumbnail: '/images/projects/innovation-center-main.jpg',
+      thumbnail: '/sv-architects-website/images/projects/innovation-center-interior-design/innovation-center-main.jpg',
       gallery: [
-        '/images/projects/innovation-center-main.jpg',
-        '/images/projects/innovation-center-closeup.jpg',
-        '/images/projects/innovation-center-scene2.jpg',
-        '/images/projects/innovation-center-hall.jpg'
+        '/sv-architects-website/images/projects/innovation-center-interior-design/innovation-center-main.jpg',
+        '/sv-architects-website/images/projects/innovation-center-interior-design/innovation-center-closeup.jpg',
+        '/sv-architects-website/images/projects/innovation-center-interior-design/innovation-center-scene2.jpg',
+        '/sv-architects-website/images/projects/innovation-center-interior-design/innovation-center-hall.jpg'
       ]
     },
     sustainability: {
@@ -1732,11 +1721,11 @@ const projects: Project[] = [
       'Modern tropical design'
     ],
     images: {
-      thumbnail: '/images/projects/phuket-condominium-interior-1.jpg',
+      thumbnail: '/sv-architects-website/images/projects/phuket-condominium-residential/phuket-condominium-1.jpg',
       gallery: [
-        '/images/projects/phuket-condominium-interior-1.jpg',
-        '/images/projects/phuket-condominium-interior-2.jpg',
-        '/images/projects/phuket-condominium-interior-3.jpg'
+        '/sv-architects-website/images/projects/phuket-condominium-residential/phuket-condominium-1.jpg',
+        '/sv-architects-website/images/projects/phuket-condominium-residential/phuket-condominium-2.jpg',
+        '/sv-architects-website/images/projects/phuket-condominium-residential/phuket-condominium-3.jpg'
       ]
     },
     sustainability: {
@@ -1945,7 +1934,7 @@ const HeroSection = () => {
     ">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0 bg-[url('/images/patterns/architecture-pattern.svg')] bg-repeat" />
+        <div className="absolute inset-0 bg-[url('/sv-architects-website/images/patterns/architecture-pattern.svg')] bg-repeat" />
       </div>
       
       <div className="container-responsive relative">
@@ -2115,8 +2104,8 @@ const ProjectsGrid = ({
                   aspect-[4/3] // 4:3 aspect ratio
                   overflow-hidden // Hide overflow
                 ">
-                  <img
-                    src={project.images.thumbnail}
+                  <Image
+                    src={project.images.thumbnail || ''}
                     alt={`${project.name} - ${project.category} project`}
                     className="
                       w-full h-full object-cover
@@ -2124,6 +2113,8 @@ const ProjectsGrid = ({
                       transition-transform // Smooth transform
                       duration-500 // 500ms transition
                     "
+                    fill
+                    objectFit="cover"
                   />
                   
                   {/* Category Badge */}

@@ -13,6 +13,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { fadeIn, slideUp } from '@/lib/animations';
 import Link from 'next/link';
+import Image from "next/image";
 
 // Project data
 const project = {
@@ -36,10 +37,10 @@ const project = {
     'Modern commercial amenities'
   ],
   images: [
-    '/images/projects/centerpoint-siamsquare-1.png',
-    '/images/projects/centerpoint-siamsquare-2.jpg',
-    '/images/projects/centerpoint-siamsquare-3.jpg',
-    '/images/projects/centerpoint-siamsquare-4.jpg'
+    '/sv-architects-website/images/projects/centerpoint-siamsquare-1.jpg',
+    '/sv-architects-website/images/projects/centerpoint-siamsquare-2.jpg',
+    '/sv-architects-website/images/projects/centerpoint-siamsquare-3.jpg',
+    '/sv-architects-website/images/projects/centerpoint-siamsquare-4.jpg'
   ],
   sustainability: {
     leed: true,
@@ -77,10 +78,12 @@ export default function CenterpointSiamsquarePage() {
               transition={{ duration: 0.8, ease: "easeInOut" }}
               className="absolute inset-0"
             >
-              <img
-                src={project.images[currentImageIndex]}
+              <Image
+                src={project.images[currentImageIndex] || ''}
                 alt={`${project.name} - Image ${currentImageIndex + 1}`}
                 className="w-full h-full object-cover"
+                fill
+                objectFit="cover"
               />
               <div className="absolute inset-0 bg-black bg-opacity-40" />
             </motion.div>
@@ -386,10 +389,12 @@ export default function CenterpointSiamsquarePage() {
                 onClick={() => goToImage(index)}
               >
                 <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
-                  <img
-                    src={image}
+                  <Image
+                    src={image || ''}
                     alt={`${project.name} - Gallery Image ${index + 1}`}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    fill
+                    objectFit="cover"
                   />
                   <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300" />
                 </div>

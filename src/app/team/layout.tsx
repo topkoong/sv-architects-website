@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     siteName: 'SV Architects and Associates Ltd.',
     images: [
       {
-        url: 'https://sv-architects.github.io/images/team/team-hero.jpg',
+        url: 'https://sv-architects.github.io/sv-architects-website/images/team/team-hero.jpg',
         width: 1200,
         height: 630,
         alt: 'SV Architects team members'
@@ -70,7 +70,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Our Team | SV Architects and Associates Ltd.',
     description: 'Meet our talented team of architects, designers, and professionals.',
-    images: ['https://sv-architects.github.io/images/team/team-hero.jpg']
+    images: ['https://sv-architects.github.io/sv-architects-website/images/team/team-hero.jpg']
   },
   
   // Additional meta tags

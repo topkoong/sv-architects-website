@@ -39,6 +39,7 @@ import { getAllTeamMemberSlugs, getTeamMemberBySlug } from '@/data/team';
 
 // Import Next.js components
 import Link from 'next/link';
+import Image from 'next/image';
 // Import metadata types
 import type { Metadata } from 'next';
 // Import custom components
@@ -293,10 +294,12 @@ const HeroSection = ({ member }: { member: TeamMember }) => {
     ">
       {/* Background image with overlay */}
       <div className="absolute inset-0">
-        <img
-          src={member.image} // Team member photo
-          alt={`${member.fullName} - ${member.title}`} // Accessible alt text
-          className="w-full h-full object-cover object-[center_top] opacity-30" // Dim image for text readability
+        <Image
+          src={member.image || ''}
+          alt={`${member.fullName} - ${member.title}`}
+          className="w-full h-full object-cover object-[center_top] opacity-30"
+          fill
+          objectFit="cover"
         />
       </div>
       

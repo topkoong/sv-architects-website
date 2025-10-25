@@ -53,8 +53,10 @@ const project = {
     'Modern forest living'
   ],
   images: [
-    '/images/projects/baan-huahin-1.jpg',
-    '/images/projects/baan-huahin-2.jpg'
+    '/sv-architects-website/images/projects/baan-huahin-1.jpg',
+    '/sv-architects-website/images/projects/baan-huahin-2.jpg',
+    '/sv-architects-website/images/projects/baan-huahin-3.jpg',
+    '/sv-architects-website/images/projects/baan-huahin-4.jpg'
   ],
   sustainability: {
     leed: true,

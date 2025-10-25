@@ -46,9 +46,6 @@ import { AnimatePresence, motion } from 'framer-motion';
 // Import React hooks for state management and side effects
 import { useCallback, useEffect, useRef, useState } from 'react';
 
-// Import Next.js Image component for optimized image loading
-import Image from 'next/image';
-
 // Import Next.js Link component for client-side navigation
 import Link from 'next/link';
 
@@ -359,71 +356,24 @@ export const Header = () => {
         {/* Flex container for header layout */}
         <div className="flex items-center justify-between h-16">
           
-          {/* ===== LOGO SECTION ===== */}
-          
-          /**
-           * Logo link with hover effects and accessibility
-           * 
-           * FEATURES:
-           * - Links to homepage
-           * - Closes mobile menu when clicked
-           * - Hover scale effect
-           * - Proper ARIA labeling
-           * - High z-index for clickability
-           */
+          {/* Logo Section */}
           <Link 
-            href="/"                             // Link to homepage
-            className="flex items-center group z-50" // Flex layout with group for hover effects
-            onClick={closeMobileMenu}            // Close mobile menu when logo is clicked
-            aria-label="SV Architects Home"      // Accessibility label for screen readers
+            href="/"
+            className="flex items-center group z-50"
+            onClick={closeMobileMenu}
+            aria-label="SV Architects Home"
           >
-            /**
-             * Optimized logo image with Next.js Image component
-             * 
-             * OPTIMIZATION FEATURES:
-             * - Automatic image optimization
-             * - Lazy loading (except priority images)
-             * - Responsive sizing
-             * - Hover scale effect
-             * - Priority loading for above-the-fold content
-             */
-            <Image
-              src="/images/logos/logo-sv-black.png"  // Logo image path
-              alt="SV Architects Logo"               // Alt text for accessibility
-              width={120}                            // Base width for optimization
-              height={40}                            // Base height for optimization
-              className="h-8 w-auto transition-transform duration-200 group-hover:scale-105" // Responsive sizing with hover effect
-              priority                                // Priority loading for performance
-            />
+            {/* Text-based logo */}
+            <div className="flex flex-col group-hover:scale-105 transition-transform duration-200">
+              <div className="text-xl font-bold text-black leading-none">SV</div>
+              <div className="text-xs font-medium text-black leading-none">ARCHITECTS</div>
+            </div>
           </Link>
 
-          {/* ===== DESKTOP NAVIGATION ===== */}
-          
-          /**
-           * Desktop navigation menu
-           * 
-           * FEATURES:
-           * - Hidden on mobile (md:hidden)
-           * - Horizontal layout with spacing
-           * - Active link highlighting
-           * - Hover effects with underline animation
-           * - Proper ARIA labeling
-           * - Semantic navigation element
-           */
+          {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8" aria-label="Main navigation">
             {/* Map through navigation items to create links */}
             {NAV_ITEMS.map((item) => (
-              /**
-               * Individual navigation link
-               * 
-               * FEATURES:
-               * - Dynamic styling based on active state
-               * - Smooth color transitions
-               * - Hover effects
-               * - Active state indication
-               * - Accessibility attributes
-               * - Underline animation
-               */
               <Link
                 key={item.href}                 // Unique key for React rendering
                 href={item.href}                // Link destination
@@ -454,19 +404,7 @@ export const Header = () => {
             ))}
           </nav>
 
-          {/* ===== MOBILE MENU BUTTON ===== */}
-          
-          /**
-           * Mobile hamburger menu toggle button
-           * 
-           * FEATURES:
-           * - Only visible on mobile (md:hidden)
-           * - Animated icon rotation
-           * - Proper accessibility attributes
-           * - Focus management
-           * - High z-index for clickability
-           * - Debug logging for development
-           */
+          {/* Mobile Menu Button */}
           <button
             onClick={toggleMobileMenu}          // Toggle mobile menu on click
             className="
@@ -523,38 +461,10 @@ export const Header = () => {
         </div>
       </div>
 
-      {/* ===== MOBILE MENU DRAWER ===== */}
-      
-      /**
-       * Mobile menu drawer with Framer Motion animations
-       * 
-       * FEATURES:
-       * - AnimatePresence for smooth enter/exit animations
-       * - Click-outside detection via menuRef
-       * - Smooth slide-down animation
-       * - Proper z-index layering
-       * - Accessibility compliance
-       * - Conditional rendering based on menu state
-       */
+      {/* Mobile Menu Drawer */}
       <AnimatePresence mode="wait">
         {/* Only render menu when open */}
         {isMobileMenuOpen && (
-          /**
-           * Mobile navigation drawer
-           * 
-           * ANIMATION PROPERTIES:
-           * - initial: Starts transparent and 20px above final position
-           * - animate: Fades in and moves to final position
-           * - exit: Fades out and moves up 20px
-           * - transition: 0.2s duration for quick, responsive feel
-           * 
-           * STYLING:
-           * - Fixed positioning below header
-           * - Full width coverage
-           * - White background with shadow
-           * - Lower z-index than header (40 vs 50)
-           * - Border for visual separation
-           */
           <motion.nav
             id="mobile-menu"                    // ID for aria-controls association
             ref={menuRef}                       // Ref for click-outside detection

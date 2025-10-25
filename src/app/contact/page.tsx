@@ -69,7 +69,7 @@ export const metadata: Metadata = {
     siteName: 'SV Architects and Associates Ltd.',
     images: [
       {
-        url: 'https://sv-architects.github.io/images/contact/office-building.jpg',
+        url: 'https://sv-architects.github.io/sv-architects-website/images/contact/office-building.jpg',
         width: 1200,
         height: 630,
         alt: 'SV Architects office building in Bangkok'
@@ -83,7 +83,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Contact Us | SV Architects and Associates Ltd.',
     description: 'Get in touch with SV Architects and Associates Ltd. for architectural services and consultation.',
-    images: ['https://sv-architects.github.io/images/contact/office-building.jpg']
+    images: ['https://sv-architects.github.io/sv-architects-website/images/contact/office-building.jpg']
   },
   
   // Additional meta tags

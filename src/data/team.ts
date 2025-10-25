@@ -46,7 +46,7 @@ export const teamMembers: TeamMember[] = [
     department: 'Leadership',
     
     // Personal information
-    image: '/images/team/suchart-bannapanya.jpg',
+    image: '/sv-architects-website/images/team/suchart-bannapanya.jpg',
     bio: 'Suchart Bannapanya serves as Principal of SV Architects and Associates Ltd., providing strategic leadership and vision for the firm. With extensive experience in architectural practice, he oversees major projects and guides the firm\'s growth and development.',
     shortBio: 'Principal providing strategic leadership and vision for SV Architects, overseeing major projects and firm development.',
     
@@ -176,7 +176,7 @@ export const teamMembers: TeamMember[] = [
     department: 'Leadership',
     
     // Personal information
-    image: '/images/team/vichien-wongnimmarn.jpg',
+    image: '/sv-architects-website/images/team/vichien-wongnimmarn.jpg',
     bio: 'Vichien Wongnimmarn serves as Managing Director of SV Architects and Associates Ltd. With extensive experience in aviation and infrastructure projects, he aims to provide aesthetic and higher level service and innovation to drive the future growth of aviation and infrastructure projects.',
     shortBio: 'Managing Director specializing in aviation and infrastructure projects with focus on innovation and service excellence.',
     
@@ -320,7 +320,7 @@ export const teamMembers: TeamMember[] = [
     department: 'Architecture',
     
     // Personal information
-    image: '/images/team/picharn-foongkiatcharoen.jpg',
+    image: '/sv-architects-website/images/team/picharn-foongkiatcharoen.jpg',
     bio: 'Picharn Foongkiatcharoen serves as Head of Architect at SV Architects and Associates Ltd., leading the architectural design team and overseeing design development for major projects.',
     shortBio: 'Head of Architect leading design development and architectural innovation for major projects.',
     
@@ -451,7 +451,7 @@ export const teamMembers: TeamMember[] = [
     department: 'Interior Design',
     
     // Personal information
-    image: '/images/team/nobpadol-suvachananonda.jpg',
+    image: '/sv-architects-website/images/team/nobpadol-suvachananonda.jpg',
     bio: 'Nobpadol Suvachananonda serves as Associate and Head of Interior Design at SV Architects and Associates Ltd., leading the interior design team and overseeing interior design projects.',
     shortBio: 'Associate and Head of Interior Design leading interior design projects and team development.',
     
@@ -582,7 +582,7 @@ export const teamMembers: TeamMember[] = [
     department: 'Business Development',
     
     // Personal information
-    image: '/images/team/supassara-bannapanya.jpg',
+    image: '/sv-architects-website/images/team/supassara-bannapanya.jpg',
     bio: 'Supassara Bannapanya serves as Senior Business Development and Senior Architect at SV Architects and Associates Ltd., combining architectural expertise with business development skills.',
     shortBio: 'Senior Architect and Business Development specialist combining design expertise with business growth.',
     

@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     siteName: 'SV Architects and Associates Ltd.',
     images: [
       {
-        url: 'https://sv-architects.github.io/images/projects/portfolio-hero.jpg',
+        url: 'https://sv-architects.github.io/sv-architects-website/images/projects/portfolio-hero.jpg',
         width: 1200,
         height: 630,
         alt: 'SV Architects project portfolio showcase'
@@ -71,7 +71,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Projects Portfolio | SV Architects and Associates Ltd.',
     description: 'Explore our comprehensive portfolio of architectural projects across Thailand.',
-    images: ['https://sv-architects.github.io/images/projects/portfolio-hero.jpg']
+    images: ['https://sv-architects.github.io/sv-architects-website/images/projects/portfolio-hero.jpg']
   },
   
   // Additional meta tags

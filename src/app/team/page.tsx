@@ -39,6 +39,7 @@ import { getAllTeamMembers, getLeadershipTeam } from '@/data/team';
 
 // Import Next.js components
 import Link from 'next/link';
+import Image from 'next/image';
 // Import custom components
 // Import Framer Motion for animations
 import { motion } from 'framer-motion';
@@ -93,7 +94,7 @@ const HeroSection = () => {
     ">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0 bg-[url('/images/patterns/architecture-pattern.svg')] bg-repeat" />
+        <div className="absolute inset-0 bg-[url('/sv-architects-website/images/patterns/architecture-pattern.svg')] bg-repeat" />
       </div>
       
       <div className="container-responsive relative">
@@ -211,10 +212,12 @@ const LeadershipSection = ({ teamMembers }: { teamMembers: any[] }) => {
                 overflow-hidden // Hide overflow
                 shadow-md // Medium shadow
               ">
-                <img
-                  src={member.image}
+                <Image
+                  src={member.image || ''}
                   alt={`${member.fullName} - ${member.title}`}
                   className="w-full h-full object-cover object-[center_top] group-hover:scale-105 transition-transform duration-500"
+                  fill
+                  objectFit="cover"
                 />
               </div>
 
@@ -350,10 +353,12 @@ const AllTeamSection = ({ teamMembers }: { teamMembers: any[] }) => {
                 overflow-hidden // Hide overflow
                 rounded-t-xl // Rounded top corners
               ">
-                <img
-                  src={member.image}
+                <Image
+                  src={member.image || ''}
                   alt={`${member.fullName} - ${member.title}`}
                   className="w-full h-full object-cover object-[center_top] group-hover:scale-105 transition-transform duration-500"
+                  fill
+                  objectFit="cover"
                 />
                 
                 {/* Overlay */}
