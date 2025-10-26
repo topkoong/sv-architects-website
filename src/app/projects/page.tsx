@@ -95,7 +95,7 @@ const HeroSection = () => {
   return (
     <section className="
       relative // Position context
-      py-16 // 64px vertical padding mobile
+      pt-24 pb-16 // Extra top padding for mobile navbar (96px top, 64px bottom)
       md:py-20 // 80px vertical padding tablet
       lg:py-24 // 96px vertical padding desktop
       bg-gradient-to-br // Gradient background
