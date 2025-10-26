@@ -8,10 +8,13 @@ This document provides a comprehensive overview of the SV Architects website pro
 sv-architects-website/
 ├── 📁 public/                          # Static assets served directly
 │   ├── 📁 images/                      # Image assets
-│   │   ├── 📁 projects/                # Project images
-│   │   ├── 📁 team/                    # Team member photos
-│   │   ├── 📁 contact/                 # Contact page images
-│   │   └── 📁 patterns/                # Background patterns
+│   │   ├── 📁 projects/                # Project images (192 files)
+│   │   ├── 📁 team/                    # Team member photos (16 files)
+│   │   ├── 📁 homepage/                # Homepage hero images
+│   │   ├── 📁 about/                   # About page images
+│   │   ├── 📁 career/                  # Career page images
+│   │   ├── 📁 hero/                    # Hero section images
+│   │   └── 📁 logos/                   # Company logos
 │   ├── 📄 favicon.svg                  # SVG favicon
 │   ├── 📄 favicon-16x16.png           # 16x16 PNG favicon
 │   ├── 📄 favicon-32x32.png           # 32x32 PNG favicon
@@ -20,35 +23,53 @@ sv-architects-website/
 │   └── 📄 site.webmanifest            # Web app manifest
 ├── 📁 src/                             # Source code
 │   ├── 📁 app/                         # Next.js App Router pages
+│   │   ├── 📁 about/                   # About page
+│   │   │   └── 📄 page.tsx            # About page component
+│   │   ├── 📁 career/                  # Career page
+│   │   │   └── 📄 page.tsx           # Career page component
 │   │   ├── 📁 contact/                 # Contact page
 │   │   │   └── 📄 page.tsx            # Contact page component
 │   │   ├── 📁 projects/                # Projects showcase
-│   │   │   └── 📄 page.tsx            # Projects page component
+│   │   │   ├── 📁 [slug]/             # Dynamic project routes
+│   │   │   │   ├── 📄 page.tsx        # Dynamic project page
+│   │   │   │   ├── 📄 FullDetailView.tsx  # Full detail view component
+│   │   │   │   └── 📄 GalleryOnlyView.tsx # Gallery-only view component
+│   │   │   ├── 📄 page.tsx            # Projects listing page
+│   │   │   └── 📄 layout.tsx          # Projects layout with SEO
 │   │   ├── 📁 team/                    # Team directory
-│   │   │   └── 📄 page.tsx            # Team page component
+│   │   │   ├── 📄 page.tsx            # Team listing page
+│   │   │   └── 📄 layout.tsx          # Team layout with SEO
 │   │   ├── 📁 team-member/             # Individual team profiles
 │   │   │   └── 📁 [slug]/             # Dynamic route for team members
 │   │   │       └── 📄 page.tsx        # Team member profile page
 │   │   ├── 📄 layout.tsx               # Root layout component
 │   │   ├── 📄 page.tsx                 # Homepage component
-│   │   ├── 📄 loading.tsx              # Global loading component
-│   │   ├── 📄 not-found.tsx            # 404 page component
-│   │   └── 📄 error.tsx                # Error page component
+│   │   ├── 📄 globals.css              # Global styles
+│   │   ├── 📄 robots.ts                # robots.txt generator
+│   │   └── 📄 sitemap.ts               # XML sitemap generator
 │   ├── 📁 components/                  # Reusable React components
 │   │   ├── 📁 layout/                  # Layout components
 │   │   │   ├── 📄 Header.tsx          # Site header/navigation
 │   │   │   └── 📄 Footer.tsx          # Site footer
-│   │   └── 📁 ui/                      # UI components
-│   │       └── 📄 OptimizedImage.tsx  # Image optimization component
+│   │   ├── 📁 projects/                # Project-specific components
+│   │   │   └── 📄 ProjectsFilter.tsx   # Project filter component
+│   │   ├── 📁 ui/                      # UI components
+│   │   │   └── 📄 OptimizedImage.tsx  # Image optimization component
+│   │   ├── 📄 ErrorBoundary.tsx        # Error boundary component
+│   │   └── 📄 SEO.tsx                 # SEO component
+│   ├── 📁 config/                      # Configuration files
+│   │   └── 📄 site.ts                 # Site configuration and helpers
 │   ├── 📁 data/                        # Static data and content
+│   │   ├── 📄 projects.ts             # Project data (all projects)
 │   │   └── 📄 team.ts                 # Team member data
-│   ├── 📁 lib/                         # Utility functions and configurations
-│   │   └── 📄 animations.ts           # Framer Motion animation variants
-│   ├── 📁 styles/                      # Global styles
-│   │   └── 📄 globals.css             # Global CSS and Tailwind imports
-│   └── 📁 types/                       # TypeScript type definitions
-│       ├── 📄 project.ts              # Project-related types
-│       └── 📄 team.ts                 # Team member types
+│   ├── 📁 lib/                         # Utility functions
+│   │   ├── 📄 animations.ts           # Framer Motion animation variants
+│   │   └── 📄 performance.ts          # Performance utilities
+│   ├── 📁 types/                       # TypeScript type definitions
+│   │   ├── 📄 project.ts              # Project types and interfaces
+│   │   └── 📄 team.ts                 # Team member types and interfaces
+│   └── 📁 styles/                      # Global styles
+│       └── 📄 globals.css             # Global CSS and Tailwind imports
 ├── 📄 .eslintrc.json                   # ESLint configuration
 ├── 📄 .prettierrc                      # Prettier configuration
 ├── 📄 .gitignore                       # Git ignore rules
@@ -87,6 +108,13 @@ The project uses Next.js 16's App Router, which provides:
 
 ```
 📁 data/
+├── projects.ts         # Static project data
+│   ├── projects[]       # Array of all project objects
+│   ├── getProjectBySlug()        # Get project by URL slug
+│   ├── getAllProjectSlugs()      # Get all slugs for static generation
+│   ├── getProjectsByCategory()   # Filter by category
+│   ├── getFeaturedProjects()     # Get featured projects
+│   └── getAvailableCategories()  # Get available categories
 └── team.ts             # Static team member data
     ├── teamMembers[]    # Array of team member objects
     ├── getTeamMemberBySlug()    # Get member by URL slug
@@ -100,14 +128,28 @@ The project uses Next.js 16's App Router, which provides:
 ```
 📁 types/
 ├── project.ts          # Project-related interfaces
-│   ├── Project         # Main project interface
-│   ├── ProjectImage    # Project image interface
-│   └── ProjectCategory # Project category enum
+│   ├── ProjectData              # Main project data interface
+│   ├── ProjectImage             # Project image interface
+│   ├── ProjectCategory          # Project category type
+│   ├── ProjectStatus            # Project status type
+│   ├── ProjectDisplayMode       # Display mode type
+│   ├── ProjectSustainability    # Sustainability interface
+│   └── Helper functions:
+│       ├── hasFullDetails()     # Type guard for full detail mode
+│       ├── isGalleryOnly()      # Type guard for gallery-only mode
+│       ├── getProjectThumbnail() # Get project thumbnail
+│       ├── getCategoryDisplayName() # Get category display name
+│       └── getStatusInfo()      # Get status display info
 └── team.ts             # Team member interfaces
-    ├── TeamMember      # Main team member interface
-    ├── Education       # Education interface
-    ├── Certification   # Certification interface
-    └── WorkHistory     # Work history interface
+    ├── TeamMember              # Main team member interface
+    ├── TeamMemberPosition      # Position type
+    ├── ExpertiseArea           # Expertise area type
+    ├── Education               # Education interface
+    ├── ProfessionalCert        # Professional certification interface
+    ├── WorkExperience          # Work experience interface
+    ├── ProjectInvolvement      # Project involvement interface
+    ├── ContactInfo             # Contact information interface
+    └── SocialMedia             # Social media interface
 ```
 
 ## 🔧 Configuration Files

@@ -60,6 +60,12 @@ const playfairDisplay = Playfair_Display({
  * Includes comprehensive meta tags, Open Graph, Twitter Cards, and structured data
  */
 export const metadata: Metadata = {
+  // Base URL for Open Graph and Twitter images
+  metadataBase: new URL(process.env.NODE_ENV === 'production' 
+    ? 'https://sv-architects.github.io/sv-architects-website'
+    : 'http://localhost:3000'
+  ),
+  
   // Basic meta tags
   title: {
     default: 'SV Architects and Associates Ltd. | Leading Architecture Firm Bangkok Thailand',
