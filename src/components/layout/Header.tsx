@@ -357,8 +357,8 @@ export const Header = () => {
         fixed top-0 left-0 right-0 z-50        // Fixed positioning with high z-index
         transition-all duration-300             // Smooth transitions for all properties
         ${isScrolled 
-          ? 'bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-200'  // Scrolled: solid background with blur and shadow
-          : 'bg-white/90 backdrop-blur-sm'      // Default: semi-transparent with light blur
+          ? 'bg-white backdrop-blur-md shadow-sm border-b border-gray-200'  // Scrolled: solid white background with blur and shadow
+          : 'bg-white backdrop-blur-sm'         // Default: solid white background with light blur
         }
       `}
     >

@@ -142,14 +142,14 @@ const HeroSection = ({ project }: { project: ProjectData }) => {
 
         {/* Project Title Overlay */}
         <div className="absolute inset-0 flex items-center">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-4 pt-24 md:pt-0">
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
               className="max-w-4xl text-white"
             >
-              <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">
+              <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
                 {project.name}
               </h1>
               {project.tagline && (
