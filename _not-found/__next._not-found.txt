@@ -1,4 +1,4 @@
 1:"$Sreact.fragment"
-2:I[96269,["/sv-architects-website/_next/static/chunks/d276a49971e241af.js","/sv-architects-website/_next/static/chunks/d09dad11bc74418f.js","/sv-architects-website/_next/static/chunks/c87a3be439f2e46a.js"],"default"]
-3:I[92282,["/sv-architects-website/_next/static/chunks/d276a49971e241af.js","/sv-architects-website/_next/static/chunks/d09dad11bc74418f.js","/sv-architects-website/_next/static/chunks/c87a3be439f2e46a.js"],"default"]
-0:{"buildId":"qVlJsKIkvjpBHYOTHpstT","rsc":["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}]}]]}],"loading":null,"isPartial":false}
+2:I[96269,["/sv-architects-website/_next/static/chunks/d276a49971e241af.js","/sv-architects-website/_next/static/chunks/d09dad11bc74418f.js","/sv-architects-website/_next/static/chunks/75e2fc124e3c2f4e.js"],"default"]
+3:I[92282,["/sv-architects-website/_next/static/chunks/d276a49971e241af.js","/sv-architects-website/_next/static/chunks/d09dad11bc74418f.js","/sv-architects-website/_next/static/chunks/75e2fc124e3c2f4e.js"],"default"]
+0:{"buildId":"ez9k2upAu5VjsKT2MowS4","rsc":["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}]}]]}],"loading":null,"isPartial":false}
